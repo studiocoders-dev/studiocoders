@@ -1,17 +1,31 @@
 # Plan Técnico: Landing Page Principal de Studio Coders (`studiocoders.dev`)
 
 > **Ubicación:** `.agents/plans/001-foundation-landing-page.md`  
-> **Estado:** Borrador  
+> **Estado:** Implementado  
 > **Fecha:** Noviembre 2026  
 > **Referencia Spec:** [`.agents/specs/001-foundation-landing-page.md`](../specs/001-foundation-landing-page.md)
 
 ---
 
-## 1. Resumen de la Arquitectura
-Implementación de la landing page sobre **Next.js 16 (App Router)** utilizando Server Components para la entrega de HTML estático ultra-rápido, minimizando la hidratación en el cliente.
-- **Estilos:** Tailwind CSS 4 con utilidades personalizadas para fondos oscuros (`#070B14`, `#0B0F19`), bordes de baja opacidad (`border-white/10`) y efectos de resplandor.
-- **Tipografía:** Integración de Google Fonts con `next/font` (`Inter` para lectura y `Geist_Mono` para badges/métricas).
-- **SEO/AEO:** Generación de metadatos mediante `generateMetadata` de Next.js y componente estructurado JSON-LD en `src/app/layout.tsx`.
+## 1. Resumen de la Arquitectura & Sistema de Diseño (Inspiración Brotherhood.dev + Electric Purple)
+Implementación de la landing page sobre **Next.js 16 (App Router)** utilizando Server Components para la entrega de HTML estático ultra-rápido y mínimo JS en el cliente.
+- **Tipografías nativas (`next/font/google`):**
+  - Display / Titulares: `Archivo` (`--font-archivo`)
+  - Subtítulos y prosa editorial: `Newsreader` (`--font-newsreader`, serif elegante)
+  - Monospace / Badges técnicos: `IBM_Plex_Mono` (`--font-mono`)
+- **Tokens de Color (Adaptación de Brotherhood.dev a Electric Purple `#6366f1`):**
+  - `--color-ink`: `#14161c` (Fondo de página ultra-dark graphite)
+  - `--color-raise`: `#1c1f28` (Superficie de tarjetas y contenedores)
+  - `--color-raise-2`: `#242835` (Hover en tarjetas y botones secundarios)
+  - `--color-line`: `#2e3340` (Bordes finos y divisores sutiles)
+  - `--color-paper`: `#edeff4` (Texto principal de alto contraste)
+  - `--color-muted`: `#949aab` (Texto secundario y explicativo)
+  - `--color-faint`: `#818799` (Etiquetas y placeholders de baja jerarquía)
+  - `--color-brand`: `#6366f1` (Púrpura eléctrico / Indigo 500 extraído de la muestra del usuario)
+  - `--color-brand-hover`: `#4f46e5` (Estado activo/hover del botón principal)
+  - `--color-brand-text`: `#818cf8` (Texto de acento y enlaces sobre fondo oscuro)
+  - `--color-brand-wash`: `rgba(99, 102, 241, 0.12)` (Fondo translúcido para el badge y selecciones)
+- **SEO/AEO:** Generación de metadatos mediante `generateMetadata` de Next.js y componente estructurado JSON-LD (`ProfessionalService`, `FAQPage`, `SoftwareApplication`) en `src/app/layout.tsx`.
 
 ---
 

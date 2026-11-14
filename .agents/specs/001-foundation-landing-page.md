@@ -1,7 +1,7 @@
 # Feature Spec: Landing Page Principal de Studio Coders (`studiocoders.dev`)
 
 > **Ubicación:** `.agents/specs/001-foundation-landing-page.md`  
-> **Estado:** Borrador  
+> **Estado:** Completado  
 > **Fecha:** Noviembre 2026  
 > **Referencia Plan Técnico:** [`.agents/plans/001-foundation-landing-page.md`](../plans/001-foundation-landing-page.md)
 
@@ -16,14 +16,21 @@ Los fundadores, gerentes y tomadores de decisiones B2B enfrentan una fricción r
 ---
 
 ## 2. Solución Funcional y Arquitectura de Pantallas
-Una Single Page Application (SPA) de alto impacto visual (dark mode tipo Brotherhood.dev y Vercel) estructurada en 7 secciones estratégicas:
+Una Single Page Application (SPA) de estética boutique minimalista inspirada directamente en Brotherhood.dev:
+- **Línea Visual:** Fondo Dark Graphite (`#14161c`), tarjetas elevadas (`#1c1f28`), líneas divisorias sutiles (`#2e3340`) y acento púrpura eléctrico (`#6366f1` / `#818cf8` con wash `rgba(99, 102, 241, 0.12)`) sustituyendo el azul tradicional.
+- **Trío Tipográfico:**
+  - **Archivo:** Headings limpios y contundentes con `tracking-tight`.
+  - **Newsreader:** Subtítulos y prosa en serif editorial de alto estatus.
+  - **IBM Plex Mono:** Eyebrows geográficos, cronogramas y etiquetas técnicas.
 
-1. **Header / Navbar:** Logo corporativo Studio Coders, navegación de anclas (`#proceso`, `#proyectos`, `#faq`) y CTA principal: *"Agendar llamada"*.
+Estructurada en 7 secciones estratégicas:
+
+1. **Header / Navbar:** Logo corporativo `studiocoders.dev`, navegación contextual (`#metodo`, `#proyectos`, `#faq`) y botón CTA en púrpura eléctrico.
 2. **Hero Section:**
-   - Badge superior: *"Entrega en Producción en 14 Días · Agentes IA & Software Ágil"*.
-   - Headline: *"Tu software o Agente IA en producción en dos semanas."*
-   - Subtítulo: *"No un mockup ni una demo: una primera versión real, desplegada y con usuarios, lista para facturar."*
-   - CTAs duales: *"Agendar Scope Call (15 min)"* y *"Explorar Proyectos Reales"*.
+   - Badge superior (IBM Plex Mono + wash púrpura): `SANTIAGO, CHILE · TRABAJAMOS CON TODA LATINOAMÉRICA`.
+   - Headline (Archivo): *"En dos semanas tu software o Agente IA está en producción."*
+   - Subtítulo (Newsreader serif): *"No un mockup ni una demo: una primera versión real, desplegada, que tú y tu equipo pueden abrir y usar el día catorce. Después iteramos contigo cada semana hasta terminarlo."*
+   - CTAs duales: *"Cuéntanos tu proyecto"* (botón sólido púrpura `#6366f1`) y *"Mira cómo trabajamos"* (botón outline minimalista con borde `#2e3340`).
 3. **El Proceso de 14 Días (Timeline visual):**
    - **Día 0:** Scope call técnica y definición de MVP.
    - **Día 2:** Presupuesto cerrado y arquitectura fijada.
@@ -51,8 +58,8 @@ Una Single Page Application (SPA) de alto impacto visual (dark mode tipo Brother
 ---
 
 ## 4. Definition of Done (DoD) Checklist
-- [ ] Layout base con tipografías y tema oscuro (`globals.css`) implementado.
-- [ ] Componentes modulares creados: `Navbar`, `Hero`, `ProcessTimeline`, `PortfolioShowcase`, `ComparisonTable`, `FAQ`, `Footer`.
-- [ ] Esquema Schema.org JSON-LD inyectado en `layout.tsx`.
-- [ ] Suite de pruebas unitarias (`tests/landing.test.ts`) validando renderizado y textos clave.
-- [ ] Build de Next.js (`npm run build`) ejecutado sin errores de TypeScript ni linter.
+- [x] Layout base con tipografías (Archivo, Newsreader, IBM Plex Mono) y tema oscuro (`globals.css`) implementado.
+- [x] Componentes modulares creados: `Navbar`, `Hero`, `ProcessTimeline`, `PortfolioShowcase`, `ComparisonTable`, `FAQ`, `ContactForm`, `Footer`.
+- [x] Esquema Schema.org JSON-LD inyectado en `layout.tsx` (`ProfessionalService`, `FAQPage`).
+- [x] Suite de pruebas unitarias (`tests/landing.test.tsx`) validando 15 tests con 100% de éxito.
+- [x] Build de Next.js (`npm run build`) y linter (`npm run lint`) ejecutados con 0 errores y 0 warnings.

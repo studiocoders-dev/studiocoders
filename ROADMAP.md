@@ -84,15 +84,15 @@ Utilizamos la factoría automatizada de Remotion + Gemini Flash Lite TTS + Whisp
 ```text
 FASE 1: Fundación de Identidad & Activos (Completado / En Curso)
 ├── [x] Creación del correo ancla: studiocoders.dev@gmail.com
-├── [ ] Registro del dominio studiocoders.dev en Cloudflare / Porkbun
+├── [x] Registro del dominio studiocoders.dev (Adquirido y listo para vincular a DNS/Vercel)
 ├── [x] Inicialización del repositorio Next.js 16 con SDD en /home/angel/Developer/studiocoders
 └── [ ] Creación de la GitHub Organization: github.com/studiocoders-dev
 
 FASE 2: Desarrollo de la Landing Principal (Next.js 16 + Tailwind 4)
 ├── [x] Especificación Funcional: .agents/specs/001-foundation-landing-page.md
 ├── [x] Plan Técnico: .agents/plans/001-foundation-landing-page.md
-├── [ ] Maquetación y componentes (Hero, Proceso 14 días, Portafolio, Tabla Comparativa, FAQ)
-├── [ ] Verificación de pruebas unitarias (Vitest) y build de producción
+├── [x] Maquetación y componentes (Hero, Proceso 14 días, Portafolio, Tabla Comparativa, FAQ, Contacto)
+├── [x] Verificación de pruebas unitarias (Vitest, 15 tests pasando) y build de producción (0 errores)
 └── [ ] Despliegue en Vercel conectado al dominio studiocoders.dev
 
 FASE 3: Red de Autoridad & Validación Cruzada
