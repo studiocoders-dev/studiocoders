@@ -42,11 +42,11 @@ export function ComparisonTable() {
             Comparativa de Mercado
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#edeff4] sm:text-5xl">
-            Por qué fundadores y empresas eligen Studio Coders.
+            Studio Coders frente al modelo de agencia tradicional.
           </h2>
           <p className="mt-4 font-serif text-lg text-[#949aab]">
-            La diferencia entre perder 6 meses en burocracia de agencia y tener
-            software real funcionando en dos semanas.
+            La diferencia entre esperar meses por un prototipo o empezar a captar
+            clientes en dos semanas.
           </p>
         </div>
 

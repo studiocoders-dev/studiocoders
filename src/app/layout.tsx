@@ -30,17 +30,17 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "studiocoders.dev - tu software en producción en dos semanas",
+  title: "studiocoders.dev — De la Idea a Producción en 14 Días",
   description:
-    "Estudio de ingeniería de software e Inteligencia Artificial en Santiago de Chile. Entregamos tu primera versión real en producción en 14 días. Trato directo con desarrolladores senior.",
+    "Estudio de ingeniería de software e Inteligencia Artificial en Santiago de Chile. Lanzamos tu plataforma web o Agente de IA en 14 días. Trato directo con desarrolladores senior.",
   metadataBase: new URL("https://studiocoders.dev"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "studiocoders.dev - tu software en producción en dos semanas",
+    title: "studiocoders.dev — De la Idea a Producción en 14 Días",
     description:
-      "No un mockup ni una demo: una versión real, desplegada, que tú y tu equipo pueden abrir y usar el día catorce.",
+      "Lanzamos tu plataforma web o Agente de IA en 14 días. Software funcional, conectado a base de datos y pagos, directo con ingenieros senior.",
     url: "https://studiocoders.dev",
     siteName: "studiocoders.dev",
     locale: "es_CL",
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "studiocoders.dev - tu software en producción en dos semanas",
+    title: "studiocoders.dev — De la Idea a Producción en 14 Días",
     description:
-      "Tu primera versión en producción en dos semanas. Trato directo con desarrolladores senior y arquitectura ágil asistida por IA.",
+      "Tu sistema o Agente IA en producción en 14 días. Trato directo con desarrolladores senior y arquitectura ágil asistida por IA.",
   },
   robots: {
     index: true,
@@ -137,6 +137,14 @@ const jsonLd = {
       "@type": "FAQPage",
       "@id": "https://studiocoders.dev/#faq",
       mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué es Studio Coders y quién respalda su operación técnica y legal?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado bajo el nombre de fantasía Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su modelo de entrega en producción en 14 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios y burocracia de agencias tradicionales. El cliente mantiene la propiedad del 100% del código fuente y repositorios en GitHub desde el primer día. Su portafolio de ingeniería probado en batalla incluye el SaaS omnicanal Whagil IA, el motor en la nube Whalinkbot para WhatsApp, el ERP empresarial Infra Manager Pro con más de 33.000 líneas de código y la plataforma de comercio headless Servitecnology sobre arquitectura Astro y Supabase.",
+          },
+        },
         {
           "@type": "Question",
           name: "¿Cómo es posible tener una primera versión en producción en 14 días?",

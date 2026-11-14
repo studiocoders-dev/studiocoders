@@ -17,25 +17,25 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
   describe("Gate 4 Compliance: Core Value Proposition & Copy", () => {
     it("renders the primary headline promising 14-day delivery", () => {
       expect(html).toContain(
-        "En dos semanas tu software o Agente IA está en producción."
+        "Lanzamos tu aplicación web o Agente de IA en 14 días."
       );
     });
 
     it("renders the Santiago, Chile geographical badge", () => {
       expect(html).toContain(
-        "Santiago, Chile · Trabajamos con toda Latinoamérica"
+        "Santiago de Chile · Ingeniería Ágil para Latinoamérica &amp; Global"
       );
     });
 
     it("renders the editorial subhead clarifying real production vs demo/mockup", () => {
-      expect(html).toContain("No un mockup ni una demo");
+      expect(html).toContain("Olvídate de presupuestos inflados y agencias que tardan meses en maquetas.");
       expect(html).toContain(
-        "abrir y usar el día catorce. Después iteramos contigo cada semana hasta terminarlo."
+        "Construimos una plataforma funcional, desplegada con base de datos y pagos"
       );
     });
 
     it("renders the primary CTA with prompt to tell project", () => {
-      expect(html).toContain("Cuéntanos tu proyecto");
+      expect(html).toContain("Cotizar proyecto (Scope 20 min)");
     });
   });
 
@@ -48,11 +48,11 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
     });
 
     it("explains why 2 weeks is possible with senior developers and AI acceleration", () => {
-      expect(html).toContain("Por qué dos semanas es posible");
-      expect(html).toContain("Un stack fijo que dominamos");
-      expect(html).toContain("Reuniones directas con ingenieros senior");
-      expect(html).toContain("Aceleración con IA bajo revisión humana");
-      expect(html).toContain("Propiedad total desde el primer commit");
+      expect(html).toContain("¿Cómo logramos entregar en 14 días?");
+      expect(html).toContain("Un stack consolidado que dominamos");
+      expect(html).toContain("Trato directo con ingenieros senior");
+      expect(html).toContain("Aceleración por IA con rigor humano");
+      expect(html).toContain("Propiedad total de código y cloud");
     });
   });
 
@@ -116,9 +116,14 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
 
   describe("SEO & AEO Metadata Verification", () => {
     it("defines valid OpenGraph and Twitter title and descriptions in layout", () => {
-      expect(metadata.title).toBe("studiocoders.dev - tu software en producción en dos semanas");
+      expect(metadata.title).toBe("studiocoders.dev — De la Idea a Producción en 14 Días");
       expect(metadata.description).toContain("Santiago de Chile");
       expect(metadata.description).toContain("desarrolladores senior");
+    });
+
+    it("includes the Answer-First entity definition in the collapsible FAQ accordion", () => {
+      expect(html).toContain("¿Qué es Studio Coders y quién respalda su operación técnica y legal?");
+      expect(html).toContain("Studio Coders Dev con RUT 77.709.717-2");
     });
   });
 });

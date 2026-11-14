@@ -67,11 +67,11 @@ describe("SEO, GEO & AEO Master Blindaje Suite", () => {
 
   describe("Answer-First Princeton / Georgia Tech Standard (134-167 words)", () => {
     it("extracts the Answer-First text and verifies strict word count (154 words)", () => {
-      const heroPath = path.resolve(process.cwd(), "src/components/Hero.tsx");
-      const heroContent = fs.readFileSync(heroPath, "utf-8");
+      const faqPath = path.resolve(process.cwd(), "src/components/FAQ.tsx");
+      const faqContent = fs.readFileSync(faqPath, "utf-8");
       
-      // Match the Answer-First paragraph inside Hero.tsx
-      const match = heroContent.match(/Studio Coders es un estudio de ingeniería[\s\S]*?Astro y Supabase\./);
+      // Match the Answer-First paragraph inside FAQ.tsx (Question 1)
+      const match = faqContent.match(/Studio Coders es un estudio de ingeniería[\s\S]*?Astro y Supabase\./);
       expect(match).not.toBeNull();
       
       if (match) {

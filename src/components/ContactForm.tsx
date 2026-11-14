@@ -24,12 +24,12 @@ export function ContactForm() {
             Contacto Directo
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#edeff4] sm:text-5xl">
-            Cuéntanos tu proyecto.
+            Construyamos tu próximo sistema.
           </h2>
           <p className="mt-4 font-serif text-lg text-[#949aab]">
-            Una llamada de 20 minutos con un desarrollador senior. Sin
-            vendedores ni presentaciones genéricas. Respondemos en menos de 24
-            horas con un presupuesto cerrado en USD.
+            Agenda una sesión técnica de 20 minutos con un desarrollador senior.
+            Analizamos la viabilidad de tu idea y te entregamos un presupuesto
+            cerrado en menos de 24 horas.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export function ContactForm() {
                   disabled={loading}
                   className="inline-flex w-full h-12 items-center justify-center rounded-md bg-[#6366f1] px-6 font-mono text-sm font-semibold tracking-wide text-white transition-all hover:bg-[#4f46e5] hover:shadow-[0_0_25px_rgba(99,102,241,0.35)] disabled:opacity-50 active:scale-[0.99]"
                 >
-                  {loading ? "Enviando..." : "Solicitar llamada de alcance (20 min)"}
+                  {loading ? "Enviando..." : "Solicitar llamada técnica (20 min)"}
                 </button>
               </div>
 

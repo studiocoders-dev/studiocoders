@@ -69,12 +69,12 @@ export function PortfolioShowcase() {
             Código en Producción
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#edeff4] sm:text-5xl">
-            No tienes que creernos sobre cómo construimos software.
+            Plataformas activas procesando operaciones críticas cada día.
           </h2>
           <p className="mt-5 font-serif text-lg leading-relaxed text-[#949aab] sm:text-xl">
-            No mostramos maquetas de Figma ni interfaces ficticias. Estas son
-            plataformas reales, creadas por nuestro equipo de ingeniería,
-            operando 24/7 en empresas y procesando operaciones críticas.
+            No vendemos promesas sobre maquetas de Figma. Respaldamos nuestra
+            ingeniería con sistemas propios y de clientes operando 24/7 en alta
+            concurrencia.
           </p>
         </div>
 

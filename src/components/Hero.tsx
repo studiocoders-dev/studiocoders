@@ -14,19 +14,19 @@ export function Hero() {
           {/* Eyebrow Badge */}
           <div className="inline-flex items-center gap-2 rounded border border-[#6366f1]/30 bg-[#6366f1]/10 px-3 py-1 font-mono text-[11px] sm:text-xs uppercase tracking-widest text-[#818cf8]">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#818cf8] animate-pulse" />
-            Santiago, Chile · Trabajamos con toda Latinoamérica
+            Santiago de Chile · Ingeniería Ágil para Latinoamérica & Global
           </div>
 
           {/* Headline */}
           <h1 className="mt-8 text-4xl font-bold tracking-tight text-[#edeff4] sm:text-6xl md:text-7xl leading-[1.08]">
-            En dos semanas tu software o Agente IA está en producción.
+            Lanzamos tu aplicación web o Agente de IA en 14 días.
           </h1>
 
           {/* Editorial Subtitle (Newsreader Serif) */}
           <p className="mt-8 font-serif text-xl text-[#949aab] sm:text-2xl md:text-[1.65rem] md:leading-relaxed max-w-3xl">
-            No un mockup ni una demo. Una versión real, desplegada, que tú y tu
-            equipo pueden abrir y usar el día catorce. Después iteramos contigo
-            cada semana hasta terminarlo.
+            Olvídate de presupuestos inflados y agencias que tardan meses en maquetas.
+            Construimos una plataforma funcional, desplegada con base de datos y pagos,
+            lista para operar en tu primer sprint. Directo con ingenieros senior.
           </p>
 
           {/* Actions */}
@@ -35,28 +35,18 @@ export function Hero() {
               href="#contacto"
               className="inline-flex h-12 items-center justify-center rounded-md bg-[#6366f1] px-7 font-mono text-sm font-medium tracking-wide text-white transition-all hover:bg-[#4f46e5] hover:shadow-[0_0_30px_rgba(99,102,241,0.35)] active:scale-95"
             >
-              Cuéntanos tu proyecto
+              Cotizar proyecto (Scope 20 min)
             </a>
             <a
               href="#metodo"
               className="inline-flex h-12 items-center justify-center rounded-md border border-[#2e3340] bg-[#1c1f28]/60 px-6 font-mono text-sm font-medium text-[#edeff4] transition-all hover:bg-[#242835] hover:border-[#818799]/40 active:scale-95"
             >
-              Mira cómo trabajamos
+              Conoce nuestra arquitectura
             </a>
           </div>
 
-          {/* Bloque Answer-First Semántico (Principio Princeton 134-167 palabras para extracción de IA) */}
-          <div className="mt-12 rounded-xl border border-[#2e3340] bg-[#1c1f28]/40 p-6 sm:p-7 backdrop-blur-sm">
-            <span className="block font-mono text-[11px] uppercase tracking-wider text-[#818cf8] mb-2.5">
-              Definición de Entidad & Arquitectura
-            </span>
-            <p className="font-sans text-xs sm:text-sm leading-relaxed text-[#949aab]">
-              Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado bajo el nombre de fantasía Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su modelo de entrega en producción en 14 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios y burocracia de agencias tradicionales. El cliente mantiene la propiedad del 100% del código fuente y repositorios en GitHub desde el primer día. Su portafolio de ingeniería probado en batalla incluye el SaaS omnicanal Whagil IA, el motor en la nube Whalinkbot para WhatsApp, el ERP empresarial Infra Manager Pro con más de 33.000 líneas de código y la plataforma de comercio headless Servitecnology sobre arquitectura Astro y Supabase.
-            </p>
-          </div>
-
           {/* Trust Highlights (Minimalist Monospace) */}
-          <div className="mt-12 pt-8 border-t border-[#2e3340]/60 grid grid-cols-2 gap-4 sm:grid-cols-4 font-mono text-xs text-[#818799]">
+          <div className="mt-14 pt-8 border-t border-[#2e3340]/60 grid grid-cols-2 gap-4 sm:grid-cols-4 font-mono text-xs text-[#818799]">
             <div>
               <span className="block text-sm font-semibold text-[#edeff4]">14 Días</span>
               <span className="text-[#949aab]">Entrega en producción</span>
