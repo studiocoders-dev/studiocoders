@@ -93,7 +93,7 @@ FASE 2: Desarrollo de la Landing Principal (Next.js 16 + Tailwind 4)
 ├── [x] Plan Técnico: .agents/plans/001-foundation-landing-page.md
 ├── [x] Maquetación y componentes (Hero, Proceso 14 días, Portafolio, Tabla Comparativa, FAQ, Contacto)
 ├── [x] Verificación de pruebas unitarias (Vitest, 15 tests pasando) y build de producción (0 errores)
-└── [ ] Despliegue en Vercel conectado al dominio studiocoders.dev
+└── [x] Despliegue en Vercel conectado al dominio studiocoders.dev (EN VIVO EN PRODUCCIÓN 🚀)
 
 FASE 3: Red de Autoridad & Validación Cruzada
 ├── [ ] Agregar mención de autoría en footers de Whagil, Whalinkbot, Infra Manager y Servitecnology
