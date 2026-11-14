@@ -4,6 +4,8 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { PortfolioShowcase } from "@/components/PortfolioShowcase";
 import { DelayCauses } from "@/components/DelayCauses";
+import { AuditGuarantees } from "@/components/AuditGuarantees";
+import { PublicCode } from "@/components/PublicCode";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { FAQ } from "@/components/FAQ";
 import { ContactForm } from "@/components/ContactForm";
@@ -19,6 +21,8 @@ export default function Home() {
         <ProcessTimeline />
         <PortfolioShowcase />
         <DelayCauses />
+        <AuditGuarantees />
+        <PublicCode />
         <ComparisonTable />
         <FAQ />
         <ContactForm />

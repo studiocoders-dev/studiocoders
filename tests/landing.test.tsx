@@ -64,6 +64,30 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
     });
   });
 
+  describe("Audit Guarantees: Qué puedes verificar tú mismo", () => {
+    it("renders the section header and the 4 objective technical commitments", () => {
+      expect(html).toContain("Garantías Técnicas");
+      expect(html).toContain("Qué puedes verificar tú mismo.");
+      expect(html).toContain("Core Web Vitals en verde, medido en móvil");
+      expect(html).toContain("Accesibilidad web WCAG 2.1 AA");
+      expect(html).toContain("Cero dependencias cautivas ni vendor lock-in");
+      expect(html).toContain("Pruebas automatizadas y CI/CD en verde");
+    });
+  });
+
+  describe("Public Code: Open-source Proof of Work", () => {
+    it("renders the section header and the public open-source package links", () => {
+      expect(html).toContain("Código Público");
+      expect(html).toContain("Audita nuestro estándar de ingeniería directamente en el código fuente.");
+      expect(html).toContain("@studiocoders/webhook-verifier");
+      expect(html).toContain("studiocoders-dev/webhook-verifier");
+      expect(html).toContain("https://www.npmjs.com/package/@studiocoders/webhook-verifier");
+      expect(html).toContain("https://github.com/studiocoders-dev/webhook-verifier");
+      expect(html).toContain("TypeScript Strict");
+      expect(html).toContain("100% Test Coverage");
+    });
+  });
+
   describe("The 14-Day Process Timeline", () => {
     it("includes all milestones: Día 0, Día 2, Día 14 and Cada semana", () => {
       expect(html).toContain("Día 0");
