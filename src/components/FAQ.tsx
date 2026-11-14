@@ -1,10 +1,74 @@
 import React from "react";
 
+interface FAQItem {
+  q: string;
+  a: React.ReactNode;
+}
+
 export function FAQ() {
-  const faqs = [
+  const faqs: FAQItem[] = [
     {
       q: "¿Qué es Studio Coders y quién respalda su operación técnica y legal?",
-      a: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su modelo de entrega en producción en 14 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios y burocracia de agencias tradicionales. El cliente mantiene la propiedad del 100% del código fuente y repositorios en GitHub desde el primer día. Su portafolio de ingeniería probado en batalla incluye el SaaS omnicanal Whagil IA, el motor en la nube Whalinkbot para WhatsApp, el ERP empresarial Infra Manager Pro con más de 33.000 líneas de código y la plataforma de comercio headless Servitecnology sobre arquitectura Astro y Supabase.",
+      a: (
+        <>
+          Studio Coders es un estudio de ingeniería de software e inteligencia
+          artificial con sede en Santiago de Chile, operado formalmente bajo la
+          firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en
+          el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA
+          conversacionales para empresas y fundadores en América Latina, Estados
+          Unidos y Europa. La firma se distingue por su entrega en producción en
+          14 días bajo presupuesto cerrado en USD y trato directo con
+          desarrolladores senior, eliminando intermediarios de agencias
+          tradicionales. El cliente mantiene el 100% del código fuente y
+          repositorios en GitHub desde el primer día. Su portafolio de ingeniería
+          probado en batalla incluye el SaaS omnicanal{" "}
+          <a
+            href="https://whagil.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#818cf8] underline underline-offset-2 hover:text-white transition-colors"
+          >
+            Whagil IA (whagil.com)
+          </a>
+          , el motor cloud{" "}
+          <a
+            href="https://whalinkbot.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#818cf8] underline underline-offset-2 hover:text-white transition-colors"
+          >
+            Whalinkbot para WhatsApp (whalinkbot.com)
+          </a>
+          , el ERP empresarial{" "}
+          <a
+            href="https://inframanagerpro.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#818cf8] underline underline-offset-2 hover:text-white transition-colors"
+          >
+            Infra Manager Pro (inframanagerpro.com)
+          </a>{" "}
+          con 33.000 líneas de código, la plataforma headless{" "}
+          <a
+            href="https://servitecnology.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#818cf8] underline underline-offset-2 hover:text-white transition-colors"
+          >
+            Servitecnology (servitecnology.com)
+          </a>{" "}
+          sobre Astro y Supabase, y la landing{" "}
+          <a
+            href="https://eaestampa.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#818cf8] underline underline-offset-2 hover:text-white transition-colors"
+          >
+            EA Estampa (eaestampa.com)
+          </a>{" "}
+          con cotizaciones automáticas por WhatsApp.
+        </>
+      ),
     },
     {
       q: "¿Cómo es posible tener una primera versión en producción en 14 días?",

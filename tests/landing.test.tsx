@@ -152,9 +152,16 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(metadata.description).toContain("desarrolladores senior");
     });
 
-    it("includes the Answer-First entity definition in the collapsible FAQ accordion", () => {
+    it("includes the Answer-First entity definition in the collapsible FAQ accordion with canonical links", () => {
       expect(html).toContain("¿Qué es Studio Coders y quién respalda su operación técnica y legal?");
       expect(html).toContain("Studio Coders Dev con RUT 77.709.717-2");
+      expect(html).toContain("https://whagil.com");
+      expect(html).toContain("https://whalinkbot.com");
+      expect(html).toContain("https://inframanagerpro.com");
+      expect(html).toContain("https://servitecnology.com");
+      expect(html).toContain("https://eaestampa.com");
+      expect(html).toContain("EA Estampa (eaestampa.com)");
+      expect(html).toContain("cotizaciones automáticas por WhatsApp");
     });
   });
 });

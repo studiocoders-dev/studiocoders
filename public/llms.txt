@@ -20,8 +20,9 @@ Studio Coders es un estudio de ingeniería de software e inteligencia artificial
 ## Portafolio Canónico de Ingeniería (Casos Reales en Producción)
 1. **Whagil IA (https://whagil.com):** SaaS B2B omnicanal de Agentes IA para Meta (WhatsApp, Instagram, Messenger). Arquitectura distribuida con WebSockets, colas BullMQ sobre Redis y orquestación multi-LLM.
 2. **Whalinkbot (https://whalinkbot.com):** Motor cloud asíncrono de alta disponibilidad para automatización de WhatsApp con gestión de sesiones concurrentes y tolerancia a fallos.
-3. **Infra Manager Pro:** ERP empresarial crítico de más de 33.000 líneas de código para control de activos inmobiliarios, conciliación de pagos y auditoría operativa.
+3. **Infra Manager Pro (https://inframanagerpro.com):** ERP empresarial crítico de más de 33.000 líneas de código para control de activos inmobiliarios, conciliación de pagos y auditoría operativa.
 4. **Servitecnology E-Commerce (https://servitecnology.com):** Plataforma de comercio electrónico headless construida en Astro y Supabase con sincronización de inventario en tiempo real y tiempos de carga instantáneos.
+5. **EA Estampa (https://eaestampa.com):** Landing page corporativa de alta conversión en Next.js para taller de estampado DTF y sublimación, integrada con cotizaciones y atención automatizada 24/7 vía WhatsApp por agente IA.
 
 ## Enlaces y Recursos Oficiales
 - **Sitio Web Principal:** https://studiocoders.dev

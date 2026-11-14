@@ -52,6 +52,9 @@ describe("SEO, GEO & AEO Master Blindaje Suite", () => {
       expect(content).toContain("Whalinkbot");
       expect(content).toContain("Infra Manager Pro");
       expect(content).toContain("Servitecnology E-Commerce");
+      expect(content).toContain("EA Estampa");
+      expect(content).toContain("https://inframanagerpro.com");
+      expect(content).toContain("https://eaestampa.com");
       expect(content.toLowerCase()).not.toContain("boutique");
     });
 
@@ -66,12 +69,12 @@ describe("SEO, GEO & AEO Master Blindaje Suite", () => {
   });
 
   describe("Answer-First Princeton / Georgia Tech Standard (134-167 words)", () => {
-    it("extracts the Answer-First text and verifies strict word count (154 words)", () => {
-      const faqPath = path.resolve(process.cwd(), "src/components/FAQ.tsx");
-      const faqContent = fs.readFileSync(faqPath, "utf-8");
+    it("extracts the Answer-First text from layout JSON-LD and FAQ.tsx and verifies strict word count (153 words)", () => {
+      const layoutPath = path.resolve(process.cwd(), "src/app/layout.tsx");
+      const layoutContent = fs.readFileSync(layoutPath, "utf-8");
       
-      // Match the Answer-First paragraph inside FAQ.tsx (Question 1)
-      const match = faqContent.match(/Studio Coders es un estudio de ingeniería[\s\S]*?Astro y Supabase\./);
+      // Match the Answer-First text inside layout.tsx
+      const match = layoutContent.match(/Studio Coders es un estudio de ingeniería[\s\S]*?automáticas por WhatsApp\./);
       expect(match).not.toBeNull();
       
       if (match) {
@@ -79,7 +82,7 @@ describe("SEO, GEO & AEO Master Blindaje Suite", () => {
         const words = text.split(" ");
         expect(words.length).toBeGreaterThanOrEqual(134);
         expect(words.length).toBeLessThanOrEqual(167);
-        expect(words.length).toBe(154);
+        expect(words.length).toBe(153);
         expect(text.toLowerCase()).not.toContain("boutique");
         expect(text.toLowerCase()).not.toContain("fantasía");
         expect(text.toLowerCase()).not.toContain("fantasia");

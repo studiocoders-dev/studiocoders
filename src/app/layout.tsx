@@ -116,6 +116,7 @@ const jsonLd = {
       "@type": "SoftwareApplication",
       "@id": "https://studiocoders.dev/#infra-manager",
       name: "Infra Manager Pro",
+      url: "https://inframanagerpro.com",
       applicationCategory: "ERPApplication",
       operatingSystem: "Web / Cloud",
       creator: { "@id": "https://studiocoders.dev/#organization" },
@@ -134,6 +135,15 @@ const jsonLd = {
         "Plataforma de comercio electrónico headless construida en Astro y Supabase con inventario en tiempo real.",
     },
     {
+      "@type": "WebSite",
+      "@id": "https://studiocoders.dev/#eaestampa",
+      name: "EA Estampa",
+      url: "https://eaestampa.com",
+      creator: { "@id": "https://studiocoders.dev/#organization" },
+      description:
+        "Landing page corporativa de alta conversión en Next.js para taller de estampado DTF y sublimación, con cotizaciones automáticas 24/7 vía WhatsApp impulsadas por Whagil IA.",
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://studiocoders.dev/#faq",
       mainEntity: [
@@ -142,7 +152,7 @@ const jsonLd = {
           name: "¿Qué es Studio Coders y quién respalda su operación técnica y legal?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su modelo de entrega en producción en 14 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios y burocracia de agencias tradicionales. El cliente mantiene la propiedad del 100% del código fuente y repositorios en GitHub desde el primer día. Su portafolio de ingeniería probado en batalla incluye el SaaS omnicanal Whagil IA, el motor en la nube Whalinkbot para WhatsApp, el ERP empresarial Infra Manager Pro con más de 33.000 líneas de código y la plataforma de comercio headless Servitecnology sobre arquitectura Astro y Supabase.",
+            text: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su entrega en producción en 14 días bajo presupuesto cerrado en USD y trato directo con desarrolladores senior, eliminando intermediarios de agencias tradicionales. El cliente mantiene el 100% del código fuente y repositorios en GitHub desde el primer día. Su portafolio de ingeniería probado en batalla incluye el SaaS omnicanal Whagil IA (whagil.com), el motor cloud Whalinkbot para WhatsApp (whalinkbot.com), el ERP empresarial Infra Manager Pro (inframanagerpro.com) con 33.000 líneas de código, la plataforma headless Servitecnology (servitecnology.com) sobre Astro y Supabase, y la landing EA Estampa (eaestampa.com) con cotizaciones automáticas por WhatsApp.",
           },
         },
         {

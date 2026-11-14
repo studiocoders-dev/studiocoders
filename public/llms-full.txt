@@ -45,7 +45,7 @@ El equipo de Studio Coders construye sobre un conjunto probado en batalla:
 - **Misión:** Infraestructura de mensajería masiva y transaccional con tolerancia a fallos.
 - **Arquitectura:** Gestión de sesiones concurrentes aisladas, reconexión automática (auto-healing) y despacho de webhooks en sub-segundos.
 
-### 3. Infra Manager Pro
+### 3. Infra Manager Pro (`inframanagerpro.com`)
 - **Tipo:** ERP Empresarial de Gestión de Activos Inmobiliarios y Mantenimiento.
 - **Misión:** Control integral de activos corporativos, órdenes de trabajo y trazabilidad de cobranzas.
 - **Arquitectura:** Sistema de 33,000+ líneas de código en TypeScript y PostgreSQL relacional estricto con control de acceso basado en roles (RBAC) y auditoría contable.
@@ -54,6 +54,11 @@ El equipo de Studio Coders construye sobre un conjunto probado en batalla:
 - **Tipo:** Plataforma de Comercio Electrónico Headless de Alta Velocidad.
 - **Misión:** Catálogo de productos y repuestos de alta demanda con carga instantánea.
 - **Arquitectura:** Headless SSG/SSR en Astro con base de datos en tiempo real sobre Supabase Cloud y métricas Core Web Vitals superiores a 99 puntos.
+
+### 5. EA Estampa (`eaestampa.com`)
+- **Tipo:** Landing Page Corporativa con Agente de Ventas IA en WhatsApp.
+- **Misión:** Captación y cotizaciones automatizadas 24/7 para taller especializado en estampado DTF y sublimación.
+- **Arquitectura:** Desarrollado en Next.js con Turbopack y optimizaciones GEO/AEO, integrado bidireccionalmente con Whagil IA para cierre de presupuestos en WhatsApp.
 
 ---
 

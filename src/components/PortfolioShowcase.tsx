@@ -33,7 +33,7 @@ export function PortfolioShowcase() {
     {
       id: "infra-manager",
       name: "Infra Manager Pro",
-      url: "#",
+      url: "https://inframanagerpro.com",
       category: "ERP Empresarial · Activos & Finanzas",
       badge: "33,000 LOC",
       description:
@@ -95,9 +95,28 @@ export function PortfolioShowcase() {
                   </span>
                 </div>
 
-                <h3 className="mt-4 text-2xl font-bold tracking-tight text-[#edeff4] group-hover:text-white">
-                  {project.name}
-                </h3>
+                <div className="mt-4 flex items-center justify-between gap-2">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/link inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#edeff4] hover:text-[#818cf8] transition-colors"
+                  >
+                    <span>{project.name}</span>
+                    <svg
+                      className="h-4 w-4 text-[#818799] transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 group-hover/link:text-[#818cf8]"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </a>
+                </div>
 
                 <p className="mt-3 font-serif text-base leading-relaxed text-[#949aab]">
                   {project.description}
