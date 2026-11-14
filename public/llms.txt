@@ -5,7 +5,7 @@
 > **Tax ID (RUT):** 77.709.717-2  
 > **Headquarters:** Santiago, Chile  
 > **Official Website:** https://studiocoders.dev  
-> **Contact:** studiocoders.dev@gmail.com  
+> **Contact:** contacto@studiocoders.dev  
 > **Operating Currency:** USD (US Dollars) / Closed B2B Scope Contracts  
 
 Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado comercialmente por Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa.

@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Studio Coders | Tu software o Agente IA en producción en 14 días",
+  title: "studiocoders.dev - tu software en producción en dos semanas",
   description:
     "Estudio de ingeniería de software e Inteligencia Artificial en Santiago de Chile. Entregamos tu primera versión real en producción en 14 días. Trato directo con desarrolladores senior.",
   metadataBase: new URL("https://studiocoders.dev"),
@@ -38,17 +38,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Studio Coders | Tu software o Agente IA en producción en 14 días",
+    title: "studiocoders.dev - tu software en producción en dos semanas",
     description:
       "No un mockup ni una demo: una versión real, desplegada, que tú y tu equipo pueden abrir y usar el día catorce.",
     url: "https://studiocoders.dev",
-    siteName: "Studio Coders",
+    siteName: "studiocoders.dev",
     locale: "es_CL",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Studio Coders | Software y Agentes IA en 14 Días",
+    title: "studiocoders.dev - tu software en producción en dos semanas",
     description:
       "Tu primera versión en producción en dos semanas. Trato directo con desarrolladores senior y arquitectura ágil asistida por IA.",
   },
@@ -76,7 +76,7 @@ const jsonLd = {
       legalName: "Studio Coders Dev",
       taxID: "77.709.717-2",
       url: "https://studiocoders.dev",
-      email: "studiocoders.dev@gmail.com",
+      email: "contacto@studiocoders.dev",
       description:
         "Estudio de ingeniería de software e Inteligencia Artificial en Santiago de Chile. Entrega de software y agentes de IA en producción en 14 días.",
       address: {

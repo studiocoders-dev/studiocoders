@@ -86,6 +86,11 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(html).toContain("Facturación B2B en USD");
     });
 
+    it("displays the official corporate email and zero public gmail mentions", () => {
+      expect(html).toContain("contacto@studiocoders.dev");
+      expect(html).not.toContain("studiocoders.dev@gmail.com");
+    });
+
     it("strictly contains ZERO occurrences of the word boutique", () => {
       const lowerHtml = html.toLowerCase();
       expect(lowerHtml).not.toContain("boutique");
@@ -111,8 +116,7 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
 
   describe("SEO & AEO Metadata Verification", () => {
     it("defines valid OpenGraph and Twitter title and descriptions in layout", () => {
-      expect(metadata.title).toContain("Studio Coders");
-      expect(metadata.title).toContain("14 días");
+      expect(metadata.title).toBe("studiocoders.dev - tu software en producción en dos semanas");
       expect(metadata.description).toContain("Santiago de Chile");
       expect(metadata.description).toContain("desarrolladores senior");
     });

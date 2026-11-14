@@ -115,10 +115,10 @@ export function ContactForm() {
               <div className="flex items-center justify-center gap-2 pt-2 font-mono text-xs text-[#818799]">
                 <span>O escríbenos directamente a:</span>
                 <a
-                  href="mailto:studiocoders.dev@gmail.com"
+                  href="mailto:contacto@studiocoders.dev"
                   className="text-[#818cf8] hover:underline"
                 >
-                  studiocoders.dev@gmail.com
+                  contacto@studiocoders.dev
                 </a>
               </div>
             </form>

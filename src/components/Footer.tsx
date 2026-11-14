@@ -41,10 +41,10 @@ export function Footer() {
               GitHub
             </a>
             <a
-              href="mailto:studiocoders.dev@gmail.com"
+              href="mailto:contacto@studiocoders.dev"
               className="hover:text-[#edeff4] transition-colors"
             >
-              studiocoders.dev@gmail.com
+              contacto@studiocoders.dev
             </a>
           </div>
         </div>
