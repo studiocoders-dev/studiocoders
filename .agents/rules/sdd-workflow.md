@@ -8,7 +8,10 @@ trigger: model_decision
 ## 1. Principios Clave
 Este repositorio opera bajo el estándar **Spec-Driven Development (SDD)**. Está terminantemente prohibido realizar cambios directos en el código fuente (`src/`, `components/`, etc.) sin atravesar las 4 compuertas formales de desarrollo.
 
-## 2. Los 4 Hard Code-Gates Innegociables
+## 2. Los 4 Hard Code-Gates Innegociables (MANDATORIO OBLIGATORIO)
+
+> ⚠️ **REGLA DE ORO INQUEBRANTABLE:** Antes de tocar, modificar o escribir una sola línea de código en `src/`, `public/`, `tests/` o archivos de configuración, la IA tiene **TERMINANTEMENTE PROHIBIDO** actuar sin antes haber presentado la Spec y el Plan Técnico (o ajustar los existentes si la tarea es similar o incremental) y haber recibido la **aprobación humana explícita (Gate 3)**. Esta regla aplica para cualquier tarea, sin importar qué tan pequeña o de 'pulido' parezca.
+
 1. **Gate 1 (Spec Obligatoria - El "Qué"):**
    - Redactar o actualizar `.agents/specs/<feat>.md`.
    - Explica el problema de negocio/UX, la solución funcional, la sintaxis EARS y el checklist de **Definition of Done (DoD)**.
@@ -20,7 +23,7 @@ Este repositorio opera bajo el estándar **Spec-Driven Development (SDD)**. Est�
 
 3. **Gate 3 (Parada Humana Obligatoria):**
    - La IA tiene **TERMINANTEMENTE PROHIBIDO** escribir código en el mismo turno en que propone el Plan.
-   - **DEBE** detener su ejecución y esperar la aprobación explícita del usuario.
+   - **DEBE** detener su ejecución y esperar la aprobación explícita del usuario (`aprobado`).
 
 4. **Gate 4 (Testing Mandate & Verificación DoD):**
    - Ejecutar la suite de pruebas automatizadas (`npm test`) y typechecking (`npx tsc --noEmit`) con 0 errores.

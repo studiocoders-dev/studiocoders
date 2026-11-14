@@ -39,12 +39,14 @@ Antes de realizar cualquier propuesta o modificación, consulta las reglas del d
 
 ---
 
-## 🚦 Los 4 Hard Code-Gates Innegociables
+## 🚦 Los 4 Hard Code-Gates Innegociables (MANDATORIO OBLIGATORIO)
 
-1. **Gate 1 (Spec Obligatoria - El "Qué"):** Redactar `.agents/specs/<feat>.md` con EARS y Definition of Done (DoD). Sin código.
-2. **Gate 2 (Plan Técnico - El "Cómo"):** Redactar `.agents/plans/<feat>.md` detallando archivos a tocar y tests requeridos.
-3. **Gate 3 (Parada Humana Obligatoria):** Esperar la aprobación explícita del usuario antes de escribir código en `src/`.
-4. **Gate 4 (Testing Mandate):** Ejecutar `npm test` y typechecking con 0 errores antes de cerrar la tarea.
+> ⚠️ **REGLA DE ORO INQUEBRANTABLE:** Antes de tocar, modificar o escribir una sola línea de código en `src/`, `public/`, `tests/` o archivos de configuración, la IA tiene **TERMINANTEMENTE PROHIBIDO** actuar sin antes haber presentado la Spec y el Plan Técnico (o ajustar los existentes si la tarea es similar o incremental) y haber recibido la **aprobación humana explícita (Gate 3)**. Esta regla aplica para cualquier tarea, sin importar qué tan pequeña o trivial parezca.
+
+1. **Gate 1 (Spec Obligatoria - El "Qué"):** Redactar o ajustar `.agents/specs/<feat>.md` con EARS y Definition of Done (DoD). Sin código.
+2. **Gate 2 (Plan Técnico - El "Cómo"):** Redactar o ajustar `.agents/plans/<feat>.md` detallando archivos a tocar y tests requeridos.
+3. **Gate 3 (Parada Humana Obligatoria):** Esperar la aprobación explícita del usuario (`aprobado`) antes de escribir código. Prohibido codificar en el mismo turno del plan.
+4. **Gate 4 (Testing Mandate & Verificación DoD):** Ejecutar `npm test` y typechecking con 0 errores antes de cerrar la tarea.
 
 ---
 

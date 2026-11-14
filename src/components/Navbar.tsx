@@ -11,22 +11,27 @@ export function Navbar() {
           className="group flex items-center gap-2.5 text-sm font-semibold tracking-tight text-[#edeff4] transition-colors hover:text-white"
         >
           <div className="flex h-7 w-7 items-center justify-center rounded bg-[#1c1f28] border border-[#2e3340] text-[#818cf8] transition-transform group-hover:scale-105 group-hover:border-[#6366f1]/50">
-            {/* Geometric Constellation / Code Nodes */}
+            {/* The Code & AI Agent Core: < • > */}
             <svg
-              className="h-4 w-4"
+              className="h-3.5 w-3.5"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
             >
-              <circle cx="12" cy="4" r="2" />
-              <circle cx="4" cy="18" r="2" />
-              <circle cx="20" cy="18" r="2" />
-              <line x1="12" y1="6" x2="4" y2="16" />
-              <line x1="12" y1="6" x2="20" y2="16" />
-              <line x1="6" y1="18" x2="18" y2="18" />
+              <path
+                d="M8.5 7L3.5 12L8.5 17"
+                stroke="#949aab"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <circle cx="12" cy="12" r="2.2" fill="#818cf8" />
+              <path
+                d="M15.5 7L20.5 12L15.5 17"
+                stroke="#949aab"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </div>
           <span className="font-mono text-sm tracking-tight text-[#edeff4] group-hover:text-white">
