@@ -81,6 +81,8 @@ describe("SEO, GEO & AEO Master Blindaje Suite", () => {
         expect(words.length).toBeLessThanOrEqual(167);
         expect(words.length).toBe(154);
         expect(text.toLowerCase()).not.toContain("boutique");
+        expect(text.toLowerCase()).not.toContain("fantasía");
+        expect(text.toLowerCase()).not.toContain("fantasia");
       }
     });
   });

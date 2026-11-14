@@ -1,7 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { ServicesSection } from "@/components/ServicesSection";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { PortfolioShowcase } from "@/components/PortfolioShowcase";
+import { DelayCauses } from "@/components/DelayCauses";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { FAQ } from "@/components/FAQ";
 import { ContactForm } from "@/components/ContactForm";
@@ -13,8 +15,10 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <ServicesSection />
         <ProcessTimeline />
         <PortfolioShowcase />
+        <DelayCauses />
         <ComparisonTable />
         <FAQ />
         <ContactForm />

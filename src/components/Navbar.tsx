@@ -45,6 +45,12 @@ export function Navbar() {
           className="hidden items-center gap-7 text-xs font-mono tracking-wider uppercase text-[#949aab] md:flex"
         >
           <a
+            href="#servicios"
+            className="transition-colors hover:text-[#edeff4]"
+          >
+            Qué Construimos
+          </a>
+          <a
             href="#metodo"
             className="transition-colors hover:text-[#edeff4]"
           >

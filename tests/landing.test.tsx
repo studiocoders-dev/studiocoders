@@ -28,14 +28,39 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
     });
 
     it("renders the editorial subhead clarifying real production vs demo/mockup", () => {
-      expect(html).toContain("Olvídate de presupuestos inflados y agencias que tardan meses en maquetas.");
+      expect(html).toContain("Sin maquetas ni promesas en papel");
       expect(html).toContain(
-        "Construimos una plataforma funcional, desplegada con base de datos y pagos"
+        "Una versión real, desplegada con base de datos y pagos, que tú y tu equipo pueden abrir y usar el día catorce."
       );
+      expect(html).toContain("Después iteramos contigo cada semana.");
+      expect(html.toLowerCase()).not.toContain("sprint");
     });
 
     it("renders the primary CTA with prompt to tell project", () => {
       expect(html).toContain("Cotizar proyecto (Scope 20 min)");
+    });
+  });
+
+  describe("Services Section: Qué Construimos (5 Soluciones)", () => {
+    it("renders the section header and all 5 business solutions", () => {
+      expect(html).toContain("Qué Construimos");
+      expect(html).toContain("Cinco cosas, descritas por lo que resuelven.");
+      expect(html).toContain("Sitios web y plataformas que cargan al instante");
+      expect(html).toContain("Aplicaciones móviles para iOS y Android");
+      expect(html).toContain("Sistemas internos y software a medida");
+      expect(html).toContain("Integraciones entre herramientas que ya usas");
+      expect(html).toContain("Inteligencia Artificial aplicada a un proceso concreto");
+    });
+  });
+
+  describe("Before Hiring Anyone: Por qué los proyectos de software se atrasan", () => {
+    it("renders the section header and the 4 critical decision pitfalls", () => {
+      expect(html).toContain("Antes de Contratar a Nadie");
+      expect(html).toContain("Por qué los proyectos de software se atrasan.");
+      expect(html).toContain("Elegir la propuesta más barata");
+      expect(html).toContain("Pedir una cotización antes de que alguien entienda el proyecto");
+      expect(html).toContain("No ver nada funcionando hasta el final");
+      expect(html).toContain("Nunca conocer a quienes escriben el código");
     });
   });
 
@@ -81,7 +106,7 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
   });
 
   describe("Strict Brand & Positioning Guardrails (Unbreakable Rules)", () => {
-    it("displays official B2B operating entity with fantasy name and RUT", () => {
+    it("displays official B2B operating entity with commercial firm name and RUT", () => {
       expect(html).toContain("Studio Coders Dev · RUT: 77.709.717-2");
       expect(html).toContain("Facturación B2B en USD");
     });
@@ -94,6 +119,12 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
     it("strictly contains ZERO occurrences of the word boutique", () => {
       const lowerHtml = html.toLowerCase();
       expect(lowerHtml).not.toContain("boutique");
+    });
+
+    it("strictly contains ZERO occurrences of the phrase 'de fantasía'", () => {
+      const lowerHtml = html.toLowerCase();
+      expect(lowerHtml).not.toContain("de fantasía");
+      expect(lowerHtml).not.toContain("de fantasia");
     });
 
     it("strictly contains ZERO forbidden references to informal payment rails or local currencies", () => {

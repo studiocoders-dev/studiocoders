@@ -15,7 +15,7 @@ trigger: model_decision
 - **Diferenciador:** Trato directo con ingenieros seniors, aceleración asistida por IA bajo estricto code-review humano, sin capas de intermediarios ni project managers teóricos.
 
 ## 2. Entidad Legal & Facturación
-- **Razón Social Operativa:** Facturación comercial en Chile y facturas de exportación de servicios en USD operadas bajo el nombre de fantasía **Studio Coders Dev · RUT: 77.709.717-2** (Chile).
+- **Razón Social Operativa:** Facturación comercial en Chile y facturas de exportación de servicios en USD operadas bajo la firma comercial **Studio Coders Dev · RUT: 77.709.717-2** (Chile).
 - **Moneda Pública:** USD (Dólares americanos) o cotizaciones cerradas B2B.
 
 ## 3. Restricciones Estrictas de Contenido y Reputación (Regla de Oro)

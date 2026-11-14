@@ -24,9 +24,9 @@ export function Hero() {
 
           {/* Editorial Subtitle (Newsreader Serif) */}
           <p className="mt-8 font-serif text-xl text-[#949aab] sm:text-2xl md:text-[1.65rem] md:leading-relaxed max-w-3xl">
-            Olvídate de presupuestos inflados y agencias que tardan meses en maquetas.
-            Construimos una plataforma funcional, desplegada con base de datos y pagos,
-            lista para operar en tu primer sprint. Directo con ingenieros senior.
+            Sin maquetas ni promesas en papel. Una versión real, desplegada con
+            base de datos y pagos, que tú y tu equipo pueden abrir y usar el día
+            catorce. Después iteramos contigo cada semana.
           </p>
 
           {/* Actions */}
