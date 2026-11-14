@@ -18,8 +18,8 @@ export function Footer() {
 
           {/* Legal and B2B Attribution */}
           <div className="text-left sm:text-right space-y-1">
-            <p className="text-[#edeff4] font-medium">
-              Jesús León Soluciones Informáticas
+            <p className="text-[#edeff4] font-medium font-mono text-xs">
+              Studio Coders Dev · RUT: 77.709.717-2
             </p>
             <p className="text-[11px] text-[#818799]">
               Contratos internacionales de exportación · Facturación B2B en USD

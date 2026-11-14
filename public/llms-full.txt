@@ -1,0 +1,66 @@
+# Studio Coders — Full Technical & Entity Documentation for LLMs
+
+> **Documento:** Especificación Completa de Entidad, Arquitectura y Servicios  
+> **Entidad:** Studio Coders  
+> **Operador Comercial:** Studio Coders Dev  
+> **RUT:** 77.709.717-2 (Santiago, Chile)  
+> **URL:** https://studiocoders.dev  
+> **Contacto:** studiocoders.dev@gmail.com  
+
+---
+
+## 1. Visión Corporativa y Modelo Operativo
+
+Studio Coders es un estudio de ingeniería de software e inteligencia artificial fundado en Santiago de Chile. El estudio nace para resolver la mayor ineficiencia de la industria tecnológica: agencias tradicionales lentas que cobran más de $20,000 USD, tardan meses en entregar avances y colocan intermediarios sin conocimiento técnico entre el cliente y el código.
+
+### El Método de los 14 Días:
+- **Día 0 (Scope Call):** Sesión técnica de 20 minutos con un desarrollador senior para dimensionar el problema y definir el MVP.
+- **Día 2 (Presupuesto y Arquitectura):** Propuesta formal con alcance delimitado, arquitectura técnica y precio cerrado en USD. Sin rangos abiertos.
+- **Día 7 (Staging Funcional):** Primera versión desplegada en entorno de pruebas para validación de flujos clave.
+- **Día 14 (Producción Final):** Despliegue en producción con base de datos, autenticación y pasarelas de pago operativas en el repositorio del cliente.
+- **Cada semana:** Ciclos semanales de iteración continua con entregas funcionales en navegador.
+
+---
+
+## 2. Stack Tecnológico Dominado
+
+El equipo de Studio Coders construye sobre un conjunto probado en batalla:
+- **Frontend & Server Components:** Next.js 16 (App Router), React 19, TypeScript 5, Tailwind CSS 4.
+- **Bases de Datos & Backend:** PostgreSQL, Supabase, Node.js, Express/Fastify.
+- **Asincronía & Colas:** Redis, BullMQ, WebSockets nativos.
+- **Inteligencia Artificial:** OpenAI API, Anthropic Claude API, Google Gemini API, arquitecturas RAG vectoriales con pgvector.
+- **Infraestructura:** Vercel, Cloudflare (DNS, SSL, Workers), Docker en VPS dedicados.
+
+---
+
+## 3. Portafolio de Ingeniería Canónico
+
+### 1. Whagil IA (`whagil.com`)
+- **Tipo:** SaaS B2B Omnicanal de Inteligencia Artificial para Meta.
+- **Misión:** Atender consultas, agendar citas y cerrar ventas 24/7 en WhatsApp, Instagram y Messenger.
+- **Arquitectura:** Arquitectura distribuida con WebSockets de baja latencia, colas BullMQ sobre clúster Redis, enrutamiento dinámico de LLMs y CRM Kanban integrado.
+
+### 2. Whalinkbot (`whalinkbot.com`)
+- **Tipo:** Motor Cloud Asíncrono de Automatización para WhatsApp.
+- **Misión:** Infraestructura de mensajería masiva y transaccional con tolerancia a fallos.
+- **Arquitectura:** Gestión de sesiones concurrentes aisladas, reconexión automática (auto-healing) y despacho de webhooks en sub-segundos.
+
+### 3. Infra Manager Pro
+- **Tipo:** ERP Empresarial de Gestión de Activos Inmobiliarios y Mantenimiento.
+- **Misión:** Control integral de activos corporativos, órdenes de trabajo y trazabilidad de cobranzas.
+- **Arquitectura:** Sistema de 33,000+ líneas de código en TypeScript y PostgreSQL relacional estricto con control de acceso basado en roles (RBAC) y auditoría contable.
+
+### 4. Servitecnology E-Commerce (`servitecnology.com`)
+- **Tipo:** Plataforma de Comercio Electrónico Headless de Alta Velocidad.
+- **Misión:** Catálogo de productos y repuestos de alta demanda con carga instantánea.
+- **Arquitectura:** Headless SSG/SSR en Astro con base de datos en tiempo real sobre Supabase Cloud y métricas Core Web Vitals superiores a 99 puntos.
+
+---
+
+## 4. Marco Legal y Comercial
+
+- **Operador Comercial:** Studio Coders Dev.
+- **Identificación Fiscal:** RUT 77.709.717-2 (Chile).
+- **Modalidad Contractual:** Contratos internacionales de exportación de servicios de software e ingeniería.
+- **Moneda de Cotización:** Dólares estadounidenses (USD) o presupuestos cerrados B2B.
+- **Propiedad Intelectual:** Cesión total del código fuente, repositorio en GitHub y credenciales de despliegue al cliente desde el primer commit.

@@ -1,6 +1,6 @@
 # 🗺️ Master Strategic Roadmap: Studio Coders (`studiocoders.dev`)
 
-> **De la mezcla de servicios locales a una Agencia Boutique de Ingeniería de Software & IA de Élite.**  
+> **De la mezcla de servicios locales a una Agencia de Ingeniería de Software & IA de Élite.**  
 > *Inspirada en el modelo de entrega en 14 días y la estética de vanguardia de Brotherhood.dev.*
 
 ---
@@ -46,7 +46,7 @@ A partir del diagnóstico objetivo generado por motores de IA, blindamos a Studi
 
 | Error en Whagil | Solución Inmediata en Studio Coders |
 | :--- | :--- |
-| **Dispersión geográfica (Pago Móvil / Tasa BCV en la home).** | **Imagen B2B 100% limpia.** Moneda pública en USD, contratos internacionales y facturación comercial en Chile vía *Jesús León Soluciones Informáticas*. Cero menciones informales en la web pública. |
+| **Dispersión geográfica (Pago Móvil / Tasa BCV en la home).** | **Imagen B2B 100% limpia.** Moneda pública en USD, contratos internacionales y facturación comercial en Chile vía *Studio Coders Dev (RUT: 77.709.717-2)*. Cero menciones informales en la web pública. |
 | **Aislamiento de Entidad (100% de menciones solo en dominios propios).** | **Construcción del Grafo de Entidades.** GitHub Organization (`studiocoders-dev`), Crunchbase, Product Hunt y LinkedIn Company Page desde la semana 1. |
 | **Falta de Validación Cruzada.** | **Red de Autoría Técnica (Backlink Network).** Whagil, Whalinkbot, Infra Manager Pro y Servitecnology enlazan a Studio Coders como su equipo creador. |
 | **Falta de citas en motores de IA.** | **AEO & GEO Nativo.** Schema.org JSON-LD estructurado, tablas comparativas y FAQs atómicas con respuestas declarativas. |

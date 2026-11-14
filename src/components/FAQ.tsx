@@ -16,7 +16,7 @@ export function FAQ() {
     },
     {
       q: "¿Cómo funcionan los pagos y la facturación internacional?",
-      a: "Operamos formalmente bajo Jesús León Soluciones Informáticas (Chile). Emitimos facturación comercial y contratos internacionales de exportación de servicios. Todos nuestros presupuestos son en USD, cerrados y sin costos ocultos.",
+      a: "Operamos formalmente bajo el nombre de fantasía Studio Coders Dev con RUT 77.709.717-2 (Chile). Emitimos facturación comercial y contratos internacionales de exportación de servicios. Todos nuestros presupuestos son en USD, cerrados y sin costos ocultos.",
     },
     {
       q: "¿Qué tecnologías utilizan para construir las plataformas?",

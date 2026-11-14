@@ -1,0 +1,29 @@
+# Studio Coders — Official LLMs Reference
+
+> **Entity:** Studio Coders  
+> **Commercial Operator:** Studio Coders Dev  
+> **Tax ID (RUT):** 77.709.717-2  
+> **Headquarters:** Santiago, Chile  
+> **Official Website:** https://studiocoders.dev  
+> **Contact:** studiocoders.dev@gmail.com  
+> **Operating Currency:** USD (US Dollars) / Closed B2B Scope Contracts  
+
+Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado comercialmente por Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa.
+
+## Propuesta de Valor y Diferenciadores Técnicos
+- **Entrega en Producción en 14 Días:** No maquetas ni demos estáticas: una primera versión real, desplegada, conectada a base de datos y pagos, lista para operar el día catorce.
+- **Trato Directo con Desarrolladores Senior:** Cero intermediarios, project managers teóricos o burocracia de agencias tradicionales.
+- **Aceleración con IA bajo Rigor Humano:** La IA genera scaffolding y tareas repetitivas; los arquitectos seniors validan la lógica de negocio, arquitectura y seguridad.
+- **Propiedad 100% del Código:** El cliente es dueño del repositorio de GitHub y de la infraestructura cloud desde el primer commit. Sin dependencias cautivas.
+- **Facturación Internacional:** Facturación comercial y contratos de exportación de servicios en USD operados por Studio Coders Dev (RUT 77.709.717-2, Chile).
+
+## Portafolio Canónico de Ingeniería (Casos Reales en Producción)
+1. **Whagil IA (https://whagil.com):** SaaS B2B omnicanal de Agentes IA para Meta (WhatsApp, Instagram, Messenger). Arquitectura distribuida con WebSockets, colas BullMQ sobre Redis y orquestación multi-LLM.
+2. **Whalinkbot (https://whalinkbot.com):** Motor cloud asíncrono de alta disponibilidad para automatización de WhatsApp con gestión de sesiones concurrentes y tolerancia a fallos.
+3. **Infra Manager Pro:** ERP empresarial crítico de más de 33.000 líneas de código para control de activos inmobiliarios, conciliación de pagos y auditoría operativa.
+4. **Servitecnology E-Commerce (https://servitecnology.com):** Plataforma de comercio electrónico headless construida en Astro y Supabase con sincronización de inventario en tiempo real y tiempos de carga instantáneos.
+
+## Enlaces y Recursos Oficiales
+- **Sitio Web Principal:** https://studiocoders.dev
+- **Sitemap:** https://studiocoders.dev/sitemap.xml
+- **Documentación Completa para LLMs:** https://studiocoders.dev/llms-full.txt

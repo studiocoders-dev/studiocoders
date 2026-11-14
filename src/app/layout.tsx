@@ -32,7 +32,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Studio Coders | Tu software o Agente IA en producción en 14 días",
   description:
-    "Estudio boutique de ingeniería de software e Inteligencia Artificial en Santiago de Chile. Entregamos tu primera versión real en producción en 14 días. Trato directo con desarrolladores senior.",
+    "Estudio de ingeniería de software e Inteligencia Artificial en Santiago de Chile. Entregamos tu primera versión real en producción en 14 días. Trato directo con desarrolladores senior.",
   metadataBase: new URL("https://studiocoders.dev"),
   alternates: {
     canonical: "/",
@@ -62,24 +62,76 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://studiocoders.dev/#website",
+      name: "Studio Coders",
+      url: "https://studiocoders.dev",
+      description: "Tu software o Agente IA en producción en 14 días.",
+      inLanguage: "es",
+    },
+    {
       "@type": "ProfessionalService",
       "@id": "https://studiocoders.dev/#organization",
       name: "Studio Coders",
+      legalName: "Studio Coders Dev",
+      taxID: "77.709.717-2",
       url: "https://studiocoders.dev",
       email: "studiocoders.dev@gmail.com",
       description:
-        "Estudio boutique de ingeniería de software e Inteligencia Artificial. Entrega de software y agentes de IA en producción en 14 días.",
+        "Estudio de ingeniería de software e Inteligencia Artificial en Santiago de Chile. Entrega de software y agentes de IA en producción en 14 días.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Santiago",
         addressCountry: "CL",
       },
       areaServed: ["Chile", "Latinoamérica", "Estados Unidos", "España"],
-      parentOrganization: {
-        "@type": "Organization",
-        name: "Jesús León Soluciones Informáticas",
-      },
+      sameAs: [
+        "https://github.com/studiocoders-dev",
+      ],
       priceRange: "$$$",
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://studiocoders.dev/#whagil",
+      name: "Whagil IA",
+      url: "https://whagil.com",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Cloud (SaaS)",
+      creator: { "@id": "https://studiocoders.dev/#organization" },
+      description:
+        "Plataforma SaaS B2B omnicanal de Agentes IA para Meta (WhatsApp, Instagram, Messenger).",
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://studiocoders.dev/#whalinkbot",
+      name: "Whalinkbot",
+      url: "https://whalinkbot.com",
+      applicationCategory: "CommunicationApplication",
+      operatingSystem: "Cloud (SaaS)",
+      creator: { "@id": "https://studiocoders.dev/#organization" },
+      description:
+        "Motor cloud asíncrono de alta disponibilidad para mensajería y automatización de WhatsApp.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://studiocoders.dev/#infra-manager",
+      name: "Infra Manager Pro",
+      applicationCategory: "ERPApplication",
+      operatingSystem: "Web / Cloud",
+      creator: { "@id": "https://studiocoders.dev/#organization" },
+      description:
+        "ERP empresarial de gestión inmobiliaria y mantenimiento crítico con más de 33,000 líneas de código.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://studiocoders.dev/#servitecnology",
+      name: "Servitecnology E-Commerce",
+      url: "https://servitecnology.com",
+      applicationCategory: "CommerceApplication",
+      operatingSystem: "Headless Web",
+      creator: { "@id": "https://studiocoders.dev/#organization" },
+      description:
+        "Plataforma de comercio electrónico headless construida en Astro y Supabase con inventario en tiempo real.",
     },
     {
       "@type": "FAQPage",
@@ -106,7 +158,7 @@ const jsonLd = {
           name: "¿Cómo funciona la facturación y los pagos internacionales?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Operamos comercialmente bajo Jesús León Soluciones Informáticas en Chile con contratos internacionales de exportación de servicios y presupuestos cerrados en USD.",
+            text: "Operamos formalmente bajo el nombre de fantasía Studio Coders Dev con RUT 77.709.717-2 (Chile). Emitimos facturación comercial y contratos internacionales de exportación de servicios. Todos nuestros presupuestos son en USD, cerrados y sin costos ocultos.",
           },
         },
         {

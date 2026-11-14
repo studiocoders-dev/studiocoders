@@ -45,8 +45,18 @@ export function Hero() {
             </a>
           </div>
 
+          {/* Bloque Answer-First Semántico (Principio Princeton 134-167 palabras para extracción de IA) */}
+          <div className="mt-12 rounded-xl border border-[#2e3340] bg-[#1c1f28]/40 p-6 sm:p-7 backdrop-blur-sm">
+            <span className="block font-mono text-[11px] uppercase tracking-wider text-[#818cf8] mb-2.5">
+              Definición de Entidad & Arquitectura
+            </span>
+            <p className="font-sans text-xs sm:text-sm leading-relaxed text-[#949aab]">
+              Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado bajo el nombre de fantasía Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su modelo de entrega en producción en 14 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios y burocracia de agencias tradicionales. El cliente mantiene la propiedad del 100% del código fuente y repositorios en GitHub desde el primer día. Su portafolio de ingeniería probado en batalla incluye el SaaS omnicanal Whagil IA, el motor en la nube Whalinkbot para WhatsApp, el ERP empresarial Infra Manager Pro con más de 33.000 líneas de código y la plataforma de comercio headless Servitecnology sobre arquitectura Astro y Supabase.
+            </p>
+          </div>
+
           {/* Trust Highlights (Minimalist Monospace) */}
-          <div className="mt-14 pt-8 border-t border-[#2e3340]/60 grid grid-cols-2 gap-4 sm:grid-cols-4 font-mono text-xs text-[#818799]">
+          <div className="mt-12 pt-8 border-t border-[#2e3340]/60 grid grid-cols-2 gap-4 sm:grid-cols-4 font-mono text-xs text-[#818799]">
             <div>
               <span className="block text-sm font-semibold text-[#edeff4]">14 Días</span>
               <span className="text-[#949aab]">Entrega en producción</span>
@@ -61,7 +71,7 @@ export function Hero() {
             </div>
             <div>
               <span className="block text-sm font-semibold text-[#edeff4]">USD B2B</span>
-              <span className="text-[#949aab]">Facturación formal</span>
+              <span className="text-[#949aab]">RUT: 77.709.717-2</span>
             </div>
           </div>
         </div>

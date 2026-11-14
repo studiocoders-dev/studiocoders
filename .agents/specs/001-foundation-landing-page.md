@@ -16,7 +16,7 @@ Los fundadores, gerentes y tomadores de decisiones B2B enfrentan una fricción r
 ---
 
 ## 2. Solución Funcional y Arquitectura de Pantallas
-Una Single Page Application (SPA) de estética boutique minimalista inspirada directamente en Brotherhood.dev:
+Una Single Page Application (SPA) de estética minimalista inspirada directamente en Brotherhood.dev:
 - **Línea Visual:** Fondo Dark Graphite (`#14161c`), tarjetas elevadas (`#1c1f28`), líneas divisorias sutiles (`#2e3340`) y acento púrpura eléctrico (`#6366f1` / `#818cf8` con wash `rgba(99, 102, 241, 0.12)`) sustituyendo el azul tradicional.
 - **Trío Tipográfico:**
   - **Archivo:** Headings limpios y contundentes con `tracking-tight`.
@@ -46,7 +46,7 @@ Estructurada en 7 secciones estratégicas:
 6. **FAQ Atómica:** 6 preguntas clave con respuestas directas sobre propiedad del código, soporte post-lanzamiento, stack tecnológico y facturación internacional.
 7. **Footer Institucional:**
    - Enlace de contacto (`studiocoders.dev@gmail.com`).
-   - Mención legal: *"Operado por Jesús León Soluciones Informáticas (Chile) · Contratos de exportación y facturación B2B"*.
+   - Mención legal: *"Operado por Studio Coders Dev · RUT: 77.709.717-2 (Chile) · Contratos de exportación y facturación B2B"*.
 
 ---
 

@@ -81,9 +81,14 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
   });
 
   describe("Strict Brand & Positioning Guardrails (Unbreakable Rules)", () => {
-    it("displays official B2B operating entity and USD billing", () => {
-      expect(html).toContain("Jesús León Soluciones Informáticas");
+    it("displays official B2B operating entity with fantasy name and RUT", () => {
+      expect(html).toContain("Studio Coders Dev · RUT: 77.709.717-2");
       expect(html).toContain("Facturación B2B en USD");
+    });
+
+    it("strictly contains ZERO occurrences of the word boutique", () => {
+      const lowerHtml = html.toLowerCase();
+      expect(lowerHtml).not.toContain("boutique");
     });
 
     it("strictly contains ZERO forbidden references to informal payment rails or local currencies", () => {
