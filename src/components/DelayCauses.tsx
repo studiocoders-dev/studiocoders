@@ -3,24 +3,24 @@ import React from "react";
 export function DelayCauses() {
   const causes = [
     {
-      title: "Elegir la propuesta más barata",
+      title: "Priorizar el presupuesto más bajo",
       description:
-        "El precio más bajo suele comprar la menor experiencia, y la diferencia vuelve convertida en rehacer trabajo. La pagas igual. La segunda vez, sin presupuesto para ella.",
+        "La tarifa más económica suele financiar perfiles junior o soluciones improvisadas. El ahorro aparente desaparece en cuanto hay que reescribir la base de datos o corregir arquitectura, pagando dos veces por el mismo sistema.",
     },
     {
-      title: "Pedir una cotización antes de que alguien entienda el proyecto",
+      title: "Fijar un precio cerrado sin dimensionar el alcance técnico",
       description:
-        "Un número calculado antes de que exista el alcance es una adivinanza bien vestida. Se corrige apenas aparece la realidad, y cada corrección es una negociación que nadie tenía planeada.",
+        "Presupuestar a ciegas es apostar contra la realidad. Cuando surgen los requerimientos verdaderos, el presupuesto inicial revienta y cada ajuste se convierte en una fricción contractual que paraliza el avance.",
     },
     {
-      title: "No ver nada funcionando hasta el final",
+      title: "Aceptar meses de desarrollo a oscuras sin despliegues reales",
       description:
-        "Si la primera versión usable llega en el mes seis, el mes seis es cuando te enteras de que se construyó sobre un supuesto equivocado. Cada semana sin nada desplegado es una semana de suposiciones que nadie verificó.",
+        "Esperar seis meses para probar la primera versión es descubrir demasiado tarde que el sistema se programó sobre supuestos falsos. Cada semana sin software vivo en producción es tiempo acumulado de riesgo no validado.",
     },
     {
-      title: "Nunca conocer a quienes escriben el código",
+      title: "Poner intermediarios entre tu visión y los desarrolladores",
       description:
-        "Un ejecutivo de cuentas toma el requerimiento, un jefe de proyecto lo reescribe, y un equipo que no conoces construye a partir de esa reescritura. Cada capa es un lugar más donde el requerimiento se desvía.",
+        "Cuando un vendedor promete, un gestor interpreta y programadores remotos intentan descifrar la minuta, el requerimiento original se desvanece. En software, cada capa de intermediación es una distorsión garantizada.",
     },
   ];
 
@@ -30,14 +30,15 @@ export function DelayCauses() {
         {/* Section Header */}
         <div className="max-w-3xl">
           <span className="font-mono text-xs uppercase tracking-widest text-[#818cf8]">
-            Antes de Contratar a Nadie
+            Diagnóstico Técnico
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#edeff4] sm:text-5xl">
-            Por qué los proyectos de software se atrasan.
+            Cuatro decisiones que descarrilan un proyecto de software.
           </h2>
           <p className="mt-5 font-serif text-lg leading-relaxed text-[#949aab] sm:text-xl">
-            Rara vez porque la ingeniería sea difícil. Casi siempre por cuatro
-            decisiones que se toman antes de que exista una línea de código.
+            Casi ningún retraso se debe a la complejidad del código. La mayoría
+            nace de compromisos apresurados y vicios de gestión asumidos antes de
+            abrir el editor.
           </p>
         </div>
 

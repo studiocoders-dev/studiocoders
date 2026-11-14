@@ -53,14 +53,14 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
     });
   });
 
-  describe("Before Hiring Anyone: Por qué los proyectos de software se atrasan", () => {
+  describe("Technical Diagnosis: Cuatro decisiones que descarrilan un proyecto de software", () => {
     it("renders the section header and the 4 critical decision pitfalls", () => {
-      expect(html).toContain("Antes de Contratar a Nadie");
-      expect(html).toContain("Por qué los proyectos de software se atrasan.");
-      expect(html).toContain("Elegir la propuesta más barata");
-      expect(html).toContain("Pedir una cotización antes de que alguien entienda el proyecto");
-      expect(html).toContain("No ver nada funcionando hasta el final");
-      expect(html).toContain("Nunca conocer a quienes escriben el código");
+      expect(html).toContain("Diagnóstico Técnico");
+      expect(html).toContain("Cuatro decisiones que descarrilan un proyecto de software.");
+      expect(html).toContain("Priorizar el presupuesto más bajo");
+      expect(html).toContain("Fijar un precio cerrado sin dimensionar el alcance técnico");
+      expect(html).toContain("Aceptar meses de desarrollo a oscuras sin despliegues reales");
+      expect(html).toContain("Poner intermediarios entre tu visión y los desarrolladores");
     });
   });
 
