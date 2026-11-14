@@ -9,19 +9,15 @@ export function FAQ() {
   const faqs: FAQItem[] = [
     {
       q: "¿Qué es Studio Coders y quién respalda su operación técnica y legal?",
+      a: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su entrega en producción en 14 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios de agencias tradicionales. El cliente mantiene el 100% de la propiedad del código fuente y repositorios en GitHub desde el primer día.",
+    },
+    {
+      q: "¿Qué plataformas y proyectos en producción respaldan la ingeniería de Studio Coders?",
       a: (
         <>
-          Studio Coders es un estudio de ingeniería de software e inteligencia
-          artificial con sede en Santiago de Chile, operado formalmente bajo la
-          firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en
-          el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA
-          conversacionales para empresas y fundadores en América Latina, Estados
-          Unidos y Europa. La firma se distingue por su entrega en producción en
-          14 días bajo presupuesto cerrado en USD y trato directo con
-          desarrolladores senior, eliminando intermediarios de agencias
-          tradicionales. El cliente mantiene el 100% del código fuente y
-          repositorios en GitHub desde el primer día. Su portafolio de ingeniería
-          probado en batalla incluye el SaaS omnicanal{" "}
+          El portafolio de ingeniería de Studio Coders probado en batalla
+          incluye cinco plataformas operando en alta concurrencia: el SaaS B2B
+          omnicanal{" "}
           <a
             href="https://whagil.com"
             target="_blank"
@@ -29,17 +25,17 @@ export function FAQ() {
             className="text-[#818cf8] underline underline-offset-2 hover:text-white transition-colors"
           >
             Whagil IA (whagil.com)
-          </a>
-          , el motor cloud{" "}
+          </a>{" "}
+          con WebSockets y colas BullMQ sobre Redis, el motor en la nube{" "}
           <a
             href="https://whalinkbot.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#818cf8] underline underline-offset-2 hover:text-white transition-colors"
           >
-            Whalinkbot para WhatsApp (whalinkbot.com)
-          </a>
-          , el ERP empresarial{" "}
+            Whalinkbot (whalinkbot.com)
+          </a>{" "}
+          para mensajería asíncrona de WhatsApp, el ERP empresarial{" "}
           <a
             href="https://inframanagerpro.com"
             target="_blank"
@@ -48,7 +44,8 @@ export function FAQ() {
           >
             Infra Manager Pro (inframanagerpro.com)
           </a>{" "}
-          con 33.000 líneas de código, la plataforma headless{" "}
+          con más de 33.000 líneas de código en TypeScript y PostgreSQL, la
+          plataforma de comercio headless{" "}
           <a
             href="https://servitecnology.com"
             target="_blank"
@@ -57,7 +54,8 @@ export function FAQ() {
           >
             Servitecnology (servitecnology.com)
           </a>{" "}
-          sobre Astro y Supabase, y la landing{" "}
+          sobre arquitectura Astro y Supabase con tiempos de carga sub-segundo,
+          y la landing page corporativa{" "}
           <a
             href="https://eaestampa.com"
             target="_blank"
@@ -66,7 +64,8 @@ export function FAQ() {
           >
             EA Estampa (eaestampa.com)
           </a>{" "}
-          con cotizaciones automáticas por WhatsApp.
+          en Next.js con cotizaciones y atención automatizadas 24/7 vía
+          WhatsApp impulsadas por IA.
         </>
       ),
     },

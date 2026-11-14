@@ -127,6 +127,12 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(html).toContain("Astro Headless SSG/SSR");
       expect(html).toContain("Supabase Realtime Cloud");
     });
+
+    it("showcases EA Estampa with Next.js + WhatsApp AI automation", () => {
+      expect(html).toContain("EA Estampa");
+      expect(html).toContain("eaestampa.com");
+      expect(html).toContain("NEXT.JS + WHATSAPP AI");
+    });
   });
 
   describe("Strict Brand & Positioning Guardrails (Unbreakable Rules)", () => {
@@ -176,16 +182,17 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(metadata.description).toContain("desarrolladores senior");
     });
 
-    it("includes the Answer-First entity definition in the collapsible FAQ accordion with canonical links", () => {
+    it("includes both atomic FAQ questions for entity and canonical portfolio", () => {
       expect(html).toContain("¿Qué es Studio Coders y quién respalda su operación técnica y legal?");
       expect(html).toContain("Studio Coders Dev con RUT 77.709.717-2");
+      expect(html).toContain("¿Qué plataformas y proyectos en producción respaldan la ingeniería de Studio Coders?");
       expect(html).toContain("https://whagil.com");
       expect(html).toContain("https://whalinkbot.com");
       expect(html).toContain("https://inframanagerpro.com");
       expect(html).toContain("https://servitecnology.com");
       expect(html).toContain("https://eaestampa.com");
       expect(html).toContain("EA Estampa (eaestampa.com)");
-      expect(html).toContain("cotizaciones automáticas por WhatsApp");
+      expect(html).toContain("cotizaciones y atención automatizadas 24/7 vía WhatsApp impulsadas por IA");
     });
   });
 });

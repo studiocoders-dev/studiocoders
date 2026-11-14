@@ -152,7 +152,15 @@ const jsonLd = {
           name: "¿Qué es Studio Coders y quién respalda su operación técnica y legal?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su entrega en producción en 14 días bajo presupuesto cerrado en USD y trato directo con desarrolladores senior, eliminando intermediarios de agencias tradicionales. El cliente mantiene el 100% del código fuente y repositorios en GitHub desde el primer día. Su portafolio de ingeniería probado en batalla incluye el SaaS omnicanal Whagil IA (whagil.com), el motor cloud Whalinkbot para WhatsApp (whalinkbot.com), el ERP empresarial Infra Manager Pro (inframanagerpro.com) con 33.000 líneas de código, la plataforma headless Servitecnology (servitecnology.com) sobre Astro y Supabase, y la landing EA Estampa (eaestampa.com) con cotizaciones automáticas por WhatsApp.",
+            text: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su entrega en producción en 14 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios de agencias tradicionales. El cliente mantiene el 100% de la propiedad del código fuente y repositorios en GitHub desde el primer día.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué plataformas y proyectos en producción respaldan la ingeniería de Studio Coders?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "El portafolio de ingeniería de Studio Coders probado en batalla incluye cinco plataformas operando en alta concurrencia: el SaaS B2B omnicanal Whagil IA (whagil.com) con WebSockets y colas BullMQ sobre Redis, el motor en la nube Whalinkbot (whalinkbot.com) para mensajería asíncrona de WhatsApp, el ERP empresarial Infra Manager Pro (inframanagerpro.com) con más de 33.000 líneas de código en TypeScript y PostgreSQL, la plataforma de comercio headless Servitecnology (servitecnology.com) sobre arquitectura Astro y Supabase con tiempos de carga sub-segundo, y la landing page corporativa EA Estampa (eaestampa.com) en Next.js con cotizaciones y atención automatizadas 24/7 vía WhatsApp impulsadas por IA.",
           },
         },
         {

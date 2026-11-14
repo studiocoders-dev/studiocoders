@@ -68,24 +68,41 @@ describe("SEO, GEO & AEO Master Blindaje Suite", () => {
     });
   });
 
-  describe("Answer-First Princeton / Georgia Tech Standard (134-167 words)", () => {
-    it("extracts the Answer-First text from layout JSON-LD and FAQ.tsx and verifies strict word count (153 words)", () => {
+  describe("Answer-First Atomic FAQ Standards for AEO/GEO", () => {
+    it("validates Question 1 (Entity & Legal) word count (105 words) and strict guardrails", () => {
       const layoutPath = path.resolve(process.cwd(), "src/app/layout.tsx");
       const layoutContent = fs.readFileSync(layoutPath, "utf-8");
       
-      // Match the Answer-First text inside layout.tsx
-      const match = layoutContent.match(/Studio Coders es un estudio de ingeniería[\s\S]*?automáticas por WhatsApp\./);
-      expect(match).not.toBeNull();
+      const matchQ1 = layoutContent.match(/Studio Coders es un estudio de ingeniería[\s\S]*?desde el primer día\./);
+      expect(matchQ1).not.toBeNull();
       
-      if (match) {
-        const text = match[0].replace(/\s+/g, " ").trim();
+      if (matchQ1) {
+        const text = matchQ1[0].replace(/\s+/g, " ").trim();
         const words = text.split(" ");
-        expect(words.length).toBeGreaterThanOrEqual(134);
-        expect(words.length).toBeLessThanOrEqual(167);
-        expect(words.length).toBe(153);
+        expect(words.length).toBe(105);
         expect(text.toLowerCase()).not.toContain("boutique");
         expect(text.toLowerCase()).not.toContain("fantasía");
         expect(text.toLowerCase()).not.toContain("fantasia");
+      }
+    });
+
+    it("validates Question 2 (Canonical Portfolio & Domains) word count (99 words) and canonical links", () => {
+      const layoutPath = path.resolve(process.cwd(), "src/app/layout.tsx");
+      const layoutContent = fs.readFileSync(layoutPath, "utf-8");
+      
+      const matchQ2 = layoutContent.match(/El portafolio de ingeniería de Studio Coders[\s\S]*?impulsadas por IA\./);
+      expect(matchQ2).not.toBeNull();
+      
+      if (matchQ2) {
+        const text = matchQ2[0].replace(/\s+/g, " ").trim();
+        const words = text.split(" ");
+        expect(words.length).toBe(99);
+        expect(text).toContain("whagil.com");
+        expect(text).toContain("whalinkbot.com");
+        expect(text).toContain("inframanagerpro.com");
+        expect(text).toContain("servitecnology.com");
+        expect(text).toContain("eaestampa.com");
+        expect(text.toLowerCase()).not.toContain("boutique");
       }
     });
   });
