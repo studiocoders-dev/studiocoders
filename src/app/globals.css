@@ -161,13 +161,10 @@ html[data-motion-ready="true"] .sc-card-flow[data-vstate="active"][data-vfocus="
 
 /* 5. Viewport Entry, Active & Exit Choreography (Cross-browser via data-vstate) */
 html[data-motion-ready="true"] :is(.sc-section-flow, .sc-card-flow, .sc-row-flow, .sc-hero-exit) {
-  will-change: transform, opacity, filter;
+  will-change: transform, opacity;
   transition:
     opacity 0.62s var(--ease-out-expo),
-    transform 0.62s var(--ease-out-expo),
-    filter 0.62s var(--ease-out-expo),
-    background-color 0.28s var(--ease-out-expo),
-    border-color 0.28s var(--ease-out-expo);
+    transform 0.62s var(--ease-out-expo);
 }
 
 html[data-motion-ready="true"] :is(.sc-card-flow, .sc-row-flow)[data-vstate="active"] {
@@ -178,51 +175,43 @@ html[data-motion-ready="true"] :is(.sc-card-flow, .sc-row-flow)[data-vstate="act
 html[data-motion-ready="true"] .sc-section-flow[data-vstate="entering"] {
   opacity: 0 !important;
   transform: translate3d(0, 42px, 0) scale(0.96) !important;
-  filter: blur(6px) !important;
 }
 
 html[data-motion-ready="true"] .sc-card-flow[data-vstate="entering"] {
   opacity: 0 !important;
   transform: translate3d(0, 46px, 0) scale(0.94) !important;
-  filter: blur(6px) !important;
 }
 
 html[data-motion-ready="true"] .sc-row-flow[data-vstate="entering"] {
   opacity: 0 !important;
   transform: translate3d(-18px, 28px, 0) scale(0.98) !important;
-  filter: blur(4px) !important;
 }
 
 /* DURANTE (Settled in active reading viewport) */
 html[data-motion-ready="true"] :is(.sc-section-flow, .sc-card-flow, .sc-row-flow, .sc-hero-exit)[data-vstate="active"] {
   opacity: 1 !important;
   transform: translate3d(0, 0, 0) scale(1) !important;
-  filter: blur(0px) !important;
 }
 
 /* SALIDA (Leaving top of viewport below sticky Navbar) */
 html[data-motion-ready="true"] .sc-section-flow[data-vstate="exiting"] {
   opacity: 0.14 !important;
   transform: translate3d(0, -32px, 0) scale(0.95) !important;
-  filter: blur(5px) !important;
 }
 
 html[data-motion-ready="true"] .sc-card-flow[data-vstate="exiting"] {
   opacity: 0.15 !important;
   transform: translate3d(0, -34px, 0) scale(0.945) !important;
-  filter: blur(5px) !important;
 }
 
 html[data-motion-ready="true"] .sc-row-flow[data-vstate="exiting"] {
   opacity: 0.16 !important;
   transform: translate3d(12px, -22px, 0) scale(0.97) !important;
-  filter: blur(4px) !important;
 }
 
 html[data-motion-ready="true"] .sc-hero-exit[data-vstate="exiting"] {
   opacity: 0.22 !important;
   transform: translate3d(0, -30px, 0) scale(0.96) !important;
-  filter: blur(4px) !important;
 }
 
 /* Hero Initial Stagger & Ambient Breathing */
@@ -230,12 +219,10 @@ html[data-motion-ready="true"] .sc-hero-exit[data-vstate="exiting"] {
   from {
     opacity: 0;
     transform: translate3d(0, 20px, 0) scale(0.98);
-    filter: blur(4px);
   }
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
-    filter: blur(0px);
   }
 }
 

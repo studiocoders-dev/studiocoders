@@ -4,11 +4,11 @@ import Link from "next/link";
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#2e3340]/60 bg-[#14161c]/80 backdrop-blur-md transition-all">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 sm:gap-4 px-4 sm:px-8">
         {/* Brand Logo */}
         <Link
           href="/"
-          className="group flex items-center gap-2.5 text-sm font-semibold tracking-tight text-[#edeff4] transition-colors hover:text-white"
+          className="group flex shrink-0 items-center gap-2 sm:gap-2.5 text-sm font-semibold tracking-tight text-[#edeff4] transition-colors hover:text-white"
         >
           <div className="flex h-7 w-7 items-center justify-center rounded bg-[#1c1f28] border border-[#2e3340] text-[#818cf8] transition-transform group-hover:scale-105 group-hover:border-[#6366f1]/50">
             {/* The Code & AI Agent Core: < • > */}
@@ -34,7 +34,7 @@ export function Navbar() {
               />
             </svg>
           </div>
-          <span className="font-mono text-sm tracking-tight text-[#edeff4] group-hover:text-white">
+          <span className="font-mono text-[13px] sm:text-sm tracking-tight text-[#edeff4] group-hover:text-white">
             studiocoders<span className="text-[#818cf8]">.dev</span>
           </span>
         </Link>
@@ -80,7 +80,7 @@ export function Navbar() {
         <div className="flex items-center gap-3 shrink-0">
           <a
             href="#contacto"
-            className="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md bg-[#4f46e5] px-4 font-mono text-xs font-medium tracking-wide text-white transition-all hover:bg-[#4338ca] hover:shadow-[0_0_20px_rgba(79,70,229,0.35)] active:scale-95"
+            className="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md bg-[#4f46e5] px-2.5 sm:px-4 font-mono text-[11px] sm:text-xs font-medium tracking-wide text-white transition-all hover:bg-[#4338ca] hover:shadow-[0_0_20px_rgba(79,70,229,0.35)] active:scale-95"
           >
             Cuéntanos tu proyecto
           </a>

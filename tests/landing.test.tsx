@@ -39,7 +39,7 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
     });
 
     it("renders the primary CTA with prompt to tell project", () => {
-      expect(html).toContain("Cotizar proyecto (Scope 20 min)");
+      expect(html).toContain("Cotizar proyecto en 20 minutos");
     });
   });
 
@@ -225,10 +225,19 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
 
     it("includes horizontal padding on FAQ details and public verification links in AuditGuarantees", () => {
       expect(html).toContain("sc-details sc-row-flow py-6 px-5 -mx-5");
-      expect(html).toContain("https://pagespeed.web.dev/");
-      expect(html).toContain("Auditar en PageSpeed Insights");
-      expect(html).toContain("https://wave.webaim.org/");
-      expect(html).toContain("Auditar en WAVE (WCAG 2.1 AA)");
+      expect(html).toContain("https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.studiocoders.dev%2F");
+      expect(html).toContain("Auditar Core Web Vitals en PageSpeed");
+      expect(html).toContain("Auditar Accesibilidad 100/100 en PageSpeed");
+    });
+
+    it("keeps GPU-composited animations without filter: blur on scroll-animated elements", () => {
+      const css = fs.readFileSync(path.resolve(process.cwd(), "src/app/globals.css"), "utf-8");
+      const motionCtrl = fs.readFileSync(
+        path.resolve(process.cwd(), "src/components/MotionController.tsx"),
+        "utf-8"
+      );
+      expect(css).not.toContain("filter: blur");
+      expect(motionCtrl).not.toContain("filter: blur");
     });
   });
 });

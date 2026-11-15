@@ -6,15 +6,15 @@ export function AuditGuarantees() {
       title: "Core Web Vitals en verde, medido en móvil",
       description:
         "Móvil es la prueba real, no una laptop con fibra óptica. Monitoreamos LCP y CLS en dispositivos reales antes de entregar en producción.",
-      linkLabel: "Auditar en PageSpeed Insights",
-      linkUrl: "https://pagespeed.web.dev/",
+      linkLabel: "Auditar Core Web Vitals en PageSpeed",
+      linkUrl: "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.studiocoders.dev%2F",
     },
     {
       title: "Accesibilidad web WCAG 2.1 AA",
       description:
         "Navegación completa por teclado, estructura semántica para lectores de pantalla y contraste de color auditado bajo estándares internacionales.",
-      linkLabel: "Auditar en WAVE (WCAG 2.1 AA)",
-      linkUrl: "https://wave.webaim.org/",
+      linkLabel: "Auditar Accesibilidad 100/100 en PageSpeed",
+      linkUrl: "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.studiocoders.dev%2F",
     },
     {
       title: "Cero dependencias cautivas ni vendor lock-in",

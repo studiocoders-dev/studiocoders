@@ -87,12 +87,8 @@ main > section[data-section-state="active"]::before {
 .sc-surface-glow {
   position: relative;
   transition:
-    border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .sc-surface-glow::before {
@@ -117,14 +113,10 @@ main > section[data-section-state="active"]::before {
 }
 
 html[data-motion-ready="true"] :is(.sc-section-flow, .sc-card-flow, .sc-row-flow, .sc-hero-exit) {
-  will-change: transform, opacity, filter;
+  will-change: transform, opacity;
   transition:
     opacity 0.62s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.62s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.62s cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 0.32s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.32s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.32s cubic-bezier(0.22, 1, 0.36, 1) !important;
+    transform 0.62s cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
 html[data-motion-ready="true"] :is(.sc-card-flow, .sc-row-flow)[data-vstate="active"] {
@@ -135,65 +127,54 @@ html[data-motion-ready="true"] :is(.sc-card-flow, .sc-row-flow)[data-vstate="act
 html[data-motion-ready="true"] .sc-section-flow[data-vstate="entering"] {
   opacity: 0 !important;
   transform: translate3d(0, 42px, 0) scale(0.96) !important;
-  filter: blur(6px) !important;
 }
 
 html[data-motion-ready="true"] .sc-card-flow[data-vstate="entering"] {
   opacity: 0 !important;
   transform: translate3d(0, 46px, 0) scale(0.94) !important;
-  filter: blur(6px) !important;
 }
 
 html[data-motion-ready="true"] .sc-row-flow[data-vstate="entering"] {
   opacity: 0 !important;
   transform: translate3d(-18px, 28px, 0) scale(0.98) !important;
-  filter: blur(4px) !important;
 }
 
 /* 2. DURANTE (Active in viewport + Focused in reading zone) */
 html[data-motion-ready="true"] :is(.sc-section-flow, .sc-card-flow, .sc-row-flow, .sc-hero-exit)[data-vstate="active"] {
   opacity: 1 !important;
   transform: translate3d(0, 0, 0) scale(1) !important;
-  filter: blur(0px) !important;
 }
 
 html[data-motion-ready="true"] .sc-row-flow[data-vstate="active"][data-vfocus="true"] {
   transform: translate3d(10px, 0, 0) scale(1) !important;
   background-color: rgba(28, 31, 40, 0.78) !important;
-  box-shadow: inset 3px 0 0 #818cf8, 0 10px 28px -12px rgba(79, 70, 229, 0.28) !important;
+  border-left: 3px solid #818cf8 !important;
 }
 
 html[data-motion-ready="true"] .sc-card-flow[data-vstate="active"][data-vfocus="true"] {
   transform: translate3d(0, -5px, 0) scale(1.01) !important;
   border-color: rgba(129, 140, 248, 0.55) !important;
-  box-shadow:
-    0 18px 42px -12px rgba(79, 70, 229, 0.3),
-    inset 0 1px 0 0 rgba(165, 180, 252, 0.28) !important;
 }
 
 /* 3. SALIDA (Exiting towards top of viewport, clearly visible below sticky Navbar) */
 html[data-motion-ready="true"] .sc-section-flow[data-vstate="exiting"] {
   opacity: 0.14 !important;
   transform: translate3d(0, -32px, 0) scale(0.95) !important;
-  filter: blur(5px) !important;
 }
 
 html[data-motion-ready="true"] .sc-card-flow[data-vstate="exiting"] {
   opacity: 0.15 !important;
   transform: translate3d(0, -34px, 0) scale(0.945) !important;
-  filter: blur(5px) !important;
 }
 
 html[data-motion-ready="true"] .sc-row-flow[data-vstate="exiting"] {
   opacity: 0.16 !important;
   transform: translate3d(12px, -22px, 0) scale(0.97) !important;
-  filter: blur(4px) !important;
 }
 
 html[data-motion-ready="true"] .sc-hero-exit[data-vstate="exiting"] {
   opacity: 0.22 !important;
   transform: translate3d(0, -30px, 0) scale(0.96) !important;
-  filter: blur(4px) !important;
 }
 `;
 
