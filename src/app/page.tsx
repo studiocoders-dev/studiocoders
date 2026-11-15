@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { MotionController } from "@/components/MotionController";
 import { Hero } from "@/components/Hero";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
@@ -14,6 +15,7 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-[#14161c] text-[#edeff4]">
+      <MotionController />
       <Navbar />
       <main className="flex-1">
         <Hero />

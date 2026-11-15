@@ -8,7 +8,7 @@ export function PublicCode() {
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl">
+        <div className="max-w-3xl sc-section-flow">
           <span className="font-mono text-xs uppercase tracking-widest text-[#818cf8]">
             Código Público
           </span>
@@ -26,7 +26,7 @@ export function PublicCode() {
         </div>
 
         {/* Public Code Box (npm & github) */}
-        <div className="mt-14 overflow-hidden rounded-xl border border-[#2e3340] bg-[#1c1f28]/60">
+        <div className="mt-14 overflow-hidden rounded-xl border border-[#2e3340] bg-[#1c1f28]/60 sc-card-flow sc-surface-glow">
           <div className="grid grid-cols-1 divide-y divide-[#2e3340] sm:grid-cols-2 sm:divide-y-0 sm:divide-x">
             {/* NPM Package Column */}
             <div className="p-7 sm:p-8">
@@ -92,16 +92,34 @@ export function PublicCode() {
           {/* Badges Bar */}
           <div className="border-t border-[#2e3340]/60 bg-[#14161c]/80 px-7 py-4">
             <div className="flex flex-wrap items-center gap-4 font-mono text-xs text-[#9ea5b8]">
-              <span className="inline-flex items-center gap-1.5">
+              <span
+                className="sc-fade-up inline-flex items-center gap-1.5"
+                style={{ "--stagger-index": 0 } as React.CSSProperties}
+              >
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 TypeScript Strict
               </span>
               <span>·</span>
-              <span>Zero Dependencies</span>
+              <span
+                className="sc-fade-up"
+                style={{ "--stagger-index": 1 } as React.CSSProperties}
+              >
+                Zero Dependencies
+              </span>
               <span>·</span>
-              <span>MIT License</span>
+              <span
+                className="sc-fade-up"
+                style={{ "--stagger-index": 2 } as React.CSSProperties}
+              >
+                MIT License
+              </span>
               <span>·</span>
-              <span className="text-[#818cf8]">100% Test Coverage</span>
+              <span
+                className="sc-fade-up text-[#818cf8]"
+                style={{ "--stagger-index": 3 } as React.CSSProperties}
+              >
+                100% Test Coverage
+              </span>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 export function Footer() {
   return (
     <footer className="border-t border-[#2e3340]/60 bg-[#14161c] py-14 text-xs font-mono text-[#9ea5b8]">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8 sc-fade-up">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
           {/* Logo & Tagline */}
           <div className="space-y-2">
@@ -36,13 +36,13 @@ export function Footer() {
               href="https://github.com/studiocoders-dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#edeff4] transition-colors"
+              className="sc-nav-link hover:text-[#edeff4] transition-colors"
             >
               GitHub
             </a>
             <a
               href="mailto:contacto@studiocoders.dev"
-              className="hover:text-[#edeff4] transition-colors"
+              className="sc-nav-link hover:text-[#edeff4] transition-colors"
             >
               contacto@studiocoders.dev
             </a>

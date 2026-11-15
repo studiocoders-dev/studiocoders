@@ -98,7 +98,7 @@ export function FAQ() {
   return (
     <section id="faq" className="border-t border-[#2e3340]/60 py-24 sm:py-32">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl sc-section-flow">
           <span className="font-mono text-xs uppercase tracking-widest text-[#818cf8]">
             Preguntas Frecuentes & Entidad
           </span>
@@ -112,7 +112,8 @@ export function FAQ() {
             <details
               key={idx}
               open={idx === 0}
-              className="group py-6 [&_summary::-webkit-details-marker]:hidden"
+              className="group sc-details sc-row-flow py-6 px-5 -mx-5 sm:px-6 sm:-mx-6 rounded-md [&_summary::-webkit-details-marker]:hidden"
+              style={{ "--stagger-index": idx } as React.CSSProperties}
             >
               <summary className="flex cursor-pointer items-start justify-between gap-6 list-none text-left">
                 <span className="text-lg font-semibold text-[#edeff4] group-hover:text-white transition-colors">

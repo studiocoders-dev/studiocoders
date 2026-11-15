@@ -37,7 +37,7 @@ export function ComparisonTable() {
   return (
     <section id="comparativa" className="border-t border-[#2e3340]/60 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl sc-section-flow">
           <span className="font-mono text-xs uppercase tracking-widest text-[#818cf8]">
             Comparativa de Mercado
           </span>
@@ -51,7 +51,7 @@ export function ComparisonTable() {
         </div>
 
         {/* Responsive Comparison Table */}
-        <div className="mt-14 overflow-x-auto rounded-xl border border-[#2e3340] bg-[#1c1f28]/40">
+        <div className="mt-14 overflow-x-auto rounded-xl border border-[#2e3340] bg-[#1c1f28]/40 sc-card-flow sc-surface-glow">
           <table className="w-full min-w-[640px] text-left border-collapse">
             <thead>
               <tr className="border-b border-[#2e3340] bg-[#1c1f28]">
@@ -71,14 +71,18 @@ export function ComparisonTable() {
             </thead>
             <tbody className="divide-y divide-[#2e3340]/60 font-sans text-sm">
               {rows.map((row, i) => (
-                <tr key={i} className="transition-colors hover:bg-[#1c1f28]/60">
+                <tr
+                  key={i}
+                  className="group sc-row-flow transition-colors hover:bg-[#1c1f28]/60"
+                  style={{ "--stagger-index": i } as React.CSSProperties}
+                >
                   <td className="py-5 px-6 font-medium text-[#edeff4]">
                     {row.criterio}
                   </td>
                   <td className="py-5 px-6 font-semibold text-[#818cf8] bg-[#6366f1]/5 border-x border-[#6366f1]/20">
                     <span className="inline-flex items-center gap-1.5">
                       <svg
-                        className="h-4 w-4 text-[#818cf8] shrink-0"
+                        className="h-4 w-4 text-[#818cf8] shrink-0 transition-transform duration-200 group-hover:scale-110"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >

@@ -28,7 +28,7 @@ export function DelayCauses() {
     <section id="criterio" className="border-t border-[#2e3340]/60 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl">
+        <div className="max-w-3xl sc-section-flow">
           <span className="font-mono text-xs uppercase tracking-widest text-[#818cf8]">
             Diagnóstico Técnico
           </span>
@@ -47,9 +47,10 @@ export function DelayCauses() {
           {causes.map((cause, idx) => (
             <div
               key={idx}
-              className="rounded-xl border border-[#2e3340] bg-[#1c1f28]/50 p-7 sm:p-8 transition-all hover:border-[#6366f1]/40 hover:bg-[#1c1f28]"
+              className="group sc-card-flow sc-surface-glow rounded-xl border border-[#2e3340] bg-[#1c1f28]/50 p-7 sm:p-8 transition-all hover:-translate-y-0.5 hover:border-[#6366f1]/40 hover:bg-[#1c1f28]"
+              style={{ "--stagger-index": idx } as React.CSSProperties}
             >
-              <div className="font-mono text-xs text-[#818cf8] mb-3">
+              <div className="font-mono text-xs text-[#818cf8] mb-3 transition-transform duration-200 group-hover:translate-x-1">
                 0{idx + 1}.
               </div>
               <h3 className="text-xl font-bold tracking-tight text-[#edeff4]">

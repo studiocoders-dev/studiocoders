@@ -19,7 +19,7 @@ export function ContactForm() {
   return (
     <section id="contacto" className="border-t border-[#2e3340]/60 py-24 sm:py-32">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl sc-section-flow">
           <span className="font-mono text-xs uppercase tracking-widest text-[#818cf8]">
             Contacto Directo
           </span>
@@ -33,9 +33,9 @@ export function ContactForm() {
           </p>
         </div>
 
-        <div className="mt-12 rounded-xl border border-[#2e3340] bg-[#1c1f28]/60 p-7 sm:p-10">
+        <div className="mt-12 rounded-xl border border-[#2e3340] bg-[#1c1f28]/60 p-7 sm:p-10 sc-card-flow sc-surface-glow">
           {submitted ? (
-            <div className="rounded-lg border border-[#6366f1]/40 bg-[#6366f1]/10 p-8 text-center">
+            <div className="sc-starting-reveal rounded-lg border border-[#6366f1]/40 bg-[#6366f1]/10 p-8 text-center">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#4f46e5] text-white mb-4">
                 <svg
                   className="h-6 w-6"
@@ -45,6 +45,7 @@ export function ContactForm() {
                   strokeWidth="2.5"
                 >
                   <path
+                    className="sc-check-draw"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     d="M5 13l4 4L19 7"

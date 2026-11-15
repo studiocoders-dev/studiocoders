@@ -98,7 +98,7 @@ export function PortfolioShowcase() {
     <section id="proyectos" className="border-t border-[#2e3340]/60 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl">
+        <div className="max-w-3xl sc-section-flow">
           <span className="font-mono text-xs uppercase tracking-widest text-[#818cf8]">
             Código en Producción
           </span>
@@ -118,7 +118,8 @@ export function PortfolioShowcase() {
             <details
               key={project.id}
               open={idx === 0}
-              className="group rounded-xl border border-[#2e3340] bg-[#1c1f28]/60 p-7 sm:p-9 transition-all hover:border-[#6366f1]/40 open:border-[#6366f1]/50 open:bg-[#1c1f28] [&_summary::-webkit-details-marker]:hidden"
+              className="group sc-details sc-card-flow sc-surface-glow rounded-xl border border-[#2e3340] bg-[#1c1f28]/60 p-7 sm:p-9 transition-all hover:border-[#6366f1]/40 open:border-[#6366f1]/50 open:bg-[#1c1f28] [&_summary::-webkit-details-marker]:hidden"
+              style={{ "--stagger-index": idx } as React.CSSProperties}
             >
               <summary className="cursor-pointer list-none">
                 <div className="flex flex-wrap items-center justify-between gap-3">
@@ -185,7 +186,8 @@ export function PortfolioShowcase() {
                   {project.specs.map((spec, i) => (
                     <div
                       key={i}
-                      className="rounded-lg border border-[#2e3340]/80 bg-[#14161c]/80 p-3.5"
+                      className="sc-fade-up rounded-lg border border-[#2e3340]/80 bg-[#14161c]/80 p-3.5 transition-colors duration-200 hover:border-[#6366f1]/40"
+                      style={{ "--stagger-index": i } as React.CSSProperties}
                     >
                       <span className="block text-[10px] uppercase tracking-wider text-[#9ea5b8]">
                         {spec.label}

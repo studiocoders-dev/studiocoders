@@ -46,31 +46,31 @@ export function Navbar() {
         >
           <a
             href="#servicios"
-            className="whitespace-nowrap transition-colors hover:text-[#edeff4]"
+            className="sc-nav-link whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
             Qué Construimos
           </a>
           <a
             href="#metodo"
-            className="whitespace-nowrap transition-colors hover:text-[#edeff4]"
+            className="sc-nav-link whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
             Método 14 Días
           </a>
           <a
             href="#proyectos"
-            className="whitespace-nowrap transition-colors hover:text-[#edeff4]"
+            className="sc-nav-link whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
             Proyectos Reales
           </a>
           <a
             href="#comparativa"
-            className="whitespace-nowrap transition-colors hover:text-[#edeff4]"
+            className="sc-nav-link whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
             Comparativa
           </a>
           <a
             href="#faq"
-            className="whitespace-nowrap transition-colors hover:text-[#edeff4]"
+            className="sc-nav-link whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
             FAQ
           </a>
@@ -86,6 +86,7 @@ export function Navbar() {
           </a>
         </div>
       </div>
+      <div aria-hidden="true" className="sc-scroll-progress" />
     </header>
   );
 }

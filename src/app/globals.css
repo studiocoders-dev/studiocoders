@@ -22,10 +22,14 @@
 
 :root {
   color-scheme: dark;
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  interpolate-size: allow-keywords;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
   background-color: #14161c;
 }
 
@@ -42,4 +46,302 @@ body {
 ::selection {
   background-color: rgba(99, 102, 241, 0.35);
   color: #ffffff;
+}
+
+/* ==========================================================================
+   Pro Motion System (skills.sh + Modern Web Platform Standards)
+   ========================================================================== */
+
+/* 1. Native Smooth Accordions (<details> / ::details-content) */
+details.sc-details::details-content {
+  interpolate-size: allow-keywords;
+  overflow: clip;
+  contain: layout;
+}
+
+details.sc-details:not([open])::details-content {
+  block-size: 0;
+}
+
+/* 2. Interactive Surface Glow & Cursor Spotlight ("Durante") */
+.sc-surface-glow {
+  position: relative;
+  transition:
+    border-color 0.28s var(--ease-out-expo),
+    background-color 0.28s var(--ease-out-expo),
+    box-shadow 0.28s var(--ease-out-expo),
+    transform 0.28s var(--ease-out-expo);
+}
+
+.sc-surface-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-out-expo);
+  background: radial-gradient(
+    360px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+    rgba(99, 102, 241, 0.14),
+    transparent 70%
+  );
+}
+
+.sc-surface-glow:hover::before,
+.sc-surface-glow:focus-within::before {
+  opacity: 1;
+}
+
+.sc-surface-glow:hover,
+.sc-surface-glow:focus-within {
+  box-shadow:
+    0 14px 36px -12px rgba(79, 70, 229, 0.24),
+    inset 0 1px 0 0 rgba(129, 140, 248, 0.22);
+}
+
+/* Active Reading Zone Highlight ("Durante" on Scroll) */
+html[data-motion-ready="true"] .sc-row-flow[data-vstate="active"][data-vfocus="true"] {
+  transform: translate3d(10px, 0, 0) scale(1) !important;
+  background-color: rgba(28, 31, 40, 0.78) !important;
+  box-shadow: inset 3px 0 0 #818cf8, 0 10px 28px -12px rgba(79, 70, 229, 0.28) !important;
+}
+
+html[data-motion-ready="true"] .sc-card-flow[data-vstate="active"][data-vfocus="true"] {
+  transform: translate3d(0, -5px, 0) scale(1.01) !important;
+  border-color: rgba(129, 140, 248, 0.55) !important;
+  box-shadow:
+    0 18px 42px -12px rgba(79, 70, 229, 0.3),
+    inset 0 1px 0 0 rgba(165, 180, 252, 0.28) !important;
+}
+
+/* 3. Navbar Links & Scroll-Spy Active Indicator */
+.sc-nav-link {
+  position: relative;
+  transition: color 0.2s var(--ease-out-expo);
+}
+
+.sc-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 1.5px;
+  background: linear-gradient(90deg, #818cf8, #4f46e5);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.24s var(--ease-out-expo);
+}
+
+.sc-nav-link:hover::after,
+.sc-nav-link:focus-visible::after,
+.sc-nav-link[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
+.sc-nav-link[data-active="true"] {
+  color: #edeff4;
+}
+
+/* 4. Scroll-Progress Bar in Navbar */
+.sc-scroll-progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #4f46e5 0%, #818cf8 55%, #a5b4fc 100%);
+  box-shadow: 0 0 12px rgba(129, 140, 248, 0.55);
+  transform-origin: 0 50%;
+  transform: scaleX(var(--scroll-progress, 0));
+  transition: transform 0.08s linear;
+  pointer-events: none;
+}
+
+/* 5. Viewport Entry, Active & Exit Choreography (Cross-browser via data-vstate) */
+html[data-motion-ready="true"] :is(.sc-section-flow, .sc-card-flow, .sc-row-flow, .sc-hero-exit) {
+  will-change: transform, opacity, filter;
+  transition:
+    opacity 0.62s var(--ease-out-expo),
+    transform 0.62s var(--ease-out-expo),
+    filter 0.62s var(--ease-out-expo),
+    background-color 0.28s var(--ease-out-expo),
+    border-color 0.28s var(--ease-out-expo);
+}
+
+html[data-motion-ready="true"] :is(.sc-card-flow, .sc-row-flow)[data-vstate="active"] {
+  transition-delay: calc(var(--stagger-index, 0) * 55ms);
+}
+
+/* ENTRADA (Before entering active viewport zone) */
+html[data-motion-ready="true"] .sc-section-flow[data-vstate="entering"] {
+  opacity: 0 !important;
+  transform: translate3d(0, 42px, 0) scale(0.96) !important;
+  filter: blur(6px) !important;
+}
+
+html[data-motion-ready="true"] .sc-card-flow[data-vstate="entering"] {
+  opacity: 0 !important;
+  transform: translate3d(0, 46px, 0) scale(0.94) !important;
+  filter: blur(6px) !important;
+}
+
+html[data-motion-ready="true"] .sc-row-flow[data-vstate="entering"] {
+  opacity: 0 !important;
+  transform: translate3d(-18px, 28px, 0) scale(0.98) !important;
+  filter: blur(4px) !important;
+}
+
+/* DURANTE (Settled in active reading viewport) */
+html[data-motion-ready="true"] :is(.sc-section-flow, .sc-card-flow, .sc-row-flow, .sc-hero-exit)[data-vstate="active"] {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale(1) !important;
+  filter: blur(0px) !important;
+}
+
+/* SALIDA (Leaving top of viewport below sticky Navbar) */
+html[data-motion-ready="true"] .sc-section-flow[data-vstate="exiting"] {
+  opacity: 0.14 !important;
+  transform: translate3d(0, -32px, 0) scale(0.95) !important;
+  filter: blur(5px) !important;
+}
+
+html[data-motion-ready="true"] .sc-card-flow[data-vstate="exiting"] {
+  opacity: 0.15 !important;
+  transform: translate3d(0, -34px, 0) scale(0.945) !important;
+  filter: blur(5px) !important;
+}
+
+html[data-motion-ready="true"] .sc-row-flow[data-vstate="exiting"] {
+  opacity: 0.16 !important;
+  transform: translate3d(12px, -22px, 0) scale(0.97) !important;
+  filter: blur(4px) !important;
+}
+
+html[data-motion-ready="true"] .sc-hero-exit[data-vstate="exiting"] {
+  opacity: 0.22 !important;
+  transform: translate3d(0, -30px, 0) scale(0.96) !important;
+  filter: blur(4px) !important;
+}
+
+/* Hero Initial Stagger & Ambient Breathing */
+@keyframes sc-fade-up-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0) scale(0.98);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.sc-fade-up {
+  --stagger-time: 75ms;
+  animation: sc-fade-up-in 0.65s var(--ease-out-expo) backwards;
+  animation-delay: calc(var(--stagger-index, 0) * var(--stagger-time));
+  animation-delay: calc(sibling-index() * var(--stagger-time));
+}
+
+@keyframes sc-orb-breathe {
+  0% {
+    transform: translate3d(-50%, 0, 0) scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(-50%, 16px, 0) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.sc-ambient-orb {
+  animation: sc-orb-breathe 6s ease-in-out infinite alternate;
+}
+
+/* 6. Motion Opt-In & Native Progressive Enhancements */
+@media (prefers-reduced-motion: no-preference) {
+  details.sc-details::details-content {
+    transition: block-size, content-visibility, display;
+    transition-duration: 0.32s;
+    transition-timing-function: var(--ease-out-expo);
+    transition-behavior: allow-discrete;
+  }
+
+  .sc-starting-reveal {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition:
+      opacity 0.34s var(--ease-out-expo),
+      transform 0.34s var(--ease-out-expo),
+      display 0.34s;
+    transition-behavior: allow-discrete;
+  }
+
+  @starting-style {
+    .sc-starting-reveal {
+      opacity: 0;
+      transform: translateY(12px) scale(0.96);
+    }
+  }
+
+  @keyframes sc-draw-check {
+    from {
+      stroke-dashoffset: 28;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .sc-check-draw {
+    stroke-dasharray: 28;
+    stroke-dashoffset: 0;
+    animation: sc-draw-check 0.45s var(--ease-out-expo) both;
+  }
+
+  @supports (animation-timeline: scroll()) {
+    @keyframes sc-grow-progress {
+      from {
+        transform: scaleX(0);
+      }
+      to {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    @keyframes sc-section-lifecycle {
+      entry 0% {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      entry 100%,
+      exit 0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      exit 100% {
+        opacity: 0.25;
+        transform: translateY(-16px);
+      }
+    }
+  }
+}
+
+/* 7. Reduced Motion Safety Override */
+@media (prefers-reduced-motion: reduce) {
+  .sc-fade-up,
+  .sc-ambient-orb {
+    animation: none !important;
+  }
+
+  html[data-motion-ready="true"] :is(.sc-section-flow, .sc-card-flow, .sc-row-flow, .sc-hero-exit) {
+    transition: opacity 0.2s ease !important;
+    transform: none !important;
+    filter: none !important;
+  }
 }

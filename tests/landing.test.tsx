@@ -1,4 +1,6 @@
 import React from "react";
+import fs from "node:fs";
+import path from "node:path";
 import { describe, it, expect, vi } from "vitest";
 
 vi.mock("next/font/google", () => ({
@@ -193,6 +195,40 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(html).toContain("https://eaestampa.com");
       expect(html).toContain("EA Estampa (eaestampa.com)");
       expect(html).toContain("cotizaciones y atención automatizadas 24/7 vía WhatsApp impulsadas por IA");
+    });
+  });
+
+  describe("Pro Section Animations & Motion Accessibility Guardrails (Spec 014)", () => {
+    const globalsCss = fs.readFileSync(
+      path.join(process.cwd(), "src/app/globals.css"),
+      "utf-8"
+    );
+
+    it("renders scroll progress bar, lifecycle animation classes and smooth details hooks across sections", () => {
+      expect(html).toContain("sc-scroll-progress");
+      expect(html).toContain("sc-hero-exit");
+      expect(html).toContain("sc-section-flow");
+      expect(html).toContain("sc-card-flow");
+      expect(html).toContain("sc-row-flow");
+      expect(html).toContain("sc-details");
+      expect(html).toContain("sc-surface-glow");
+      expect(html).toContain("sc-nav-link");
+    });
+
+    it("enforces reduced-motion opt-in, progressive feature detection and smooth intrinsic sizing in globals.css", () => {
+      expect(globalsCss).toContain("@media (prefers-reduced-motion: no-preference)");
+      expect(globalsCss).toContain("@supports ((animation-timeline: view()) and (animation-range: entry))");
+      expect(globalsCss).toContain("interpolate-size: allow-keywords");
+      expect(globalsCss).toContain("transition-behavior: allow-discrete");
+      expect(globalsCss).toContain("cubic-bezier(0.22, 1, 0.36, 1)");
+    });
+
+    it("includes horizontal padding on FAQ details and public verification links in AuditGuarantees", () => {
+      expect(html).toContain("sc-details sc-row-flow py-6 px-5 -mx-5");
+      expect(html).toContain("https://pagespeed.web.dev/");
+      expect(html).toContain("Auditar en PageSpeed Insights");
+      expect(html).toContain("https://wave.webaim.org/");
+      expect(html).toContain("Auditar en WAVE (WCAG 2.1 AA)");
     });
   });
 });

@@ -33,7 +33,7 @@ export function ServicesSection() {
     <section id="servicios" className="border-t border-[#2e3340]/60 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl">
+        <div className="max-w-3xl sc-section-flow">
           <span className="font-mono text-xs uppercase tracking-widest text-[#818cf8]">
             Qué Construimos
           </span>
@@ -47,13 +47,14 @@ export function ServicesSection() {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="group grid grid-cols-1 gap-3 py-8 sm:grid-cols-12 sm:gap-8 transition-colors hover:bg-[#1c1f28]/40 px-3 -mx-3 rounded-md"
+              className="group sc-row-flow grid grid-cols-1 gap-3 py-8 sm:grid-cols-12 sm:gap-8 transition-colors hover:bg-[#1c1f28]/40 px-3 -mx-3 rounded-md"
+              style={{ "--stagger-index": idx } as React.CSSProperties}
             >
               <div className="sm:col-span-5">
-                <span className="font-mono text-xs text-[#818cf8] block mb-1">
+                <span className="font-mono text-xs text-[#818cf8] block mb-1 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#a5b4fc]">
                   0{idx + 1}.
                 </span>
-                <h3 className="text-xl font-bold tracking-tight text-[#edeff4] group-hover:text-white transition-colors">
+                <h3 className="text-xl font-bold tracking-tight text-[#edeff4] group-hover:text-white transition-all duration-200 group-hover:translate-x-1">
                   {service.title}
                 </h3>
               </div>
