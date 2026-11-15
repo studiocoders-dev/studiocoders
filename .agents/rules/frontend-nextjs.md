@@ -20,6 +20,7 @@ trigger: model_decision
 - **Psicología Visual B2B:** Cero elementos infantiles, cero ilustraciones genéricas 3D tipo SaaS barato. Transmitir solvencia técnica, seriedad arquitectónica y velocidad de entrega.
 
 ## 3. Prácticas Obligatorias
-- Accesibilidad semántica (HTML5 nativo, etiquetas `nav`, `main`, `section`, `footer`).
-- Imágenes y SVGs optimizados con `next/image` y formatos WebP/AVIF.
-- Rendimiento Core Web Vitals (LCP < 1.2s, CLS 0, INP excelente).
+- **Accesibilidad web WCAG 2.1 AA (`100/100`):** relación de contraste mínima $\ge 4.5:1$ en textos secundarios y botones primarios con `text-white` (ej. `#9ea5b8` sobre fondos oscuros `#14161c`/`#1c1f28` y `#4f46e5` en botones primarios), HTML5 semántico (`nav`, `main`, `section`, `footer`), foco visible y jerarquía única de headings.
+- **Navegación & Layout:** usar `whitespace-nowrap` en enlaces y CTAs de la barra de navegación para evitar saltos de línea en anchos intermedios (`md`).
+- **Imágenes y SVGs:** optimizados con `next/image` y formatos WebP/AVIF.
+- **Rendimiento Core Web Vitals (móvil y desktop):** `LCP <= 2.5s`, `CLS <= 0.1`, `INP <= 200ms` y fuentes cargadas con `display: swap`.

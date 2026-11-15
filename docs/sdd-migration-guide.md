@@ -270,6 +270,11 @@ Reescribe o crea el archivo `AGENTS.md` en la raíz del proyecto. Debe ser conci
    - **Gate 3 (Parada Humana Obligatoria):** La IA tiene TERMINANTEMENTE PROHIBIDO escribir código en el mismo turno en que propone el Plan. DEBE detenerse y pedir aprobación explícita al usuario.
    - **Gate 4 (Testing Mandate & DoD):** Prohibido cerrar tareas sin ejecutar tests automatizados con 0 errores y tildar el DoD.
 5. **Context Routing Map:** Tabla de decisión que guíe a la IA a leer la regla correspondiente en `.agents/rules/<archivo>.md` según lo que el usuario le pida.
+6. **Estándares de Calidad Obligatorios (sección concisa de 4 viñetas):**
+   - **Core Web Vitals en verde (móvil):** `LCP <= 2.5s`, `CLS <= 0.1`, `INP <= 200ms`.
+   - **Accesibilidad web WCAG 2.1 AA:** contraste $\ge 4.5:1$, HTML semántico y foco visible (`100/100` en Lighthouse).
+   - **Cero dependencias cautivas ni vendor lock-in:** código estándar, repositorios y servicios cloud 100% portables.
+   - **Pruebas automatizadas y CI/CD en verde:** Gate 4 local + pipeline `.github/workflows/ci.yml` pasando sin errores.
 
 ---
 

@@ -50,6 +50,15 @@ Antes de realizar cualquier propuesta o modificación, consulta las reglas del d
 
 ---
 
+## ✅ Estándares de Calidad Obligatorios
+
+1. **Core Web Vitals en verde (móvil):** `LCP <= 2.5s`, `CLS <= 0.1`, `INP <= 200ms`.
+2. **Accesibilidad web WCAG 2.1 AA:** contraste $\ge 4.5:1$, HTML semántico y foco visible (`100/100` en Lighthouse).
+3. **Cero dependencias cautivas ni vendor lock-in:** código estándar, repositorios y servicios cloud 100% portables.
+4. **Pruebas automatizadas y CI/CD en verde:** Gate 4 local + pipeline [`.github/workflows/ci.yml`](.github/workflows/ci.yml) pasando sin errores.
+
+---
+
 ## 📂 Directorio del Proyecto
 
 ```text
