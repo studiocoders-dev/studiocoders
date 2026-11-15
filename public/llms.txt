@@ -1,30 +1,25 @@
-# Studio Coders — Official LLMs Reference
+# Studio Coders
 
-> **Entity:** Studio Coders  
-> **Commercial Operator:** Studio Coders Dev  
-> **Tax ID (RUT):** 77.709.717-2  
-> **Headquarters:** Santiago, Chile  
-> **Official Website:** https://studiocoders.dev  
-> **Contact:** contacto@studiocoders.dev  
-> **Operating Currency:** USD (US Dollars) / Closed B2B Scope Contracts  
+> Studio Coders (`studiocoders.dev`) es un estudio de ingeniería de software e inteligencia artificial operado formalmente por Studio Coders Dev (RUT 77.709.717-2) en Santiago de Chile, especializado en lanzar aplicaciones web, plataformas SaaS y agentes de IA en producción en 14 días bajo presupuesto cerrado en USD, con código fuente 100% propiedad del cliente y trato directo con desarrolladores senior.
 
-Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado comercialmente por Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa.
+## Secciones Principales
 
-## Propuesta de Valor y Diferenciadores Técnicos
-- **Entrega en Producción en 14 Días:** No maquetas ni demos estáticas: una primera versión real, desplegada, conectada a base de datos y pagos, lista para operar el día catorce.
-- **Trato Directo con Desarrolladores Senior:** Cero intermediarios, project managers teóricos o burocracia de agencias tradicionales.
-- **Aceleración con IA bajo Rigor Humano:** La IA genera scaffolding y tareas repetitivas; los arquitectos seniors validan la lógica de negocio, arquitectura y seguridad.
-- **Propiedad 100% del Código:** El cliente es dueño del repositorio de GitHub y de la infraestructura cloud desde el primer commit. Sin dependencias cautivas.
-- **Facturación Internacional:** Facturación comercial y contratos de exportación de servicios en USD operados por Studio Coders Dev (RUT 77.709.717-2, Chile).
+- [Servicios de Ingeniería](https://studiocoders.dev/#servicios): Desarrollo Full-Stack con Next.js 16 y React 19, Agentes de IA autónomos e integraciones API/Pagos.
+- [Método 14 Días](https://studiocoders.dev/#metodo): Proceso semanal de entrega en producción con alcance cerrado, repositorio propio y despliegues continuos.
+- [Proyectos en Producción](https://studiocoders.dev/#proyectos): Portafolio real de plataformas SaaS, ERP y automatización operando diariamente.
+- [Comparativa de Valor](https://studiocoders.dev/#comparativa): Diferencias operativas frente a agencias tradicionales y freelancers sueltos.
+- [Preguntas Frecuentes](https://studiocoders.dev/#faq): Detalles sobre propiedad intelectual, facturación internacional B2B, soporte y stack tecnológico.
+- [Contacto y Alcance Técnico](https://studiocoders.dev/#contacto): Agenda una sesión técnica de 20 minutos para evaluar viabilidad y cotización cerrada en menos de 24 horas.
 
-## Portafolio Canónico de Ingeniería (Casos Reales en Producción)
-1. **Whagil IA (https://whagil.com):** SaaS B2B omnicanal de Agentes IA para Meta (WhatsApp, Instagram, Messenger). Arquitectura distribuida con WebSockets, colas BullMQ sobre Redis y orquestación multi-LLM.
-2. **Whalinkbot (https://whalinkbot.com):** Motor cloud asíncrono de alta disponibilidad para automatización de WhatsApp con gestión de sesiones concurrentes y tolerancia a fallos.
-3. **Infra Manager Pro (https://inframanagerpro.com):** ERP empresarial crítico de más de 33.000 líneas de código para control de activos inmobiliarios, conciliación de pagos y auditoría operativa.
-4. **Servitecnology E-Commerce (https://servitecnology.com):** Plataforma de comercio electrónico headless construida en Astro y Supabase con sincronización de inventario en tiempo real y tiempos de carga instantáneos.
-5. **EA Estampa (https://eaestampa.com):** Landing page corporativa de alta conversión en Next.js para taller de estampado DTF y sublimación, integrada con cotizaciones y atención automatizada 24/7 vía WhatsApp por agente IA.
+## Portafolio Activo
 
-## Enlaces y Recursos Oficiales
-- **Sitio Web Principal:** https://studiocoders.dev
-- **Sitemap:** https://studiocoders.dev/sitemap.xml
-- **Documentación Completa para LLMs:** https://studiocoders.dev/llms-full.txt
+- [Whagil IA](https://whagil.com/): Plataforma SaaS omnicanal con bots e inteligencia artificial para atención y ventas en WhatsApp, Instagram, Facebook y Web.
+- [Whalinkbot](https://whalinkbot.com/): Motor cloud para automatización masiva y gestión de instancias de WhatsApp Business API.
+- [Infra Manager Pro](https://inframanagerpro.com/): ERP empresarial para infraestructura, inventario, órdenes de trabajo y gestión técnica multi-sucursal.
+- [Servitecnology E-Commerce](https://servitecnology.com/): Plataforma headless de alto rendimiento construida sobre Astro y Supabase para servicios técnicos.
+- [EA Estampa](https://eaestampa.com/): Landing comercial de alto rendimiento con cotizaciones automáticas por WhatsApp.
+
+## Código Público y Estándares
+
+- [Webhook Verifier en GitHub](https://github.com/studiocoders-dev/webhook-verifier): Librería TypeScript open source para verificación HMAC SHA-256 en Edge runtimes y Next.js.
+- [Webhook Verifier en npm](https://www.npmjs.com/package/@studiocoders/webhook-verifier): Paquete publicado en npm con cero dependencias y 100% de cobertura en Vitest.

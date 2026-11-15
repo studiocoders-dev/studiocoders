@@ -58,6 +58,20 @@ describe("SEO, GEO & AEO Master Blindaje Suite", () => {
       expect(content.toLowerCase()).not.toContain("boutique");
     });
 
+    it("public/llms.txt conforms to strict llmstxt.org format (# H1, single > blockquote, ## sections with markdown links)", () => {
+      const content = fs.readFileSync(llmsPath, "utf-8");
+      const lines = content.split("\n").map((l) => l.trim()).filter(Boolean);
+      expect(lines[0]).toMatch(/^#\s+.+/);
+      expect(lines[1]).toMatch(/^>\s+.+/);
+      const blockquoteLines = lines.filter((l) => l.startsWith(">"));
+      expect(blockquoteLines).toHaveLength(1);
+      const bulletLines = lines.filter((l) => l.startsWith("- "));
+      expect(bulletLines.length).toBeGreaterThan(0);
+      for (const line of bulletLines) {
+        expect(line).toMatch(/^- \[[^\]]+\]\(https?:\/\/[^)]+\):\s+.+/);
+      }
+    });
+
     it("public/llms-full.txt exists with in-depth technical documentation", () => {
       expect(fs.existsSync(llmsFullPath)).toBe(true);
       const content = fs.readFileSync(llmsFullPath, "utf-8");

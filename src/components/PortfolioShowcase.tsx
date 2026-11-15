@@ -152,7 +152,7 @@ export function PortfolioShowcase() {
                   >
                     <span>{project.name}</span>
                     <svg
-                      className="h-4 w-4 text-[#818799] transition-transform hover:translate-x-0.5 hover:-translate-y-0.5 hover:text-[#818cf8]"
+                      className="h-4 w-4 text-[#9ea5b8] transition-transform hover:translate-x-0.5 hover:-translate-y-0.5 hover:text-[#818cf8]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -164,7 +164,7 @@ export function PortfolioShowcase() {
                       <polyline points="7 7 17 7 17 17" />
                     </svg>
                   </a>
-                  <span className="font-mono text-xs text-[#818799]">
+                  <span className="font-mono text-xs text-[#9ea5b8]">
                     ({project.domain})
                   </span>
                 </div>
@@ -187,7 +187,7 @@ export function PortfolioShowcase() {
                       key={i}
                       className="rounded-lg border border-[#2e3340]/80 bg-[#14161c]/80 p-3.5"
                     >
-                      <span className="block text-[10px] uppercase tracking-wider text-[#818799]">
+                      <span className="block text-[10px] uppercase tracking-wider text-[#9ea5b8]">
                         {spec.label}
                       </span>
                       <span className="mt-1 block font-medium text-[#edeff4] text-[11px] sm:text-xs">

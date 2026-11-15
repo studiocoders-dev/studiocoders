@@ -2,7 +2,7 @@ import React from "react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#2e3340]/60 bg-[#14161c] py-14 text-xs font-mono text-[#818799]">
+    <footer className="border-t border-[#2e3340]/60 bg-[#14161c] py-14 text-xs font-mono text-[#9ea5b8]">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
           {/* Logo & Tagline */}
@@ -21,7 +21,7 @@ export function Footer() {
             <p className="text-[#edeff4] font-medium font-mono text-xs">
               Studio Coders Dev · RUT: 77.709.717-2
             </p>
-            <p className="text-[11px] text-[#818799]">
+            <p className="text-[11px] text-[#9ea5b8]">
               Contratos internacionales de exportación · Facturación B2B en USD
             </p>
           </div>

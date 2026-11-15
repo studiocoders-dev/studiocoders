@@ -31,7 +31,7 @@ mi-proyecto/
 │   ├── rules/                         # 🚦 Reglas atómicas por dominio (con YAML frontmatter)
 │   │   ├── sdd-workflow.md            # Regla madre del ciclo de 4 pasos
 │   │   ├── database.md                # Reglas de base de datos / modelos / migraciones
-│   │   ├── frontend-ui.md             # Directrices de componentes, UX y estilos
+│   │   ├── frontend-ui.md             # Directrices de componentes, UX, Core Web Vitals y WCAG 2.1 AA
 │   │   └── [dominio-especifico].md    # Reglas específicas de cada subsistema crítico
 │   ├── specs/                         # 📋 El "QUÉ": Especificaciones Funcionales (EARS + DoD)
 │   ├── plans/                         # 🛠️ El "CÓMO": Planes Técnicos de Implementación
@@ -253,6 +253,9 @@ Crea la siguiente estructura de directorios en la raíz del repositorio:
      ---
      ```
    - Extrae en viñetas claras las mejores prácticas, trampas comunes (gotchas) y decisiones de arquitectura del proyecto.
+3. **Estándares Obligatorios de Calidad Web (en `.agents/rules/frontend-ui.md` o regla equivalente de UI):**
+   - **Core Web Vitals (Móvil y Desktop):** LCP $\le 2.5\text{s}$, CLS $\le 0.1$, INP $\le 200\text{ms}$, fuentes cargadas con `display: swap`, cero recursos bloqueantes innecesarios e imágenes optimizadas con dimensiones explícitas.
+   - **Accesibilidad Web WCAG 2.1 AA (100/100 en Lighthouse):** Contraste mínimo $\ge 4.5:1$ en texto normal y botones con texto blanco, HTML semántico (`<header>`, `<main>`, `<nav>`, `<footer>`), jerarquía única de encabezados (`<h1>` -> `<h2>`), foco visible y atributos `aria-*` correctos.
 
 ---
 

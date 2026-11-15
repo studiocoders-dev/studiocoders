@@ -36,7 +36,7 @@ export function ContactForm() {
         <div className="mt-12 rounded-xl border border-[#2e3340] bg-[#1c1f28]/60 p-7 sm:p-10">
           {submitted ? (
             <div className="rounded-lg border border-[#6366f1]/40 bg-[#6366f1]/10 p-8 text-center">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#6366f1] text-white mb-4">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#4f46e5] text-white mb-4">
                 <svg
                   className="h-6 w-6"
                   fill="none"
@@ -71,7 +71,7 @@ export function ContactForm() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block font-mono text-xs uppercase tracking-wider text-[#818799]"
+                  className="block font-mono text-xs uppercase tracking-wider text-[#9ea5b8]"
                 >
                   Correo corporativo
                 </label>
@@ -81,14 +81,14 @@ export function ContactForm() {
                   name="email"
                   required
                   placeholder="tu@empresa.com"
-                  className="mt-2 block w-full rounded-md border border-[#2e3340] bg-[#14161c] px-4 py-3 font-mono text-sm text-[#edeff4] placeholder-[#818799]/60 transition-colors focus:border-[#6366f1] focus:outline-none focus:ring-1 focus:ring-[#6366f1]"
+                  className="mt-2 block w-full rounded-md border border-[#2e3340] bg-[#14161c] px-4 py-3 font-mono text-sm text-[#edeff4] placeholder-[#9ea5b8]/80 transition-colors focus:border-[#6366f1] focus:outline-none focus:ring-1 focus:ring-[#6366f1]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="project"
-                  className="block font-mono text-xs uppercase tracking-wider text-[#818799]"
+                  className="block font-mono text-xs uppercase tracking-wider text-[#9ea5b8]"
                 >
                   ¿Qué necesitas construir?
                 </label>
@@ -98,7 +98,7 @@ export function ContactForm() {
                   required
                   rows={4}
                   placeholder="¿Qué estás tratando de construir, y qué tiene que hacer?"
-                  className="mt-2 block w-full rounded-md border border-[#2e3340] bg-[#14161c] px-4 py-3 font-sans text-sm text-[#edeff4] placeholder-[#818799]/60 transition-colors focus:border-[#6366f1] focus:outline-none focus:ring-1 focus:ring-[#6366f1]"
+                  className="mt-2 block w-full rounded-md border border-[#2e3340] bg-[#14161c] px-4 py-3 font-sans text-sm text-[#edeff4] placeholder-[#9ea5b8]/80 transition-colors focus:border-[#6366f1] focus:outline-none focus:ring-1 focus:ring-[#6366f1]"
                 />
               </div>
 
@@ -106,13 +106,13 @@ export function ContactForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="inline-flex w-full h-12 items-center justify-center rounded-md bg-[#6366f1] px-6 font-mono text-sm font-semibold tracking-wide text-white transition-all hover:bg-[#4f46e5] hover:shadow-[0_0_25px_rgba(99,102,241,0.35)] disabled:opacity-50 active:scale-[0.99]"
+                  className="inline-flex w-full h-12 items-center justify-center rounded-md bg-[#4f46e5] px-6 font-mono text-sm font-semibold tracking-wide text-white transition-all hover:bg-[#4338ca] hover:shadow-[0_0_25px_rgba(79,70,229,0.4)] disabled:opacity-50 active:scale-[0.99]"
                 >
                   {loading ? "Enviando..." : "Solicitar llamada técnica (20 min)"}
                 </button>
               </div>
 
-              <div className="flex items-center justify-center gap-2 pt-2 font-mono text-xs text-[#818799]">
+              <div className="flex items-center justify-center gap-2 pt-2 font-mono text-xs text-[#9ea5b8]">
                 <span>O escríbenos directamente a:</span>
                 <a
                   href="mailto:contacto@studiocoders.dev"

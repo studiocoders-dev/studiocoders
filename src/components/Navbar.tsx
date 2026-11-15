@@ -42,45 +42,45 @@ export function Navbar() {
         {/* Navigation Anchors */}
         <nav
           aria-label="Navegación principal"
-          className="hidden items-center gap-7 text-xs font-mono tracking-wider uppercase text-[#949aab] md:flex"
+          className="hidden items-center gap-5 lg:gap-7 text-xs font-mono tracking-wider uppercase text-[#949aab] md:flex"
         >
           <a
             href="#servicios"
-            className="transition-colors hover:text-[#edeff4]"
+            className="whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
             Qué Construimos
           </a>
           <a
             href="#metodo"
-            className="transition-colors hover:text-[#edeff4]"
+            className="whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
             Método 14 Días
           </a>
           <a
             href="#proyectos"
-            className="transition-colors hover:text-[#edeff4]"
+            className="whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
             Proyectos Reales
           </a>
           <a
             href="#comparativa"
-            className="transition-colors hover:text-[#edeff4]"
+            className="whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
             Comparativa
           </a>
           <a
             href="#faq"
-            className="transition-colors hover:text-[#edeff4]"
+            className="whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
             FAQ
           </a>
         </nav>
 
         {/* CTA Button */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 shrink-0">
           <a
             href="#contacto"
-            className="inline-flex h-9 items-center justify-center rounded-md bg-[#6366f1] px-4 font-mono text-xs font-medium tracking-wide text-white transition-all hover:bg-[#4f46e5] hover:shadow-[0_0_20px_rgba(99,102,241,0.3)] active:scale-95"
+            className="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md bg-[#4f46e5] px-4 font-mono text-xs font-medium tracking-wide text-white transition-all hover:bg-[#4338ca] hover:shadow-[0_0_20px_rgba(79,70,229,0.35)] active:scale-95"
           >
             Cuéntanos tu proyecto
           </a>

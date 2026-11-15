@@ -55,16 +55,16 @@ export function ComparisonTable() {
           <table className="w-full min-w-[640px] text-left border-collapse">
             <thead>
               <tr className="border-b border-[#2e3340] bg-[#1c1f28]">
-                <th className="py-5 px-6 font-mono text-xs uppercase tracking-wider text-[#818799]">
+                <th className="py-5 px-6 font-mono text-xs uppercase tracking-wider text-[#9ea5b8]">
                   Criterio
                 </th>
                 <th className="py-5 px-6 font-mono text-xs uppercase tracking-wider text-[#818cf8] bg-[#6366f1]/10 border-x border-[#6366f1]/20">
                   Studio Coders
                 </th>
-                <th className="py-5 px-6 font-mono text-xs uppercase tracking-wider text-[#818799]">
+                <th className="py-5 px-6 font-mono text-xs uppercase tracking-wider text-[#9ea5b8]">
                   Agencias Tradicionales
                 </th>
-                <th className="py-5 px-6 font-mono text-xs uppercase tracking-wider text-[#818799]">
+                <th className="py-5 px-6 font-mono text-xs uppercase tracking-wider text-[#9ea5b8]">
                   Freelancers Sueltos
                 </th>
               </tr>

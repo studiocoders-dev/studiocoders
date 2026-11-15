@@ -30,7 +30,7 @@ export function PublicCode() {
           <div className="grid grid-cols-1 divide-y divide-[#2e3340] sm:grid-cols-2 sm:divide-y-0 sm:divide-x">
             {/* NPM Package Column */}
             <div className="p-7 sm:p-8">
-              <span className="block font-mono text-xs uppercase tracking-wider text-[#818799]">
+              <span className="block font-mono text-xs uppercase tracking-wider text-[#9ea5b8]">
                 Paquete en npm
               </span>
               <a
@@ -41,7 +41,7 @@ export function PublicCode() {
               >
                 <span>@studiocoders/webhook-verifier</span>
                 <svg
-                  className="h-4 w-4 text-[#818799] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#818cf8]"
+                  className="h-4 w-4 text-[#9ea5b8] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#818cf8]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -60,7 +60,7 @@ export function PublicCode() {
 
             {/* GitHub Repo Column */}
             <div className="p-7 sm:p-8">
-              <span className="block font-mono text-xs uppercase tracking-wider text-[#818799]">
+              <span className="block font-mono text-xs uppercase tracking-wider text-[#9ea5b8]">
                 Código en GitHub
               </span>
               <a
@@ -71,7 +71,7 @@ export function PublicCode() {
               >
                 <span>studiocoders-dev/webhook-verifier</span>
                 <svg
-                  className="h-4 w-4 text-[#818799] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#818cf8]"
+                  className="h-4 w-4 text-[#9ea5b8] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#818cf8]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -91,7 +91,7 @@ export function PublicCode() {
 
           {/* Badges Bar */}
           <div className="border-t border-[#2e3340]/60 bg-[#14161c]/80 px-7 py-4">
-            <div className="flex flex-wrap items-center gap-4 font-mono text-xs text-[#818799]">
+            <div className="flex flex-wrap items-center gap-4 font-mono text-xs text-[#9ea5b8]">
               <span className="inline-flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 TypeScript Strict

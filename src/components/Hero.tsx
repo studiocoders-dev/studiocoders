@@ -33,20 +33,20 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#contacto"
-              className="inline-flex h-12 items-center justify-center rounded-md bg-[#6366f1] px-7 font-mono text-sm font-medium tracking-wide text-white transition-all hover:bg-[#4f46e5] hover:shadow-[0_0_30px_rgba(99,102,241,0.35)] active:scale-95"
+              className="inline-flex h-12 items-center justify-center rounded-md bg-[#4f46e5] px-7 font-mono text-sm font-medium tracking-wide text-white transition-all hover:bg-[#4338ca] hover:shadow-[0_0_30px_rgba(79,70,229,0.4)] active:scale-95"
             >
               Cotizar proyecto (Scope 20 min)
             </a>
             <a
               href="#metodo"
-              className="inline-flex h-12 items-center justify-center rounded-md border border-[#2e3340] bg-[#1c1f28]/60 px-6 font-mono text-sm font-medium text-[#edeff4] transition-all hover:bg-[#242835] hover:border-[#818799]/40 active:scale-95"
+              className="inline-flex h-12 items-center justify-center rounded-md border border-[#2e3340] bg-[#1c1f28]/60 px-6 font-mono text-sm font-medium text-[#edeff4] transition-all hover:bg-[#242835] hover:border-[#9ea5b8]/40 active:scale-95"
             >
               Conoce nuestra arquitectura
             </a>
           </div>
 
           {/* Trust Highlights (Minimalist Monospace) */}
-          <div className="mt-14 pt-8 border-t border-[#2e3340]/60 grid grid-cols-2 gap-4 sm:grid-cols-4 font-mono text-xs text-[#818799]">
+          <div className="mt-14 pt-8 border-t border-[#2e3340]/60 grid grid-cols-2 gap-4 sm:grid-cols-4 font-mono text-xs text-[#9ea5b8]">
             <div>
               <span className="block text-sm font-semibold text-[#edeff4]">14 Días</span>
               <span className="text-[#949aab]">Entrega en producción</span>
