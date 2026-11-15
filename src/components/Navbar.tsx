@@ -54,7 +54,7 @@ export function Navbar() {
             href="#metodo"
             className="sc-nav-link whitespace-nowrap transition-colors hover:text-[#edeff4]"
           >
-            Método 14 Días
+            Método 30 Días
           </a>
           <a
             href="#proyectos"

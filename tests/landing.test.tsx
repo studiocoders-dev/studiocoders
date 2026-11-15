@@ -17,9 +17,9 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
   const html = renderToStaticMarkup(React.createElement(Home));
 
   describe("Gate 4 Compliance: Core Value Proposition & Copy", () => {
-    it("renders the primary headline promising 14-day delivery", () => {
+    it("renders the primary headline promising 30-day delivery", () => {
       expect(html).toContain(
-        "Lanzamos tu aplicación web o Agente de IA en 14 días."
+        "Lanzamos tu aplicación web o Agente de IA en 30 días."
       );
     });
 
@@ -32,14 +32,16 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
     it("renders the editorial subhead clarifying real production vs demo/mockup", () => {
       expect(html).toContain("Sin maquetas ni promesas en papel");
       expect(html).toContain(
-        "Una versión real, desplegada con base de datos y pagos, que tú y tu equipo pueden abrir y usar el día catorce."
+        "Una versión real, desplegada con base de datos y pagos, que tú y tu equipo pueden abrir y usar el día treinta."
       );
       expect(html).toContain("Después iteramos contigo cada semana.");
       expect(html.toLowerCase()).not.toContain("sprint");
     });
 
-    it("renders the primary CTA with prompt to tell project", () => {
+    it("renders the primary CTA with prompt to tell project and 30-day nav anchor", () => {
       expect(html).toContain("Cotizar proyecto en 20 minutos");
+      expect(html).toContain("Método 30 Días");
+      expect(html).toContain("30 Días en producción");
     });
   });
 
@@ -90,16 +92,17 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
     });
   });
 
-  describe("The 14-Day Process Timeline", () => {
-    it("includes all milestones: Día 0, Día 2, Día 14 and Cada semana", () => {
+  describe("The 30-Day Process Timeline", () => {
+    it("includes all milestones: Día 0, Día 2, Día 15, Día 30 and Cada semana", () => {
       expect(html).toContain("Día 0");
       expect(html).toContain("Día 2");
-      expect(html).toContain("Día 14");
+      expect(html).toContain("Día 15");
+      expect(html).toContain("Día 30");
       expect(html).toContain("Cada semana");
     });
 
-    it("explains why 2 weeks is possible with senior developers and AI acceleration", () => {
-      expect(html).toContain("¿Cómo logramos entregar en 14 días?");
+    it("explains why 30 days is possible with senior developers and AI acceleration", () => {
+      expect(html).toContain("¿Cómo logramos entregar en 30 días?");
       expect(html).toContain("Un stack consolidado que dominamos");
       expect(html).toContain("Trato directo con ingenieros senior");
       expect(html).toContain("Aceleración por IA con rigor humano");
@@ -179,8 +182,9 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
 
   describe("SEO & AEO Metadata Verification", () => {
     it("defines valid OpenGraph and Twitter title and descriptions in layout", () => {
-      expect(metadata.title).toBe("studiocoders.dev — De la Idea a Producción en 14 Días");
+      expect(metadata.title).toBe("studiocoders.dev — De la Idea a Producción en 30 Días");
       expect(metadata.description).toContain("Santiago de Chile");
+      expect(metadata.description).toContain("30 días");
       expect(metadata.description).toContain("desarrolladores senior");
     });
 
@@ -238,6 +242,86 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       );
       expect(css).not.toContain("filter: blur");
       expect(motionCtrl).not.toContain("filter: blur");
+    });
+  });
+
+  describe("Commercial Conversion Sections & PageSpeed/Animation Parity (Spec 016)", () => {
+    it("renders ImpactMetrics KPI section with 30, 5%, +5 and strictly zero +100 claims", () => {
+      expect(html).toContain('id="metricas"');
+      expect(html).toContain("Métricas de Ejecución");
+      expect(html).toContain(
+        "Construimos plataformas de software y aplicaciones móviles listas para escalar."
+      );
+      expect(html).toContain("Días para entregar tu proyecto");
+      expect(html).toContain("Inversión inicial para arrancar");
+      expect(html).toContain("Años de experiencia en ingeniería");
+      expect(html).toContain(">30<");
+      expect(html).toContain(">5%<");
+      expect(html).toContain(">+5<");
+      expect(html).not.toContain("+100");
+    });
+
+    it("renders CommercialGuarantees multi-industry section with 5 paraphrased cards starting at +5 años", () => {
+      expect(html).toContain('id="respaldo"');
+      expect(html).toContain(
+        "Especialistas en desarrollo de software a medida para múltiples industrias."
+      );
+      expect(html).toContain("logística, salud, finanzas, comercio y operaciones");
+      expect(html).toContain("+5 años de experiencia");
+      expect(html).toContain("Arrancas con solo el 5%");
+      expect(html).toContain("Entrega en 30 días");
+      expect(html).toContain("100% a tu nombre");
+      expect(html).toContain("1 año de soporte incluido");
+      expect(html).not.toContain("+100 proyectos exitosos");
+      expect(html).not.toContain("más de una década");
+    });
+
+    it("renders QuickStepsCTA 3-step pre-closing funnel before contact form", () => {
+      expect(html).toContain('id="como-empezar"');
+      expect(html).toContain("Lo hacemos realidad en 3 simples pasos.");
+      expect(html).toContain("Paso 01");
+      expect(html).toContain("Paso 02");
+      expect(html).toContain("Paso 03");
+      expect(html).toContain("Diagnóstico técnico en 20 minutos");
+      expect(html).toContain("Propuesta cerrada e inicio con 5%");
+      expect(html).toContain("Lanzamiento llave en mano en 30 días");
+    });
+
+    it("registers all new section IDs in MotionController and eliminates animated box-shadow in globals.css", () => {
+      const motionCtrl = fs.readFileSync(
+        path.resolve(process.cwd(), "src/components/MotionController.tsx"),
+        "utf-8"
+      );
+      const css = fs.readFileSync(
+        path.resolve(process.cwd(), "src/app/globals.css"),
+        "utf-8"
+      );
+      expect(motionCtrl).toContain('"metricas"');
+      expect(motionCtrl).toContain('"respaldo"');
+      expect(motionCtrl).toContain('"como-empezar"');
+      expect(css).not.toContain("box-shadow 0.28s");
+      expect(css).not.toContain("0 14px 36px -12px");
+      expect(css).not.toContain("0 18px 42px -12px");
+    });
+
+    it("keeps all 3 new sections as pure Server Components with GPU motion classes and decorative icon aria-hidden", () => {
+      const files = [
+        "src/components/ImpactMetrics.tsx",
+        "src/components/CommercialGuarantees.tsx",
+        "src/components/QuickStepsCTA.tsx",
+      ];
+      for (const file of files) {
+        const src = fs.readFileSync(path.resolve(process.cwd(), file), "utf-8");
+        expect(src).not.toContain("use client");
+        expect(src).toContain("sc-section-flow");
+        expect(src).toContain("sc-card-flow");
+        expect(src).toContain("--stagger-index");
+      }
+      const commercialSrc = fs.readFileSync(
+        path.resolve(process.cwd(), "src/components/CommercialGuarantees.tsx"),
+        "utf-8"
+      );
+      expect(commercialSrc).toContain('aria-hidden="true"');
     });
   });
 });

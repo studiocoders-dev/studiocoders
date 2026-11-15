@@ -9,7 +9,7 @@ export function FAQ() {
   const faqs: FAQItem[] = [
     {
       q: "¿Qué es Studio Coders y quién respalda su operación técnica y legal?",
-      a: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su entrega en producción en 14 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios de agencias tradicionales. El cliente mantiene el 100% de la propiedad del código fuente y repositorios en GitHub desde el primer día.",
+      a: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su entrega en producción en 30 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios de agencias tradicionales. El cliente mantiene el 100% de la propiedad del código fuente y repositorios en GitHub desde el primer día.",
     },
     {
       q: "¿Qué plataformas y proyectos en producción respaldan la ingeniería de Studio Coders?",
@@ -70,8 +70,8 @@ export function FAQ() {
       ),
     },
     {
-      q: "¿Cómo es posible tener una primera versión en producción en 14 días?",
-      a: "Trabajamos sin intermediarios: hablas directamente con desarrolladores senior. Utilizamos aceleración asistida por Inteligencia Artificial para el boilerplate y la codificación repetitiva bajo estricta supervisión de arquitectura, y nos basamos en componentes probados en batalla (Next.js 16, Supabase, Tailwind CSS, Redis y BullMQ).",
+      q: "¿Cómo es posible tener una primera versión en producción en 30 días?",
+      a: "Trabajamos sin intermediarios: hablas directamente con desarrolladores senior con más de cinco años de experiencia. Validamos avances funcionales en entorno de pruebas al día 15, utilizamos aceleración asistida por Inteligencia Artificial bajo estricta supervisión de arquitectura y nos basamos en componentes probados en batalla (Next.js 16, Supabase, Tailwind CSS, Redis y BullMQ) para liberar en producción al día 30.",
     },
     {
       q: "¿Quién es el dueño del código fuente y de los accesos?",
@@ -79,11 +79,11 @@ export function FAQ() {
     },
     {
       q: "¿Qué incluye el soporte y mantenimiento posterior?",
-      a: "Ofrecemos garantía contra fallos post-lanzamiento y planes opcionales de mantenimiento mensual que cubren monitoreo 24/7, corrección de errores, hosting, base de datos y actualizaciones de seguridad. Nuevas funcionalidades se cotizan por separado con alcance cerrado.",
+      a: "Todos nuestros desarrollos llave en mano incluyen un año completo de soporte técnico sin costo tras el lanzamiento en producción, cubriendo estabilidad y corrección de fallos, más planes opcionales de evolución continua y nuevas funcionalidades bajo alcance cerrado.",
     },
     {
       q: "¿Cómo funcionan los pagos y la facturación internacional?",
-      a: "Operamos formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2 (Chile). Emitimos facturación comercial y contratos internacionales de exportación de servicios. Todos nuestros presupuestos son en USD, cerrados y sin costos ocultos.",
+      a: "Operamos formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2 (Chile). Emitimos facturación comercial y contratos internacionales de exportación de servicios. Todos nuestros presupuestos son en USD, cerrados, sin costos ocultos y puedes arrancar tu desarrollo con solo el 5% de inversión inicial.",
     },
     {
       q: "¿Qué tecnologías utilizan para construir las plataformas?",

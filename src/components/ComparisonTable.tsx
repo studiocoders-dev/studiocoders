@@ -4,7 +4,7 @@ export function ComparisonTable() {
   const rows = [
     {
       criterio: "Entrega de primera versión",
-      studioCoders: "14 Días en producción",
+      studioCoders: "30 Días en producción",
       agencias: "3 a 6 meses de espera",
       freelancers: "Impredecible",
     },
@@ -46,7 +46,7 @@ export function ComparisonTable() {
           </h2>
           <p className="mt-4 font-serif text-lg text-[#949aab]">
             La diferencia entre esperar meses por un prototipo o empezar a captar
-            clientes en dos semanas.
+            clientes en treinta días.
           </p>
         </div>
 

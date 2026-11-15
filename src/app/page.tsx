@@ -1,7 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { MotionController } from "@/components/MotionController";
 import { Hero } from "@/components/Hero";
+import { ImpactMetrics } from "@/components/ImpactMetrics";
 import { ServicesSection } from "@/components/ServicesSection";
+import { CommercialGuarantees } from "@/components/CommercialGuarantees";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { PortfolioShowcase } from "@/components/PortfolioShowcase";
 import { DelayCauses } from "@/components/DelayCauses";
@@ -9,6 +11,7 @@ import { AuditGuarantees } from "@/components/AuditGuarantees";
 import { PublicCode } from "@/components/PublicCode";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { FAQ } from "@/components/FAQ";
+import { QuickStepsCTA } from "@/components/QuickStepsCTA";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 
@@ -19,7 +22,9 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <ImpactMetrics />
         <ServicesSection />
+        <CommercialGuarantees />
         <ProcessTimeline />
         <PortfolioShowcase />
         <DelayCauses />
@@ -27,6 +32,7 @@ export default function Home() {
         <PublicCode />
         <ComparisonTable />
         <FAQ />
+        <QuickStepsCTA />
         <ContactForm />
       </main>
       <Footer />

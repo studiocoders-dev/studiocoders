@@ -19,14 +19,14 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className="mt-8 text-4xl font-bold tracking-tight text-[#edeff4] sm:text-6xl md:text-7xl leading-[1.08]">
-            Lanzamos tu aplicación web o Agente de IA en 14 días.
+            Lanzamos tu aplicación web o Agente de IA en 30 días.
           </h1>
 
           {/* Editorial Subtitle (Newsreader Serif) */}
           <p className="mt-8 font-serif text-xl text-[#949aab] sm:text-2xl md:text-[1.65rem] md:leading-relaxed max-w-3xl">
             Sin maquetas ni promesas en papel. Una versión real, desplegada con
             base de datos y pagos, que tú y tu equipo pueden abrir y usar el día
-            catorce. Después iteramos contigo cada semana.
+            treinta. Después iteramos contigo cada semana.
           </p>
 
           {/* Actions */}
@@ -48,7 +48,7 @@ export function Hero() {
           {/* Trust Highlights (Minimalist Monospace) */}
           <div className="mt-14 pt-8 border-t border-[#2e3340]/60 grid grid-cols-2 gap-4 sm:grid-cols-4 font-mono text-xs text-[#9ea5b8]">
             <div className="transition-transform duration-200 hover:-translate-y-0.5">
-              <span className="block text-sm font-semibold text-[#edeff4]">14 Días</span>
+              <span className="block text-sm font-semibold text-[#edeff4]">30 Días</span>
               <span className="text-[#949aab]">Entrega en producción</span>
             </div>
             <div className="transition-transform duration-200 hover:-translate-y-0.5">

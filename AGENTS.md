@@ -1,7 +1,7 @@
 # Studio Coders (`studiocoders.dev`) — Guía Maestra de Orquestación IA (SDD)
 
 > Este repositorio opera bajo **Spec-Driven Development (SDD)** con **Context Routing** y **4 Hard Code-Gates**.  
-> **Misión:** Estudio de ingeniería de software de élite y desarrollo ágil asistido por IA. Entrega de aplicaciones web, móviles y agentes de IA en producción en 14 días.
+> **Misión:** Estudio de ingeniería de software de élite y desarrollo ágil asistido por IA. Entrega de aplicaciones web, móviles y agentes de IA en producción en 30 días.
 
 ---
 

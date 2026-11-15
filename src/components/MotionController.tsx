@@ -3,7 +3,9 @@
 import { useEffect } from "react";
 
 const SECTION_IDS = [
+  "metricas",
   "servicios",
+  "respaldo",
   "metodo",
   "proyectos",
   "criterio",
@@ -11,6 +13,7 @@ const SECTION_IDS = [
   "codigo-publico",
   "comparativa",
   "faq",
+  "como-empezar",
   "contacto",
 ];
 

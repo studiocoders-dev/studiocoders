@@ -75,7 +75,7 @@ describe("SEO, GEO & AEO Master Blindaje Suite", () => {
     it("public/llms-full.txt exists with in-depth technical documentation", () => {
       expect(fs.existsSync(llmsFullPath)).toBe(true);
       const content = fs.readFileSync(llmsFullPath, "utf-8");
-      expect(content).toContain("El Método de los 14 Días");
+      expect(content).toContain("El Método de los 30 Días");
       expect(content).toContain("Next.js 16");
       expect(content).toContain("BullMQ");
       expect(content.toLowerCase()).not.toContain("boutique");

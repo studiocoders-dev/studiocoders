@@ -10,12 +10,17 @@ export function ProcessTimeline() {
     {
       time: "Día 2",
       description:
-        "Propuesta técnica con arquitectura definida y presupuesto cerrado en USD. Un precio fijo y exacto, sin sorpresas ni costes ocultos.",
+        "Propuesta técnica con arquitectura definida y presupuesto cerrado en USD. Un precio fijo y exacto e inicio con solo el 5% de inversión inicial.",
     },
     {
-      time: "Día 14",
+      time: "Día 15",
       description:
-        "Tu sistema o Agente IA en producción. Desplegado, conectado a base de datos y pagos, 100% operativo en tu propio repositorio de GitHub.",
+        "Primer entregable funcional en entorno de pruebas (Staging). Tú y tu equipo validan flujos reales a mitad de camino antes del lanzamiento.",
+    },
+    {
+      time: "Día 30",
+      description:
+        "Tu sistema o Agente IA en producción llave en mano. Desplegado, conectado a base de datos y pagos, 100% operativo a tu nombre y en tu propio GitHub.",
     },
     {
       time: "Cada semana",
@@ -56,7 +61,7 @@ export function ProcessTimeline() {
             Metodología Ágil
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#edeff4] sm:text-5xl">
-            De requerimiento a producción real en dos semanas.
+            De requerimiento a producción real en treinta días.
           </h2>
         </div>
 
@@ -82,11 +87,11 @@ export function ProcessTimeline() {
           ))}
         </div>
 
-        {/* Subsection: ¿Cómo logramos entregar en 14 días? */}
+        {/* Subsection: ¿Cómo logramos entregar en 30 días? */}
         <div className="mt-24 pt-16 border-t border-[#2e3340]/60">
           <div className="max-w-3xl sc-section-flow">
             <h3 className="text-2xl font-bold tracking-tight text-[#edeff4] sm:text-3xl">
-              ¿Cómo logramos entregar en 14 días?
+              ¿Cómo logramos entregar en 30 días?
             </h3>
             <p className="mt-3 font-serif text-lg text-[#949aab]">
               Eliminamos las capas de intermediarios y combinamos aceleración por

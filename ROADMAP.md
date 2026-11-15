@@ -1,7 +1,7 @@
 # 🗺️ Master Strategic Roadmap: Studio Coders (`studiocoders.dev`)
 
 > **De la mezcla de servicios locales a una Agencia de Ingeniería de Software & IA de Élite.**  
-> *Inspirada en el modelo de entrega en 14 días y la estética de vanguardia de Brotherhood.dev.*
+> *Inspirada en el modelo de entrega en 30 días y la estética de vanguardia de Brotherhood.dev.*
 
 ---
 
@@ -9,8 +9,8 @@
 
 **Studio Coders** nace para resolver la mayor fricción del mercado de desarrollo de software: las empresas y fundadores están cansados de agencias tradicionales lentas que cobran \$20,000+ USD, tardan 6 meses en entregar algo y colocan intermediarios que no entienden de código.
 
-* **Nuestra Propuesta Central:** *"Tu software o Agente IA en producción en 14 días. No un mockup ni una demo: una primera versión real, desplegada, lista para facturar."*
-* **Diferenciador:** Trato directo con desarrolladores senior, aceleración asistida por Inteligencia Artificial y arquitecturas modernas probadas en batalla.
+* **Nuestra Propuesta Central:** *"Tu software o Agente IA en producción en 30 días. No un mockup ni una demo: una plataforma real, llave en mano, 100% a tu nombre y lista para facturar."*
+* **Diferenciador:** Trato directo con desarrolladores senior (+5 años de experiencia), inicio con el 5%, hito de validación en Staging al día 15, aceleración asistida por Inteligencia Artificial, 1 año de soporte incluido y arquitecturas modernas probadas en batalla.
 
 ---
 
@@ -31,8 +31,8 @@ flowchart TD
 
         subgraph Entidad_B["🚀 2. ESTUDIO DE INGENIERÍA DE SOFTWARE & IA (studiocoders.dev)"]
             SC_Web["Web: studiocoders.dev<br/>Stack: Next.js 16 + React 19 + Tailwind 4"]
-            SC_Funnel["Funnel: landing.studiocoders.dev<br/>(Respuesta directa y captación)"]
-            SC_Nicho["Mercado: Global (Chile, Latam, EE.UU., España)<br/>Servicios: Software a medida, Agentes IA, Micro-SaaS en 14 días"]
+            SC_Funnel["Funnel Unificado: studiocoders.dev<br/>(Autoridad técnica + Conversión directa)"]
+            SC_Nicho["Mercado: Global (Chile, Latam, EE.UU., España)<br/>Servicios: Software a medida, Agentes IA, Micro-SaaS en 30 días"]
             SC_RRSS["RRSS: @studiocoders.dev alimentadas por genvideoremotion"]
         end
     end
@@ -72,7 +72,7 @@ No inventamos proyectos de prueba; mostramos plataformas reales operando en prod
 
 Utilizamos la factoría automatizada de Remotion + Gemini Flash Lite TTS + Whisper para alimentar las redes de Studio Coders con contenido faceless B2B enfocado en dolor de negocio:
 
-* **Pilar 1 (Desmitificación):** *"Por qué las agencias tradicionales tardan 6 meses y nosotros te lo dejamos en producción en 14 días"*.
+* **Pilar 1 (Desmitificación):** *"Por qué las agencias tradicionales tardan 6 meses y nosotros te lo dejamos en producción en 30 días"*.
 * **Pilar 2 (Casos de Automatización):** *"Cómo este negocio multiplicó sus cierres nocturnos con un Agente IA en WhatsApp"*.
 * **Pilar 3 (Sistemas Propios vs Enlatados):** *"Por qué las empresas están reemplazando 5 suscripciones de software por un panel interno a medida"*.
 * **Call to Action (CTA):** Comentar una palabra clave o ir al enlace de la biografía para agendar una llamada técnica de alcance de 15 minutos.
@@ -91,7 +91,7 @@ FASE 1: Fundación de Identidad & Activos (Completado / En Curso)
 FASE 2: Desarrollo de la Landing Principal (Next.js 16 + Tailwind 4)
 ├── [x] Especificación Funcional: .agents/specs/001-foundation-landing-page.md
 ├── [x] Plan Técnico: .agents/plans/001-foundation-landing-page.md
-├── [x] Maquetación y componentes (Hero, Proceso 14 días, Portafolio, Tabla Comparativa, FAQ, Contacto)
+├── [x] Maquetación y componentes (Hero, Métricas KPI, Proceso 30 días, Portafolio, Tabla Comparativa, FAQ, Contacto)
 ├── [x] Verificación de pruebas unitarias (Vitest, 15 tests pasando) y build de producción (0 errores)
 └── [x] Despliegue en Vercel conectado al dominio studiocoders.dev (EN VIVO EN PRODUCCIÓN 🚀)
 
@@ -103,5 +103,5 @@ FASE 3: Red de Autoridad & Validación Cruzada
 FASE 4: Tracción y Escalamiento
 ├── [ ] Configurar plantillas de copywriter en genvideoremotion para Studio Coders
 ├── [ ] Lanzamiento de campaña de reels verticales en YouTube Shorts, TikTok e Instagram
-└── [ ] Construcción del funnel de respuesta directa en landing.studiocoders.dev
+└── [x] Integración de secciones comerciales de conversión directa (KPIs, Garantías Multi-Industria, 3 Pasos CTA) en studiocoders.dev
 ```

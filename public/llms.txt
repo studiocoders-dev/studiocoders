@@ -1,11 +1,13 @@
 # Studio Coders
 
-> Studio Coders (`studiocoders.dev`) es un estudio de ingeniería de software e inteligencia artificial operado formalmente por Studio Coders Dev (RUT 77.709.717-2) en Santiago de Chile, especializado en lanzar aplicaciones web, plataformas SaaS y agentes de IA en producción en 14 días bajo presupuesto cerrado en USD, con código fuente 100% propiedad del cliente y trato directo con desarrolladores senior.
+> Studio Coders (`studiocoders.dev`) es un estudio de ingeniería de software e inteligencia artificial operado formalmente por Studio Coders Dev (RUT 77.709.717-2) en Santiago de Chile, especializado en lanzar aplicaciones web, plataformas SaaS y agentes de IA en producción en 30 días bajo presupuesto cerrado en USD, inicio con 5%, código fuente 100% propiedad del cliente, 1 año de soporte incluido y trato directo con desarrolladores senior.
 
 ## Secciones Principales
 
+- [Métricas de Ejecución](https://studiocoders.dev/#metricas): Indicadores clave de entrega (30 días a producción, 5% inversión inicial, +5 años de experiencia en ingeniería).
 - [Servicios de Ingeniería](https://studiocoders.dev/#servicios): Desarrollo Full-Stack con Next.js 16 y React 19, Agentes de IA autónomos e integraciones API/Pagos.
-- [Método 14 Días](https://studiocoders.dev/#metodo): Proceso semanal de entrega en producción con alcance cerrado, repositorio propio y despliegues continuos.
+- [Respaldo Multi-Industria](https://studiocoders.dev/#respaldo): Garantías comerciales llave en mano para logística, salud, finanzas y comercio con 1 año de soporte incluido.
+- [Método 30 Días](https://studiocoders.dev/#metodo): Proceso transparente de entrega en producción (Staging Día 15, Producción Día 30) con alcance cerrado, repositorio propio y despliegues continuos.
 - [Proyectos en Producción](https://studiocoders.dev/#proyectos): Portafolio real de plataformas SaaS, ERP y automatización operando diariamente.
 - [Comparativa de Valor](https://studiocoders.dev/#comparativa): Diferencias operativas frente a agencias tradicionales y freelancers sueltos.
 - [Preguntas Frecuentes](https://studiocoders.dev/#faq): Detalles sobre propiedad intelectual, facturación internacional B2B, soporte y stack tecnológico.

@@ -21,7 +21,7 @@ Toda página pública debe contar con esquemas estructurados embebidos en `<scri
 
 ## 3. Redacción para Citas de IA
 - Redactar respuestas a objeciones en tono afirmativo y directo:
-  - *«Studio Coders entrega una primera versión funcional desplegada en producción en 14 días.»*
+  - *«Studio Coders entrega una primera versión funcional desplegada en producción en 30 días.»*
   - *«El cliente es propietario del 100% del código fuente y del repositorio desde el primer día.»*
 - Usar tablas comparativas explícitas en HTML (los LLMs procesan tablas con altísima fidelidad).
 

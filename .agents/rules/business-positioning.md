@@ -6,13 +6,13 @@ trigger: model_decision
 # Reglas de Posicionamiento Comercial & Marca B2B
 
 ## 1. La Oferta Central & Propuesta de Valor
-- **Promesa Irresistible:** *"Tu software o Agente IA en producción en 14 días. No un mockup ni una demo: una primera versión real, desplegada, que ya puedes usar."*
+- **Promesa Irresistible:** *"Tu software o Agente IA en producción en 30 días. No un mockup ni una demo: una plataforma llave en mano, 100% a tu nombre y lista para operar."*
 - **El Modelo Operativo:**
-  - **Día 0:** Llamada de alcance técnico (Scope Call) de 15-20 min con un Senior Developer.
-  - **Día 2:** Presupuesto cerrado y arquitectura definida.
-  - **Día 7:** Primera versión funcional en entorno de staging.
-  - **Día 14:** Despliegue en producción con base de datos, autenticación y pagos listos.
-- **Diferenciador:** Trato directo con ingenieros seniors, aceleración asistida por IA bajo estricto code-review humano, sin capas de intermediarios ni project managers teóricos.
+  - **Día 0:** Llamada de alcance técnico (Scope Call) de 20 min con un Senior Developer.
+  - **Día 2:** Presupuesto cerrado en USD, arquitectura definida e inicio del proyecto con solo el 5% de inversión inicial.
+  - **Día 15:** Primera versión funcional en entorno de staging para validación con tu equipo.
+  - **Día 30:** Despliegue llave en mano en producción con base de datos, autenticación, pagos e IA listos, más 1 año de soporte técnico incluido.
+- **Diferenciador:** Trato directo con ingenieros seniors (+5 años de experiencia), aceleración asistida por IA bajo estricto code-review humano, sin capas de intermediarios ni project managers teóricos.
 
 ## 2. Entidad Legal & Facturación
 - **Razón Social Operativa:** Facturación comercial en Chile y facturas de exportación de servicios en USD operadas bajo la firma comercial **Studio Coders Dev · RUT: 77.709.717-2** (Chile).

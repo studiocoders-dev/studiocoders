@@ -13,11 +13,11 @@
 
 Studio Coders es un estudio de ingeniería de software e inteligencia artificial fundado en Santiago de Chile. El estudio nace para resolver la mayor ineficiencia de la industria tecnológica: agencias tradicionales lentas que cobran más de $20,000 USD, tardan meses en entregar avances y colocan intermediarios sin conocimiento técnico entre el cliente y el código.
 
-### El Método de los 14 Días:
-- **Día 0 (Scope Call):** Sesión técnica de 20 minutos con un desarrollador senior para dimensionar el problema y definir el MVP.
-- **Día 2 (Presupuesto y Arquitectura):** Propuesta formal con alcance delimitado, arquitectura técnica y precio cerrado en USD. Sin rangos abiertos.
-- **Día 7 (Staging Funcional):** Primera versión desplegada en entorno de pruebas para validación de flujos clave.
-- **Día 14 (Producción Final):** Despliegue en producción con base de datos, autenticación y pasarelas de pago operativas en el repositorio del cliente.
+### El Método de los 30 Días:
+- **Día 0 (Scope Call):** Sesión técnica de 20 minutos con un desarrollador senior para dimensionar el problema y definir el alcance funcional.
+- **Día 2 (Presupuesto e Inicio con 5%):** Propuesta formal con alcance delimitado, arquitectura técnica y precio cerrado en USD. El desarrollo arranca con solo el 5% de inversión inicial.
+- **Día 15 (Staging Funcional):** Primera versión desplegada en entorno de pruebas para validación de flujos clave junto a tu equipo.
+- **Día 30 (Producción Final):** Despliegue llave en mano en producción con base de datos, autenticación, pagos e IA operativos en el repositorio del cliente, respaldado por 1 año de soporte técnico incluido.
 - **Cada semana:** Ciclos semanales de iteración continua con entregas funcionales en navegador.
 
 ---
