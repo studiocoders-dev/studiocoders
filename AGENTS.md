@@ -12,7 +12,7 @@
 | **Framework Web** | **Next.js 16 (App Router)**, **React 19**, **TypeScript 5** | Arquitectura moderna con Server Components y renderizado híbrido. |
 | **Estilos & UI** | **Tailwind CSS 4** (`@tailwindcss/turbopack`), **Lucide React** | Estética dark mode inspirada en Brotherhood.dev y Vercel. |
 | **Testing** | **Vitest 5** (`npm test`) | Suite de pruebas unitarias automatizadas para cumplimiento de DoD. |
-| **Despliegue** | **Vercel** / **Cloudflare DNS** | Hosting serverless con CI/CD automatizado y SSL HSTS precargado. |
+| **Despliegue & Mail** | **Cloudflare Pages** / **Cloudflare DNS** / **Resend** | Exportación estática (`output: "export"` en `out/`), Cloudflare Pages Functions (`functions/api/contact.ts`) y CI/CD vía GitHub Actions. |
 
 ---
 
@@ -73,5 +73,8 @@ studiocoders/
 ├── src/
 │   ├── app/                           # App Router de Next.js 16 (layout.tsx, page.tsx, globals.css)
 │   └── components/                    # Componentes modulares de UI
+├── functions/
+│   └── api/                           # Cloudflare Pages Functions (ej. contact.ts -> Resend)
+├── docs/                              # Guías operativas y arquitectura de despliegue
 └── tests/                             # Pruebas unitarias automatizadas (Vitest)
 ```

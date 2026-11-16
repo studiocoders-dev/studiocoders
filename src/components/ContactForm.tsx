@@ -5,15 +5,49 @@ import React, { useState } from "react";
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [email, setEmail] = useState("");
+  const [project, setProject] = useState("");
+  const [website, setWebsite] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate brief processing
-    setTimeout(() => {
-      setLoading(false);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, project, website }),
+      });
+
+      const data = (await response.json().catch(() => null)) as {
+        ok?: boolean;
+        error?: string;
+      } | null;
+
+      if (!response.ok || !data?.ok) {
+        setError(
+          data?.error ||
+            "No pudimos enviar tu mensaje. Intenta nuevamente o escribe a contacto@studiocoders.dev."
+        );
+        return;
+      }
+
+      setEmail("");
+      setProject("");
+      setWebsite("");
       setSubmitted(true);
-    }, 600);
+    } catch {
+      setError(
+        "Error de conexión al enviar el mensaje. Intenta nuevamente o escribe a contacto@studiocoders.dev."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -69,6 +103,19 @@ export function ContactForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="hidden" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                />
+              </div>
+
               <div>
                 <label
                   htmlFor="email"
@@ -81,6 +128,8 @@ export function ContactForm() {
                   id="email"
                   name="email"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="tu@empresa.com"
                   className="mt-2 block w-full rounded-md border border-[#2e3340] bg-[#14161c] px-4 py-3 font-mono text-sm text-[#edeff4] placeholder-[#9ea5b8]/80 transition-colors focus:border-[#6366f1] focus:outline-none focus:ring-1 focus:ring-[#6366f1]"
                 />
@@ -98,10 +147,21 @@ export function ContactForm() {
                   name="project"
                   required
                   rows={4}
+                  value={project}
+                  onChange={(e) => setProject(e.target.value)}
                   placeholder="¿Qué estás tratando de construir, y qué tiene que hacer?"
                   className="mt-2 block w-full rounded-md border border-[#2e3340] bg-[#14161c] px-4 py-3 font-sans text-sm text-[#edeff4] placeholder-[#9ea5b8]/80 transition-colors focus:border-[#6366f1] focus:outline-none focus:ring-1 focus:ring-[#6366f1]"
                 />
               </div>
+
+              {error ? (
+                <div
+                  role="alert"
+                  className="rounded-md border border-red-500/40 bg-red-500/10 px-4 py-3 font-mono text-xs text-red-200"
+                >
+                  {error}
+                </div>
+              ) : null}
 
               <div className="pt-2">
                 <button
