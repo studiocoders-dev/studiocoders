@@ -11,18 +11,36 @@
 
 Al inspeccionar los 6 repositorios en esta máquina (`whatsapp-saas`, `whabot`, `gestorinfraestructura`, `landingpage`, `eastampa` y `studiocoders`), este es el mapa exacto de dónde estamos hoy:
 
-| Dominio | Repositorio Local | Stack | Estado Actual de Cross-Linking y Schema | Brechas Detectadas (Entidad + SEO/AEO) |
+| Dominio | Repositorio Local | Stack | Estado Actual de Cross-Linking y Schema | Brechas Detectadas (Entidad Legal SII/Meta + SEO/AEO) |
 | :--- | :--- | :--- | :--- | :--- |
-| **`studiocoders.dev`** *(Hub Central)* | `/home/angel/Developer/studiocoders` | Next.js 16 + React 19 | Ya enlaza a las 5 plataformas (`PortfolioShowcase.tsx`), GitHub (`studiocoders-dev/webhook-verifier`) y npm (`@studiocoders/webhook-verifier`). JSON-LD `@graph` con `@id: "https://studiocoders.dev/#organization"`, `legalName: "Studio Coders Dev"` y `taxID: "77.709.717-2"`. `llms.txt` en 3/3. | **Cero enlaces entrantes** todavía desde las 5 plataformas hermanas. *(Nota opcional: en este repo figura como `Studio Coders Dev` sin la sigla `EIRL`).* |
-| **`whagil.com`** | `/home/angel/Developer/whatsapp-saas` | Next.js + Supabase | Ya cita a **`eaestampa.com`** como caso de estudio real en `LandingUseCasesSection.tsx`. Declara actualmente `SERVITECNOLOGY EIRL` (`77.709.717-2`) en **13 archivos** (`layout.tsx`, `page.tsx`, `venezuela/page.tsx`, `latam/page.tsx`, `privacy`, `terms`, `refund`, `tarifas-meta`, `landing-seo.ts`, `spokes-data.ts`, `SpokeLandingTemplate.tsx`, `llms.txt`, `llms-full.txt`). | **Migrar esas 13 referencias a `Studio Coders Dev EIRL (RUT: 77.709.717-2)`**. Falta enlazar a `studiocoders.dev` y derivar a `whalinkbot.com` (FAQ + footer), agregar `creator`/`isRelatedTo` en JSON-LD y llevar `public/llms.txt` al formato estricto `llmstxt.org`. |
-| **`whalinkbot.com`** | `/home/angel/Developer/whabot` | Next.js | Tiene JSON-LD `SoftwareApplication` en `src/app/layout.tsx`, `Organization` en `src/app/page.tsx` (línea 36), mención en texto plano *"desarrollada por SERVITECNOLOGY"* en `src/app/page.tsx` (línea 991) y referencias en `src/app/privacy/page.tsx` (líneas 86 y 112). | **Actualizar `SERVITECNOLOGY` a `Studio Coders Dev EIRL (RUT: 77.709.717-2)`** en JSON-LD, footer y privacidad *(manteniendo intacto `bcvService.ts` si el titular bancario Pago Móvil no cambió)*. Falta enlazar a `studiocoders.dev` y a `whagil.com` (API oficial Meta inbound) y estandarizar `public/llms.txt`. |
-| **`inframanagerpro.com`** | `/home/angel/Developer/gestorinfraestructura` | Flask + Jinja2 | Tiene JSON-LD básico en `templates/landing.html` (`SoftwareApplication` sin `url` ni `creator`). | Cero mención o enlace a `studiocoders.dev` ni declaración de `Studio Coders Dev EIRL (RUT: 77.709.717-2)`. Sin `url` ni `@id` en JSON-LD, y sin archivo/ruta `/llms.txt`. |
-| **`servitecnology.com`** | `/home/angel/Developer/landingpage` | Astro + Supabase | Ya cuenta con páginas dedicadas (`/whagil`, `/whalinkbot`, `/inframanagerpro`) que enlazan hacia `whagil.com`, `whalinkbot.com` e `inframanagerpro.com`. | Separar entidades: conservar `SERVITECNOLOGY EIRL` para el giro retail/hardware y facturas de repuestos, y **actualizar `Footer.astro` (línea 256), `desarrollo.astro`, fichas SaaS, `Layout.astro` y `public/llms.txt`** para atribuir la división de software e IA a **`Studio Coders Dev EIRL (RUT: 77.709.717-2)`** enlazando a `studiocoders.dev`. |
-| **`eaestampa.com`** | `/home/angel/Developer/eastampa/landing-page` | Next.js | En `src/app/page.tsx` (líneas 383 y 428) **ya enlaza** hacia `https://whagil.com/vendedor-pro` (`Whagil IA`) en las FAQs, además de mencionarlo en el JSON-LD (`LocalBusiness` + `FAQPage`). | Falta enlace y atribución de desarrollo web hacia `studiocoders.dev` / **`Studio Coders Dev EIRL (RUT: 77.709.717-2)`** (footer + nodo `WebSite.creator` en JSON-LD), **corregir `"telephone": "+56912345678"`** (línea 15 de `page.tsx`), y crear `public/llms.txt`. |
+| **`studiocoders.dev`** *(Hub Central)* | `/home/angel/Developer/studiocoders` | Next.js 16 + React 19 | Ya enlaza a las 5 plataformas (`PortfolioShowcase.tsx`), GitHub (`studiocoders-dev/webhook-verifier`) y npm (`@studiocoders/webhook-verifier`). JSON-LD `@graph` con `@id: "https://studiocoders.dev/#organization"`, `name: "Studio Coders"`, `legalName: "Studio Coders Dev"` y `taxID: "77.709.717-2"`. `llms.txt` en 3/3. **100% alineado con `.agents/rules/business-positioning.md` y `tests/seo-geo-aeo.test.ts` (no requiere cambios en `src/` ni `public/`).** | **Cero enlaces entrantes** todavía desde las 5 plataformas hermanas. |
+| **`whagil.com`** | `/home/angel/Developer/whatsapp-saas` | Next.js + Supabase | Ya cita a **`eaestampa.com`** como caso de estudio real en `LandingUseCasesSection.tsx`. Declara actualmente el nombre inexacto `SERVITECNOLOGY EIRL` (`77.709.717-2`) en **13 archivos**, mientras que `docs/compliance/` y `fase-41-guia-completa.md` declaran la EIRL real registrada ante Meta y SII. | **Separar marca y razón social:** usar **`Studio Coders`** (`studiocoders.dev`) en marketing/ingeniería y **`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)`** en textos legales, privacidad, términos, facturación SII y `legalName` JSON-LD (para no romper Meta Business Verification). Añadir enlaces a `studiocoders.dev` y `whalinkbot.com` + estandarizar `public/llms.txt`. |
+| **`whalinkbot.com`** | `/home/angel/Developer/whabot` | Next.js | Tiene JSON-LD `SoftwareApplication` en `src/app/layout.tsx`, `Organization` en `src/app/page.tsx` (línea 36), mención plana *"desarrollada por SERVITECNOLOGY"* en `src/app/page.tsx` (línea 991) y referencias en `src/app/privacy/page.tsx` (líneas 86 y 112). | Declarar **`Studio Coders Dev`** (`https://studiocoders.dev`) como estudio de desarrollo bajo la razón social **`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)`** en JSON-LD, footer y privacidad *(manteniendo `bcvService.ts` sin cambios salvo confirmación bancaria)*. Añadir enlaces a `studiocoders.dev` y `whagil.com` + estandarizar `public/llms.txt`. |
+| **`inframanagerpro.com`** | `/home/angel/Developer/gestorinfraestructura` | Flask + Jinja2 | Tiene JSON-LD básico en `templates/landing.html` (`SoftwareApplication` sin `url` ni `creator`). | Cero mención o enlace a `studiocoders.dev`. Agregar `creator` en JSON-LD (`name: "Studio Coders"`, `legalName: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L."`, `taxID: "77.709.717-2"`), enlace único en footer y ruta `/llms.txt`. |
+| **`servitecnology.com`** | `/home/angel/Developer/landingpage` | Astro + Supabase | Ya cuenta con páginas dedicadas (`/whagil`, `/whalinkbot`, `/inframanagerpro`) que enlazan hacia `whagil.com`, `whalinkbot.com` e `inframanagerpro.com`. Usa `"SERVITECNOLOGY EIRL"` en legales, mailer y fichas de pedido. | Corregir `"SERVITECNOLOGY EIRL"` declarando **`SERVITECNOLOGY`** como marca comercial de **`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)`** para hardware/e-commerce *(verificando titular BancoEstado antes de tocar `pedido/[id].astro`)*, y atribuir la división de software e IA (`Footer.astro`, `/desarrollo`, fichas SaaS, `Layout.astro`, `llms.txt`) a **`Studio Coders`** (`studiocoders.dev`). |
+| **`eaestampa.com`** | `/home/angel/Developer/eastampa/landing-page` | Next.js | En `src/app/page.tsx` (líneas 383 y 428) **ya enlaza** hacia `https://whagil.com/vendedor-pro` (`Whagil IA`) en las FAQs, además de mencionarlo en el JSON-LD (`LocalBusiness` + `FAQPage`). | Corregir `"telephone": "+56912345678"` (línea 15), añadir nodo `WebSite.creator` en JSON-LD con `@id: "https://studiocoders.dev/#organization"` + `legalName: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L."`, añadir atribución limpia en footer (`Web por studiocoders.dev`, sin exponer EIRL/RUT ajeno al cliente) y crear `public/llms.txt`. |
 
 > **Activos de autoridad abierta ya publicados:**  
 > - GitHub: `https://github.com/studiocoders-dev/webhook-verifier` (`HTTP 200`, CI en verde).  
 > - npm: `@studiocoders/webhook-verifier@1.0.0` (`https://www.npmjs.com/package/@studiocoders/webhook-verifier`).
+
+### 1.1 Blindaje Legal Meta Tech Provider + SII + Schema.org (Regla Maestra)
+
+En Chile (Ley N° 19.857 y Servicio de Impuestos Internos), la sigla **`E.I.R.L.`** solo puede acompañar a la razón social inscrita en el estatuto y el **e-RUT oficial**:
+
+- **Razón Social Legal / Tributaria (SII & Meta Business Verification):** **`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`** (`RUT: 77.709.717-2`)
+- **Marcas Comerciales / Nombres de Fantasía:** **`Studio Coders`** / **`Studio Coders Dev`** (estudio de ingeniería e IA), **`Whagil IA`**, **`Whalinkbot`**, **`Infra Manager Pro`**, **`SERVITECNOLOGY`** (retail hardware).
+
+> ⚠️ **Por qué está PROHIBIDO escribir `"Studio Coders Dev EIRL"` o `"SERVITECNOLOGY EIRL"` en legales, privacidad o JSON-LD:**
+> 1. **Meta Tech Provider (`business.facebook.com`):** Meta verifica tu portafolio contra el e-RUT del SII (`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`). Si `/privacy`, `/terms` o el aviso legal del footer en `whagil.com` muestran `"Studio Coders Dev EIRL"` (o `"SERVITECNOLOGY EIRL"`), en el próximo **Data Use Checkup** anual o **App Review** se produce un *Legal Entity Mismatch*; y cambiar el nombre legal en Business Info sin reforma previa ante el SII dispara una re-verificación que puede dejar el portafolio temporalmente en *Unverified / Pending*. *(Nota: el campo `Nombre · Opcional` en `developers.facebook.com` corresponde solo al contacto DPO de GDPR en la UE, no a la verificación de empresa).*
+> 2. **SII, Facturación y Bancos:** Las facturas emitidas vía Webpay/Mercado Pago con el `RUT 77.709.717-2` salen a nombre de `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`.
+> 3. **Compliance (`docs/compliance/`):** Los documentos vigentes de Ley N° 21.719 (Protección de Datos) y Ley N° 21.595 respaldan esa misma persona jurídica (`RUT 77.709.717-2`). Dado que `"Y CONSUMIBLES"` **ya fue eliminado en las escrituras actualizadas y en el e-RUT del SII**, la razón social oficial única es **`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`** y se debe limpiar toda ocurrencia heredada con `"Y CONSUMIBLES"` en `whatsapp-saas/docs/compliance/` y `docs/arquitectura/fase-41-guia-completa.md`.
+
+**Fórmula de convivencia sin fricción en las 6 webs:**
+1. **Textos comerciales, Hero, Spokes y `llms.txt`:** Usar **`Studio Coders`** (`https://studiocoders.dev`) sin sigla `EIRL`.
+2. **Footers legales, `/privacy`, `/terms`, `/refund` y facturación SII:** Declarar **`Studio Coders (marca comercial de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT: 77.709.717-2)`**.
+3. **Schema.org JSON-LD:** Separar `name` / `alternateName` (marca SEO) de `legalName` (razón social exacta SII/Meta).
+4. **En web de cliente externo (`eaestampa.com`):** Dejar el footer visible solo como `Web por studiocoders.dev` y declarar el `legalName` dentro del JSON-LD `WebSite.creator`.
 
 ---
 
@@ -81,15 +99,15 @@ Para evitar huella sintética (*footprint*), **cada sitio usa un anchor text dis
 
 | Sitio Origen | Sitio Destino | Ubicación Exacta en UI | Anchor Text Exacto Recomendado | Rel / Atributo | Intención Semántica (Por qué NO es spam) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **`whagil.com`** | `studiocoders.dev` | Footer (`src/app/page.tsx` + `/latam` + `/venezuela`) | `Studio Coders` *(precedido por "Arquitectura e ingeniería por")* | `rel="noopener"` (dofollow) | Atribución legítima del estudio creador (`Studio Coders Dev EIRL · RUT 77.709.717-2`). |
+| **`whagil.com`** | `studiocoders.dev` | Footer (`src/app/page.tsx` + `/latam` + `/venezuela`) | `Studio Coders` *(precedido por "Arquitectura e ingeniería por")* | `rel="noopener"` (dofollow) | Atribución comercial limpia al estudio desarrollador, aclarando junto al enlace `marca comercial de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT 77.709.717-2`. |
 | **`whagil.com`** | `whalinkbot.com` | FAQ / Bloque comparativo (`landing-seo.ts`) + Footer (`src/app/page.tsx`) | `Whalinkbot` *(contexto: prospección y alertas en grupos de WhatsApp)* | `rel="noopener"` | Derivación útil: Whagil usa Meta Cloud API oficial (no lee grupos); Whalinkbot sí monitorea grupos en la nube. |
-| **`whalinkbot.com`** | `studiocoders.dev` | Footer (`src/app/page.tsx`, línea 991) | `Studio Coders Dev EIRL` *(contexto: plataforma independiente diseñada en la nube por...)* | `rel="noopener"` | Reemplaza la mención plana actual de *"SERVITECNOLOGY"* por la firma de ingeniería real (`RUT 77.709.717-2`). |
+| **`whalinkbot.com`** | `studiocoders.dev` | Footer (`src/app/page.tsx`, línea 991) | `Studio Coders Dev` *(contexto: plataforma diseñada en la nube por...)* | `rel="noopener"` | Reemplaza la mención plana de *"SERVITECNOLOGY"* por la marca de ingeniería real (`Studio Coders Dev`) y declara al titular legal `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)`. |
 | **`whalinkbot.com`** | `whagil.com` | FAQ / Descargo comparativo en `src/app/page.tsx` | `Whagil IA` *(contexto: API Oficial de Meta para WhatsApp e Instagram)* | `rel="noopener"` | Derivación útil: clientes que buscan bots conversacionales 24/7 con sello oficial Meta sin riesgo de baneo. |
-| **`inframanagerpro.com`** | `studiocoders.dev` | Footer (`templates/landing.html`, líneas 466–470) | `Studio Coders Dev` *(precedido por "Ingeniería por")* | `rel="noopener"` | Único enlace saliente externo: un ERP B2B no debe enlazar a estampado textil ni bots de WhatsApp, solo a su firma de ingeniería (`RUT 77.709.717-2`). |
-| **`servitecnology.com`** | `studiocoders.dev` | Página `/desarrollo` (`src/pages/desarrollo.astro`) + Footer (`src/components/Footer.astro`, línea 256) | En `/desarrollo`: `Conoce Studio Coders` · En Footer: `División de Software e IA: Studio Coders` | `rel="noopener"` | Separación comercial: `SERVITECNOLOGY EIRL` atiende hardware/soporte local en Santiago; `Studio Coders Dev EIRL` ejecuta software a medida e IA global. |
-| **`servitecnology.com`** | `whagil.com`, `whalinkbot.com`, `inframanagerpro.com` | Ya existente en `/whagil`, `/whalinkbot`, `/inframanagerpro` | *(Mantener los existentes + actualizar autoría SaaS a `Studio Coders Dev EIRL` y JSON-LD `isRelatedTo`)* | `rel="noopener"` | Ya operan como páginas puente contextuales dentro de Servitecnology. |
+| **`inframanagerpro.com`** | `studiocoders.dev` | Footer (`templates/landing.html`, líneas 466–470) | `Studio Coders (Ingeniería B2B)` *(precedido por "Desarrollado por")* | `rel="noopener"` | Único enlace saliente externo: un ERP B2B no debe enlazar a estampado textil ni bots de WhatsApp, solo a su estudio desarrollador (operado por `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT 77.709.717-2`). |
+| **`servitecnology.com`** | `studiocoders.dev` | Página `/desarrollo` (`src/pages/desarrollo.astro`) + Footer (`src/components/Footer.astro`, línea 256) | En `/desarrollo`: `Conoce Studio Coders` · En Footer: `División de Software e IA: Studio Coders` | `rel="noopener"` | Separación comercial: `SERVITECNOLOGY` atiende hardware/soporte local en Santiago; `Studio Coders` ejecuta software a medida e IA global, ambas bajo `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`. |
+| **`servitecnology.com`** | `whagil.com`, `whalinkbot.com`, `inframanagerpro.com` | Ya existente en `/whagil`, `/whalinkbot`, `/inframanagerpro` | *(Mantener los existentes + actualizar autoría SaaS a `Studio Coders` / `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.` y JSON-LD `isRelatedTo`)* | `rel="noopener"` | Ya operan como páginas puente contextuales dentro de Servitecnology. |
 | **`eaestampa.com`** | `whagil.com` | Ya existente en FAQs (`src/app/page.tsx`, líneas 383 y 428) + nota opcional en `#cotizar` | *(Conservar `Whagil IA` hacia `https://whagil.com/vendedor-pro`)* | `rel="noopener"` | Caso de estudio real recíproco (Whagil ya enlaza a EA Estampa como ejemplo en producción). |
-| **`eaestampa.com`** | `studiocoders.dev` | Footer `.footer-bottom` (`landing-page/src/app/page.tsx`, ~línea 505) | `studiocoders.dev` *(precedido por "Web por")* | `rel="noopener"` | Atribución discreta de desarrollo web al pie de página (anchor de dominio natural y distinto al de los SaaS). |
+| **`eaestampa.com`** | `studiocoders.dev` | Footer `.footer-bottom` (`landing-page/src/app/page.tsx`, ~línea 505) | `studiocoders.dev` *(precedido por "Web por")* | `rel="noopener"` | Atribución discreta de desarrollo web al pie de página (sin mostrar la EIRL ni el RUT del estudio en la UI de un cliente externo; la entidad completa va en el JSON-LD `WebSite.creator`). |
 
 ---
 
@@ -97,28 +115,29 @@ Para evitar huella sintética (*footprint*), **cada sitio usa un anchor text dis
 
 Los LLMs con búsqueda en vivo (Perplexity, ChatGPT Search, Claude, Google AI Overviews) construyen confianza sobre una entidad cuando encuentran **triangulación verificable**:
 
-1. **Coherencia de `@id` y Entidad Legal Creadora (`Studio Coders Dev EIRL`, `taxID: "77.709.717-2"`):**
-   - `studiocoders.dev` declara `"@id": "https://studiocoders.dev/#organization"`, `"taxID": "77.709.717-2"`, y declara a `whagil.com`, `whalinkbot.com`, `inframanagerpro.com`, `servitecnology.com` y `eaestampa.com` con `creator: { "@id": "https://studiocoders.dev/#organization" }`.
-   - Al agregar en **cada una de esas 5 webs** la referencia inversa dentro de su propio Schema.org declarando a **`Studio Coders Dev EIRL`** como agencia creadora:
+1. **Coherencia de `@id`, Marca Comercial (`Studio Coders`) y `legalName` SII (`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`):**
+   - `studiocoders.dev` declara `"@id": "https://studiocoders.dev/#organization"`, `"name": "Studio Coders"`, `"taxID": "77.709.717-2"`, y declara a `whagil.com`, `whalinkbot.com`, `inframanagerpro.com`, `servitecnology.com` y `eaestampa.com` con `creator: { "@id": "https://studiocoders.dev/#organization" }`.
+   - Al agregar en **cada una de esas 5 webs** la referencia inversa dentro de su propio Schema.org declarando `name`/`alternateName` (marca comercial) separado de `legalName` (razón social e-RUT):
      ```json
      "creator": {
        "@type": "Organization",
        "@id": "https://studiocoders.dev/#organization",
        "name": "Studio Coders",
-       "legalName": "Studio Coders Dev EIRL",
+       "alternateName": "Studio Coders Dev",
+       "legalName": "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.",
        "taxID": "77.709.717-2",
        "url": "https://studiocoders.dev"
      }
      ```
-     Google y los motores de respuesta cierran el ciclo bidireccional (*Bidirectional Entity Resolution*): ahora **Whagil, Whalinkbot, Infra Manager Pro, Servitecnology y EA Estampa confirman explícitamente en sus metadatos estructurados que fueron construidos y operados por Studio Coders Dev EIRL (`77.709.717-2`)**.
+     Google y los motores de respuesta cierran el ciclo bidireccional (*Bidirectional Entity Resolution*) sin crear discrepancia tributaria ni legal con Meta: **Whagil, Whalinkbot, Infra Manager Pro, Servitecnology y EA Estampa confirman que fueron creados por Studio Coders, marca comercial operada legalmente por `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (77.709.717-2)`**.
 
 2. **Estandarización de `/llms.txt` según `llmstxt.org` (3/3 en Lighthouse 13):**
    - `studiocoders.dev/llms.txt` ya obtiene **3/3 en Navegación agéntica**.
-   - Hoy `whagil.com`, `whalinkbot.com` y `servitecnology.com` tienen `llms.txt` con formato libre (y citando aún a `SERVITECNOLOGY EIRL` en el caso de Whagil), e `inframanagerpro.com` y `eaestampa.com` no tienen ninguno.
-   - Estandarizar los 6 archivos `/llms.txt` con `# Título`, un único párrafo `> blockquote` (que mencione explícitamente a `Studio Coders Dev EIRL · RUT 77.709.717-2` como estudio creador cuando corresponda) y listas `- [Nombre](URL): descripción` maximiza la ingesta directa por agentes de IA y alinea los 6 dominios con Lighthouse 13.
+   - Hoy `whagil.com`, `whalinkbot.com` y `servitecnology.com` tienen `llms.txt` con formato libre (y citando aún `"SERVITECNOLOGY EIRL"` en el caso de Whagil), e `inframanagerpro.com` y `eaestampa.com` no tienen ninguno.
+   - Estandarizar los 6 archivos `/llms.txt` con `# Título`, un único párrafo `> blockquote` (que mencione explícitamente a `Studio Coders` como estudio desarrollador bajo la persona jurídica `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT 77.709.717-2` en los SaaS propios) y listas `- [Nombre](URL): descripción` maximiza la ingesta directa por agentes de IA y alinea los 6 dominios con Lighthouse 13.
 
 3. **Párrafos "Answer-First" para citaciones comparativas:**
-   - Cuando alguien pregunte en ChatGPT o Perplexity *"¿Qué diferencia hay entre Whagil IA y Whalinkbot?"* o *"¿Quién desarrolló Infra Manager Pro?"*, si el texto literal existe en ambos dominios con enlaces cruzados coherentes y atribución consistente a **Studio Coders Dev EIRL**, la IA cita ambos dominios en la misma respuesta.
+   - Cuando alguien pregunte en ChatGPT o Perplexity *"¿Qué diferencia hay entre Whagil IA y Whalinkbot?"* o *"¿Quién desarrolló Infra Manager Pro?"*, si el texto literal existe en ambos dominios con enlaces cruzados coherentes y atribución consistente a **Studio Coders** (`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`), la IA cita ambos dominios en la misma respuesta.
 
 ---
 
@@ -128,24 +147,32 @@ A continuación tienes los cambios exactos archivo por archivo para ejecutar en 
 
 ### 5.1 Repo `whatsapp-saas` (`whagil.com`)
 
-**1. Migración de Razón Social Creadora/Operadora (`SERVITECNOLOGY EIRL` → `Studio Coders Dev EIRL`):**
-Reemplazar todas las referencias a `SERVITECNOLOGY EIRL` como desarrolladora y operadora de Whagil IA por **`Studio Coders Dev EIRL`** (`RUT: 77.709.717-2`) en los **13 archivos** detectados en la auditoría local:
-- `src/app/layout.tsx` (líneas 34–35: `authors`, `creator`)
-- `src/app/page.tsx` (líneas 77–78 en `#organization` `legalName`, línea 325 en cuerpo y líneas 914–915 en footer)
-- `src/app/venezuela/page.tsx` (líneas 71 y 471 + enlace footer a `studiocoders.dev`)
-- `src/app/latam/page.tsx` (líneas 72 y 477 + enlace footer a `studiocoders.dev`)
-- `src/app/privacy/page.tsx` (líneas 40, 43 y 276)
-- `src/app/terms/page.tsx` (línea 150)
-- `src/app/refund/page.tsx` (línea 92)
-- `src/app/tarifas-meta/page.tsx` (línea 478)
-- `src/features/landing/constants/landing-seo.ts` (líneas 8, 51 y 56)
-- `src/features/landing/constants/spokes-data.ts` (líneas 77, 177, 270, 363, 456 y 555)
-- `src/features/landing/components/spokes/SpokeLandingTemplate.tsx` (línea 265)
-- `public/llms.txt` (línea 4 + estandarización completa)
-- `public/llms-full.txt` (líneas 4 y 16)
+**1. Separación Quirúrgica: Marca Comercial (`Studio Coders`) vs. Razón Social SII/Meta (`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`):**
+Reemplazar las 13 ocurrencias del nombre inexacto `"SERVITECNOLOGY EIRL"` aplicando el nivel correcto en cada archivo (nunca inventar `"Studio Coders Dev EIRL"`):
+
+- **Grupo A — Textos Legales, Tributarios y Razón Social (`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`, RUT `77.709.717-2`):**
+  - `src/app/page.tsx` (líneas 77–78 `legalName` en `#organization` y líneas 914–915 datos legales del footer)
+  - `src/app/venezuela/page.tsx` (líneas 71 y 471)
+  - `src/app/latam/page.tsx` (líneas 72 y 477)
+  - `src/app/privacy/page.tsx` (líneas 40, 43 y 276: operador legal responsable de datos ante Meta y Ley 21.719)
+  - `src/app/terms/page.tsx` (línea 150)
+  - `src/app/refund/page.tsx` (línea 92)
+  - `src/features/landing/constants/landing-seo.ts` (líneas 51 y 56 sobre facturación electrónica SII con IVA deducible)
+  - `src/features/landing/components/spokes/SpokeLandingTemplate.tsx` (línea 265: `"Operado por JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)"`)
+
+- **Grupo B — Textos Comerciales, Producto, Ingeniería y SEO/GEO (`Studio Coders`, marca comercial de `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`):**
+  - `src/app/layout.tsx` (líneas 34–35: `authors` / `creator` -> `Whagil IA — Studio Coders (JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.)`)
+  - `src/app/page.tsx` (línea 325 cuerpo comercial)
+  - `src/app/tarifas-meta/page.tsx` (línea 478)
+  - `src/features/landing/constants/landing-seo.ts` (línea 8 descripción general: desarrollada por `Studio Coders`, marca comercial de `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`)
+  - `src/features/landing/constants/spokes-data.ts` (líneas 77, 177, 270, 363, 456 y 555: desarrolladas por `Studio Coders`)
+  - `public/llms.txt` (línea 4 + formato estricto `llmstxt.org`) y `public/llms-full.txt` (líneas 4 y 16)
+
+- **Grupo C — Limpieza de Razón Social Antigua (`"Y CONSUMIBLES"` eliminado de escrituras y e-RUT) en Documentación y Compliance:**
+  - Actualizar todas las ocurrencias antiguas de `"JESUS LEON SOLUCIONES INFORMÁTICAS Y CONSUMIBLES E.I.R.L."` (o sin tildes `"Jesus Leon Soluciones Informaticas y Consumibles EIRL"`) → **`"JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L."`** en `docs/compliance/` (archivos de Ley 21.719 y Ley 21.595), `docs/arquitectura/fase-41-guia-completa.md` y `docs/desarrollo/Compliance Ley 21.719 y 21.595/`.
 
 **2. Footer en `/home/angel/Developer/whatsapp-saas/src/app/page.tsx` (líneas 905–955) y ediciones regionales (`/venezuela`, `/latam`):**
-Actualizar la mención legal del pie a **`Studio Coders Dev EIRL (RUT: 77.709.717-2)`** y añadir atribución editorial al estudio y enlace al ecosistema de prospección en grupos (`whalinkbot.com`):
+Actualizar el pie mostrando la razón social exacta del SII/Meta y los enlaces editoriales a `studiocoders.dev` y `whalinkbot.com`:
 ```tsx
 <p className="text-xs text-slate-400 mt-3">
   Arquitectura e ingeniería por{' '}
@@ -157,7 +184,7 @@ Actualizar la mención legal del pie a **`Studio Coders Dev EIRL (RUT: 77.709.71
   >
     Studio Coders
   </a>{' '}
-  (Studio Coders Dev EIRL · RUT: 77.709.717-2). ¿Buscas prospección y alertas en grupos de WhatsApp? Conoce{' '}
+  (marca comercial de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT: 77.709.717-2). ¿Buscas prospección y alertas en grupos de WhatsApp? Conoce{' '}
   <a
     href="https://whalinkbot.com"
     target="_blank"
@@ -174,13 +201,14 @@ Actualizar la mención legal del pie a **`Studio Coders Dev EIRL (RUT: 77.709.71
 Agregar una pregunta atómica en `FAQ_ITEMS` explicando la diferencia entre **Whagil IA** (Meta Cloud API oficial para conversaciones entrantes, CRM y WhatsApp + Instagram sin riesgo de baneo) y **Whalinkbot** (`https://whalinkbot.com`, monitoreo de grupos en tiempo real y prospección outbound cloud).
 
 **4. Schema.org JSON-LD en `/home/angel/Developer/whatsapp-saas/src/app/page.tsx` (y homólogos `/venezuela`, `/latam`):**
-Actualizar `legalName` a `'Studio Coders Dev EIRL'` en el nodo `#organization`, y dentro de `SoftwareApplication` (`"@id": "https://whagil.com/#software"`), añadir `creator` y `isRelatedTo`:
+Actualizar `legalName` en `#organization` a `'JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.'` (agregando `name: 'Whagil IA'`, `alternateName: 'Studio Coders'`), y dentro de `SoftwareApplication` (`"@id": "https://whagil.com/#software"`), añadir `creator` y `isRelatedTo`:
 ```ts
 creator: {
   '@type': 'Organization',
   '@id': 'https://studiocoders.dev/#organization',
   name: 'Studio Coders',
-  legalName: 'Studio Coders Dev EIRL',
+  alternateName: 'Studio Coders Dev',
+  legalName: 'JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.',
   taxID: '77.709.717-2',
   url: 'https://studiocoders.dev',
 },
@@ -190,18 +218,18 @@ isRelatedTo: [
 ```
 
 **5. Actualizar `/home/angel/Developer/whatsapp-saas/public/llms.txt` al estándar estricto `llmstxt.org`:**
-- Dejar `# Whagil IA`, un único bloque `>` de 1 párrafo mencionando que es una plataforma desarrollada y operada por **[Studio Coders Dev EIRL](https://studiocoders.dev) (RUT: 77.709.717-2)**, usar listas `- [Título](URL): descripción` para los planes (`/starter`, `/vendedor-pro`, `/inventario`, `/agendamiento`, `/instagram`, `/link-pro`), regiones (`/latam`, `/venezuela`), `https://whagil.com/llms-full.txt`, y una sección `## Ecosistema Relacionado`:
+- Dejar `# Whagil IA`, un único bloque `>` de 1 párrafo mencionando que es una plataforma desarrollada por **[Studio Coders](https://studiocoders.dev)** bajo la entidad legal **`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.` (RUT: 77.709.717-2)**, usar listas `- [Título](URL): descripción` para los planes (`/starter`, `/vendedor-pro`, `/inventario`, `/agendamiento`, `/instagram`, `/link-pro`), regiones (`/latam`, `/venezuela`), `https://whagil.com/llms-full.txt`, y una sección `## Ecosistema Relacionado`:
   - `- [Whalinkbot](https://whalinkbot.com): Plataforma complementaria en la nube para monitoreo de palabras clave en grupos de WhatsApp y prospección outbound.`
-  - `- [Studio Coders](https://studiocoders.dev): Estudio de ingeniería de software e inteligencia artificial (Studio Coders Dev EIRL · RUT 77.709.717-2) creador de Whagil IA.`
+  - `- [Studio Coders](https://studiocoders.dev): Estudio de ingeniería de software e inteligencia artificial (operado legalmente por JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT 77.709.717-2) creador de Whagil IA.`
 
 ---
 
 ### 5.2 Repo `whabot` (`whalinkbot.com`)
 
-**1. Migración de Entidad Creadora/Operadora (`SERVITECNOLOGY` → `Studio Coders Dev EIRL`):**
-- En `/home/angel/Developer/whabot/src/app/page.tsx`: actualizar la línea **36** (JSON-LD `"name": "Studio Coders Dev EIRL"`) y la línea **991** (Descargo de Responsabilidad).
-- En `/home/angel/Developer/whabot/src/app/privacy/page.tsx`: actualizar las líneas **86** y **112** declarando a **Studio Coders Dev EIRL (`RUT: 77.709.717-2`)** como entidad operadora y responsable.
-- **Precaución crítica:** NO modificar `/home/angel/Developer/whabot/src/lib/currency/bcvService.ts` (línea 161: `PAGO_MOVIL_BENEFICIARY || "SERVITECNOLOGY EIRL"`) a menos que el titular bancario real de Pago Móvil en Venezuela/banco también haya cambiado, para no afectar validaciones o instrucciones de pago vigentes.
+**1. Migración de Entidad Legal (`SERVITECNOLOGY` → `Studio Coders Dev` + `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`):**
+- En `/home/angel/Developer/whabot/src/app/page.tsx`: actualizar la línea **36** (JSON-LD `Organization` con `name: "Studio Coders Dev"`, `legalName: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L."`, `taxID: "77.709.717-2"`) y la línea **991** (Descargo de Responsabilidad).
+- En `/home/angel/Developer/whabot/src/app/privacy/page.tsx`: actualizar las líneas **86** y **112** declarando a **`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.` (`RUT: 77.709.717-2`)** como titular jurídica responsable de Whalinkbot y su marca de ingeniería `Studio Coders Dev`.
+- **Precaución crítica:** NO modificar `/home/angel/Developer/whabot/src/lib/currency/bcvService.ts` (línea 161: `PAGO_MOVIL_BENEFICIARY || "SERVITECNOLOGY EIRL"`) sin confirmar primero con el usuario el nombre exacto del titular bancario de Pago Móvil.
 
 **2. Schema.org JSON-LD en `/home/angel/Developer/whabot/src/app/layout.tsx` (líneas 71–109):**
 Actualizar `orgSchema` añadiendo `@id`, `creator` y `isRelatedTo`:
@@ -218,7 +246,8 @@ const orgSchema = {
     "@type": "Organization",
     "@id": "https://studiocoders.dev/#organization",
     "name": "Studio Coders",
-    "legalName": "Studio Coders Dev EIRL",
+    "alternateName": "Studio Coders Dev",
+    "legalName": "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.",
     "taxID": "77.709.717-2",
     "url": "https://studiocoders.dev",
   },
@@ -235,7 +264,7 @@ const orgSchema = {
 ```
 
 **3. Footer en `/home/angel/Developer/whabot/src/app/page.tsx` (línea 991):**
-Reemplazar la mención plana *"desarrollada por SERVITECNOLOGY"* por enlaces semánticos reales:
+Reemplazar la mención plana *"desarrollada por SERVITECNOLOGY"* por enlaces semánticos reales con la fórmula legal correcta:
 ```tsx
 <p className="text-xs text-slate-500 max-w-2xl mx-auto leading-relaxed">
   <strong>Descargo de Responsabilidad:</strong> Whalinkbot es una plataforma independiente de software y desarrollo en la nube diseñada por{' '}
@@ -245,9 +274,9 @@ Reemplazar la mención plana *"desarrollada por SERVITECNOLOGY"* por enlaces sem
     rel="noopener"
     className="text-indigo-400 hover:text-indigo-300 underline"
   >
-    Studio Coders Dev EIRL
+    Studio Coders Dev
   </a>{' '}
-  (RUT 77.709.717-2) bajo estricto cumplimiento de la Ley N° 21.719 de Protección de Datos de Chile. Si requieres bots conversacionales 24/7 con la API Oficial de Meta para WhatsApp e Instagram, visita{' '}
+  (marca comercial de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT 77.709.717-2) bajo estricto cumplimiento de la Ley N° 21.719 de Protección de Datos de Chile. Si requieres bots conversacionales 24/7 con la API Oficial de Meta para WhatsApp e Instagram, visita{' '}
   <a
     href="https://whagil.com"
     target="_blank"
@@ -261,14 +290,14 @@ Reemplazar la mención plana *"desarrollada por SERVITECNOLOGY"* por enlaces sem
 ```
 
 **4. Actualizar `/home/angel/Developer/whabot/public/llms.txt`:**
-Convertir a formato estricto `llmstxt.org` (sin múltiples líneas `---` ni listas planas sin enlaces), citar explícitamente a **Studio Coders Dev EIRL (`RUT: 77.709.717-2`)** en el blockquote inicial y añadir sección `## Ecosistema e Ingeniería` con enlaces a `https://whagil.com` y `https://studiocoders.dev`.
+Convertir a formato estricto `llmstxt.org` (sin múltiples líneas `---` ni listas planas sin enlaces), citar explícitamente a **`Studio Coders Dev`** (`https://studiocoders.dev`) y **`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.` (`RUT: 77.709.717-2`)** en el blockquote inicial y añadir sección `## Ecosistema e Ingeniería` con enlaces a `https://whagil.com` y `https://studiocoders.dev`.
 
 ---
 
 ### 5.3 Repo `gestorinfraestructura` (`inframanagerpro.com`)
 
 **1. Schema.org JSON-LD en `/home/angel/Developer/gestorinfraestructura/templates/landing.html` (líneas 7–21):**
-Enriquecer el bloque JSON-LD existente añadiendo `"url"`, `"@id"` y `"creator"` apuntando a **`Studio Coders Dev EIRL`** (`RUT: 77.709.717-2`):
+Enriquecer el bloque JSON-LD existente añadiendo `"url"`, `"@id"` y `"creator"` separando marca comercial (`Studio Coders`) de razón social SII (`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`):
 ```html
 <script type="application/ld+json">
 {
@@ -283,7 +312,8 @@ Enriquecer el bloque JSON-LD existente añadiendo `"url"`, `"@id"` y `"creator"`
     "@type": "Organization",
     "@id": "https://studiocoders.dev/#organization",
     "name": "Studio Coders",
-    "legalName": "Studio Coders Dev EIRL",
+    "alternateName": "Studio Coders Dev",
+    "legalName": "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.",
     "taxID": "77.709.717-2",
     "url": "https://studiocoders.dev"
   },
@@ -300,9 +330,9 @@ Enriquecer el bloque JSON-LD existente añadiendo `"url"`, `"@id"` y `"creator"`
 **2. Footer en `/home/angel/Developer/gestorinfraestructura/templates/landing.html` (líneas 466–470):**
 ```html
 <p class="text-slate-400 text-xs mt-2 font-medium">
-    Administración Técnica Rigurosa · Ingeniería por
-    <a href="https://studiocoders.dev" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-semibold">Studio Coders Dev</a>
-    (Studio Coders Dev EIRL · RUT 77.709.717-2).<br>
+    Administración Técnica Rigurosa · Desarrollado por
+    <a href="https://studiocoders.dev" target="_blank" rel="noopener" class="text-blue-600 hover:underline font-semibold">Studio Coders (Ingeniería B2B)</a>
+    · División de software de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2).<br>
     &copy; 2026 Todos los derechos reservados.
 </p>
 ```
@@ -313,7 +343,7 @@ Agregar una ruta `@app.route('/llms.txt')` que retorne `text/plain; charset=utf-
 ```markdown
 # Infra Manager Pro
 
-> Infra Manager Pro (`https://inframanagerpro.com`) es un ERP empresarial en la nube desarrollado por Studio Coders Dev EIRL (RUT: 77.709.717-2) para la administración técnica de activos, condominios, mantenimiento crítico y cobranzas bancarias automatizadas.
+> Infra Manager Pro (`https://inframanagerpro.com`) es un ERP empresarial en la nube desarrollado por Studio Coders (división de software de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT 77.709.717-2) para la administración técnica de activos, condominios, mantenimiento crítico y cobranzas bancarias automatizadas.
 
 ## Plataforma y Capacidades
 
@@ -323,20 +353,21 @@ Agregar una ruta `@app.route('/llms.txt')` que retorne `text/plain; charset=utf-
 
 ## Ingeniería
 
-- [Studio Coders](https://studiocoders.dev): Estudio de ingeniería de software e IA (Studio Coders Dev EIRL) creador y mantenedor de Infra Manager Pro.
+- [Studio Coders](https://studiocoders.dev): Estudio de ingeniería de software e IA (operado legalmente por JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT 77.709.717-2) creador y mantenedor de Infra Manager Pro.
 ```
 
 ---
 
 ### 5.4 Repo `landingpage` (`servitecnology.com`)
 
-**0. Regla de Separación Comercial / Legal (Qué se conserva vs. qué cambia):**
-- **Se MANTIENE `SERVITECNOLOGY EIRL`** para el negocio local de retail de hardware, repuestos, garantías de piezas físicas, correos transaccionales del e-commerce y cuentas de transferencia (`src/pages/terminos.astro`, `src/pages/privacidad.astro`, `src/lib/mailer.ts`, `src/pages/mis-pedidos.astro`, `src/pages/pedido/[id].astro`), salvo decisión tributaria distinta del dueño.
-- **Se ACTUALIZA a `Studio Coders Dev EIRL (RUT: 77.709.717-2)` + enlaces a `https://studiocoders.dev`** en todo lo relativo a la división de desarrollo de software, IA y plataformas SaaS (`Footer.astro`, `desarrollo.astro`, `whagil.astro`, `whalinkbot.astro`, `inframanagerpro.astro`, `Layout.astro` y `public/llms.txt`).
+**0. Regla de Separación Comercial / Legal (Marca Hardware vs. Marca Software vs. Razón Social SII):**
+- **Razón Social Única SII (`RUT: 77.709.717-2`):** **`JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`** (corregir el inexacto `"SERVITECNOLOGY EIRL"` declarando a **`SERVITECNOLOGY`** como marca comercial de `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.` en `src/pages/terminos.astro`, `src/pages/privacidad.astro`, `src/lib/mailer.ts` y `src/pages/mis-pedidos.astro`).
+- **Precaución bancaria crítica:** Antes de modificar la constante `titular: "SERVITECNOLOGY EIRL"` en `src/pages/pedido/[id].astro` (línea 84) o instrucciones de transferencia, confirmar con el usuario cómo figura exactamente el titular de la cuenta corriente en BancoEstado.
+- **División de Software e IA (`Studio Coders`):** Atribuir a **`Studio Coders`** (`https://studiocoders.dev`, marca comercial de `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT 77.709.717-2`) en `Footer.astro`, `desarrollo.astro`, fichas SaaS, `Layout.astro` y `public/llms.txt`.
 
 **1. Conectar `/desarrollo` (`src/pages/desarrollo.astro`) y fichas SaaS con `https://studiocoders.dev`:**
-- Servitecnology ya enlaza a `whagil.com`, `whalinkbot.com` e `inframanagerpro.com` desde `src/pages/whagil.astro`, `src/pages/whalinkbot.astro` y `src/pages/inframanagerpro.astro` (línea 50 en cada una). Añadir allí atribución clara indicando que dichos productos SaaS son desarrollados por **Studio Coders Dev EIRL (`https://studiocoders.dev`)**.
-- En `src/pages/desarrollo.astro` (y en su Schema.org), añadir un CTA editorial hacia **`https://studiocoders.dev`** con anchor `Conoce Studio Coders` explicando que los proyectos corporativos de software a medida, plataformas SaaS y agentes de IA son ejecutados por **Studio Coders Dev EIRL** (división de ingeniería en Santiago con cobertura global).
+- Servitecnology ya enlaza a `whagil.com`, `whalinkbot.com` e `inframanagerpro.com` desde `src/pages/whagil.astro`, `src/pages/whalinkbot.astro` y `src/pages/inframanagerpro.astro` (línea 50 en cada una). Añadir allí atribución indicando que dichas plataformas son desarrolladas por **Studio Coders (`https://studiocoders.dev`)**, división de ingeniería de `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`.
+- En `src/pages/desarrollo.astro` (y en su Schema.org), añadir un CTA editorial hacia **`https://studiocoders.dev`** con anchor `Conoce Studio Coders` explicando que los proyectos corporativos de software a medida, plataformas SaaS y agentes de IA son ejecutados por **Studio Coders**.
 
 **2. Footer en `/home/angel/Developer/landingpage/src/components/Footer.astro` (línea 256):**
 Reemplazar la línea estática `"Diseñado y desarrollado Por SERVITECNOLOGY"` por:
@@ -351,13 +382,13 @@ Reemplazar la línea estática `"Diseñado y desarrollado Por SERVITECNOLOGY"` p
 	>
 		Studio Coders
 	</a>
-	(Studio Coders Dev EIRL · RUT 77.709.717-2)
+	· SERVITECNOLOGY es marca comercial de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)
 </p>
 ```
 
 **3. Actualizar `src/layouts/Layout.astro` + `public/llms.txt`:**
-- En `src/layouts/Layout.astro`, agregar en el JSON-LD `"subOrganization"` o `"sameAs"` vinculando a `https://studiocoders.dev` (`Studio Coders Dev EIRL`).
-- Reescribir `public/llms.txt` bajo el formato `llmstxt.org` (`# SERVITECNOLOGY`, 1 único párrafo `>`, listas `- [Título](URL): descripción`) incluyendo enlaces a `/repuestos`, `/whagil`, `/whalinkbot`, `/inframanagerpro` y `https://studiocoders.dev`.
+- En `src/layouts/Layout.astro`, actualizar el nodo de organización declarando `legalName: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L."`, `taxID: "77.709.717-2"`, y agregar `"subOrganization"` o `"sameAs"` vinculando a `https://studiocoders.dev` (`@id: "https://studiocoders.dev/#organization"`).
+- Reescribir `public/llms.txt` bajo el formato `llmstxt.org` (`# SERVITECNOLOGY`, 1 único párrafo `>`, listas `- [Título](URL): descripción`) incluyendo enlaces a `/repuestos`, `/desarrollo`, `/whagil`, `/whalinkbot`, `/inframanagerpro` y `https://studiocoders.dev`.
 
 ---
 
@@ -365,7 +396,7 @@ Reemplazar la línea estática `"Diseñado y desarrollado Por SERVITECNOLOGY"` p
 
 **1. Corregir dato de contacto y enriquecer Schema.org en `/home/angel/Developer/eastampa/landing-page/src/app/page.tsx`:**
 - **Importante (detectado en auditoría):** reemplazar `"telephone": "+56912345678"` (línea 15) por el número comercial real de EA Estampa para evitar incoherencias NAP en Google (verificar contra el enlace de WhatsApp real de la página o confirmar con el propietario).
-- Agregar un nodo `WebSite` dentro de `@graph` en `src/app/page.tsx` declarando a **Studio Coders Dev EIRL (`77.709.717-2`)** como `creator`:
+- Agregar un nodo `WebSite` dentro de `@graph` en `src/app/page.tsx` declarando la relación estructurada completa en Schema.org (sin ensuciar la UI de EA Estampa con datos legales de terceros):
 ```ts
 {
   "@type": "WebSite",
@@ -376,7 +407,8 @@ Reemplazar la línea estática `"Diseñado y desarrollado Por SERVITECNOLOGY"` p
     "@type": "Organization",
     "@id": "https://studiocoders.dev/#organization",
     "name": "Studio Coders",
-    "legalName": "Studio Coders Dev EIRL",
+    "alternateName": "Studio Coders Dev",
+    "legalName": "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.",
     "taxID": "77.709.717-2",
     "url": "https://studiocoders.dev"
   }
@@ -385,7 +417,7 @@ Reemplazar la línea estática `"Diseñado y desarrollado Por SERVITECNOLOGY"` p
 
 **2. Enlaces editoriales en `/home/angel/Developer/eastampa/landing-page/src/app/page.tsx`:**
 - **Conservar intactos** los dos enlaces que ya existen en las FAQs (líneas 383 y 428) apuntando a `<a href="https://whagil.com/vendedor-pro" target="_blank" rel="noopener">Whagil IA</a>` (refuerzo recíproco natural con Whagil). Opcionalmente sumar una nota discreta similar en `#cotizar`.
-- En `.footer-bottom` (alrededor de la línea 505), agregar atribución discreta con el anchor único `studiocoders.dev`:
+- En `.footer-bottom` (alrededor de la línea 505), agregar atribución discreta de agencia (sin mostrar EIRL ni RUT del estudio en la web del cliente textil) con el anchor único `studiocoders.dev`:
 ```tsx
 <p>
   &copy; {new Date().getFullYear()} EA Estampa. Todos los derechos reservados. | Ideas · Diseños · Web por{" "}
@@ -404,7 +436,7 @@ Reemplazar la línea estática `"Diseñado y desarrollado Por SERVITECNOLOGY"` p
 ```markdown
 # EA Estampa
 
-> EA Estampa (`https://eaestampa.com`) es un taller especializado en estampado DTF y sublimación premium de poleras, polerones, bolsas de tela, termos y vasos cerveceros en Santiago de Chile, con atención y cotizaciones automáticas 24/7 vía WhatsApp impulsadas por Whagil IA y plataforma web diseñada por Studio Coders Dev EIRL.
+> EA Estampa (`https://eaestampa.com`) es un taller especializado en estampado DTF y sublimación premium de poleras, polerones, bolsas de tela, termos y vasos cerveceros en Santiago de Chile, con atención y cotizaciones automáticas 24/7 vía WhatsApp impulsadas por Whagil IA y plataforma web diseñada por Studio Coders.
 
 ## Secciones y Servicios
 
@@ -415,7 +447,7 @@ Reemplazar la línea estática `"Diseñado y desarrollado Por SERVITECNOLOGY"` p
 ## Tecnología y Desarrollo
 
 - [Whagil IA](https://whagil.com): Motor de agentes conversacionales en WhatsApp para atención y cotización automática 24/7.
-- [Studio Coders](https://studiocoders.dev): Estudio de ingeniería de software (Studio Coders Dev EIRL · RUT 77.709.717-2) responsable del desarrollo web de EA Estampa.
+- [Studio Coders](https://studiocoders.dev): Estudio de ingeniería de software responsable del desarrollo web de EA Estampa.
 ```
 
 ---
@@ -425,15 +457,15 @@ Reemplazar la línea estática `"Diseñado y desarrollado Por SERVITECNOLOGY"` p
 Ejecutar en este orden estricto **antes** de enviar sitemaps a Google y Bing:
 
 ### Fase A — Cierre de la Red Cruzada Interna (en los 5 repositorios hermanos)
-- [ ] **Paso 1 (`whatsapp-saas` / `whagil.com`):** Migrar los 13 archivos de `SERVITECNOLOGY EIRL` → `Studio Coders Dev EIRL (RUT: 77.709.717-2)` + actualizar footer, FAQ, JSON-LD (`creator` + `isRelatedTo`) y `public/llms.txt` (`llmstxt.org`); desplegar a producción.
-- [ ] **Paso 2 (`whabot` / `whalinkbot.com`):** Migrar referencias en `page.tsx` y `privacy/page.tsx` a `Studio Coders Dev EIRL (RUT: 77.709.717-2)` + actualizar JSON-LD, footer (`studiocoders.dev` y `whagil.com`) y `public/llms.txt`; desplegar a producción.
-- [ ] **Paso 3 (`landingpage` / `servitecnology.com`):** Separar hardware (`SERVITECNOLOGY EIRL`) vs. división software/IA (`Studio Coders Dev EIRL`), conectar `Footer.astro`, `/desarrollo` y fichas SaaS hacia `studiocoders.dev` + `Layout.astro` + `public/llms.txt`; desplegar a producción.
-- [ ] **Paso 4 (`gestorinfraestructura` / `inframanagerpro.com`):** Actualizar JSON-LD (`creator`: `Studio Coders Dev EIRL`) y footer en `templates/landing.html` + servir `/llms.txt` desde Flask; desplegar a producción.
-- [ ] **Paso 5 (`eastampa` / `eaestampa.com`):** Corregir teléfono real en JSON-LD (`+56912345678`) + agregar `WebSite.creator` (`Studio Coders Dev EIRL · 77.709.717-2`), enlace footer a `studiocoders.dev` (conservando enlaces FAQ a `whagil.com`) y crear `public/llms.txt`; desplegar a producción.
+- [ ] **Paso 1 (`whatsapp-saas` / `whagil.com`):** Aplicar separación `Studio Coders` (marca) vs. `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)` (razón social SII/Meta) en los 13 archivos + actualizar footer, FAQ, JSON-LD (`creator` + `isRelatedTo`) y `public/llms.txt` (`llmstxt.org`); desplegar a producción.
+- [ ] **Paso 2 (`whabot` / `whalinkbot.com`):** Actualizar referencias en `page.tsx` y `privacy/page.tsx` a `Studio Coders Dev` bajo `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)` + actualizar JSON-LD, footer (`studiocoders.dev` y `whagil.com`) y `public/llms.txt`; desplegar a producción.
+- [ ] **Paso 3 (`landingpage` / `servitecnology.com`):** Declarar `SERVITECNOLOGY` (hardware) y `Studio Coders` (software e IA) como marcas comerciales de `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)`, conectar `Footer.astro`, `/desarrollo` y fichas SaaS hacia `studiocoders.dev` + `Layout.astro` + `public/llms.txt`; desplegar a producción.
+- [ ] **Paso 4 (`gestorinfraestructura` / `inframanagerpro.com`):** Actualizar JSON-LD (`creator`: `name: "Studio Coders"`, `legalName: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L."`, `taxID: "77.709.717-2"`) y footer en `templates/landing.html` + servir `/llms.txt` desde Flask; desplegar a producción.
+- [ ] **Paso 5 (`eastampa` / `eaestampa.com`):** Corregir teléfono real en JSON-LD (`+56912345678`) + agregar `WebSite.creator` con `legalName: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L."`, enlace limpio en footer a `studiocoders.dev` (conservando enlaces FAQ a `whagil.com` y sin exponer EIRL/RUT ajeno al cliente) y crear `public/llms.txt`; desplegar a producción.
 
 ### Fase B — Validación Técnica (Antes de Indexar)
-- [ ] *(Opcional en `studiocoders.dev`)* Decidir si se añade `"EIRL"` a `legalName: "Studio Coders Dev"` (`src/app/layout.tsx`, `FAQ.tsx`, `Footer.tsx`, `public/llms.txt`, `public/llms-full.txt`) para coincidencia literal 1:1 con `Studio Coders Dev EIRL`.
-- [ ] Probar las 6 URLs en [Schema Markup Validator](https://validator.schema.org/) verificando 0 errores y que todas resuelvan el `@id: "https://studiocoders.dev/#organization"` con `Studio Coders Dev EIRL` (`taxID: "77.709.717-2"`).
+- [x] **`studiocoders.dev` listo sin cambios de código:** Cumple estrictamente `.agents/rules/business-positioning.md` (`Studio Coders Dev · RUT: 77.709.717-2`, sin `EIRL`) y `tests/seo-geo-aeo.test.ts` (`@id: "https://studiocoders.dev/#organization"`).
+- [ ] Probar las 6 URLs en [Schema Markup Validator](https://validator.schema.org/) verificando 0 errores y que todas resuelvan el `@id: "https://studiocoders.dev/#organization"` y la razón social oficial `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.` (`taxID: "77.709.717-2"`).
 - [ ] Confirmar respuesta `HTTP 200` en `/robots.txt`, `/sitemap.xml` y `/llms.txt` de los 6 dominios.
 - [ ] Correr Lighthouse / PageSpeed sobre cada dominio tras los despliegues (objetivo `SEO 100/100` y `Navegación agéntica 3/3`).
 
@@ -441,7 +473,7 @@ Ejecutar en este orden estricto **antes** de enviar sitemaps a Google y Bing:
 El cross-linking entre tus 6 plataformas construye coherencia de entidad, pero **para que Google y los LLMs no vean solo "auto-citas"**, necesitas backlinks externos reales de terceros. Los prioritarios para `studiocoders.dev`:
 - [x] **GitHub Organization (`github.com/studiocoders-dev`)** y repositorio público `webhook-verifier`.
 - [x] **Registro npm (`npmjs.com/package/@studiocoders/webhook-verifier`)** con dominio verificado `contacto@studiocoders.dev`.
-- [ ] **LinkedIn Company Page** para Studio Coders Dev EIRL enlazando a `https://studiocoders.dev` (agregar ese URL en `sameAs` del JSON-LD de `studiocoders.dev` una vez creada).
+- [ ] **LinkedIn Company Page** para Studio Coders (`Studio Coders Dev` / operado por `JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.`) enlazando a `https://studiocoders.dev` (agregar ese URL en `sameAs` del JSON-LD de `studiocoders.dev` una vez creada).
 - [ ] **Crunchbase / Product Hunt / Clutch / Sortlist** (perfiles gratuitos de agencia de software apuntando a `https://studiocoders.dev` y a los productos `whagil.com` / `whalinkbot.com`).
 - [ ] **GitHub READMEs / Perfiles:** Asegurar que todos los repositorios públicos de la org apunten a `https://studiocoders.dev`.
 
@@ -465,46 +497,56 @@ Copia y pega el bloque correspondiente dentro de la sesión de Antigravity/IA ab
 
 ```text
 Trabajaremos bajo Spec-Driven Development (SDD) en este repositorio (whatsapp-saas / whagil.com).
-ANTES de editar una sola línea de código en src/ o public/, debes:
-1. Revisar los archivos indicados abajo para confirmar su estado exacto actual.
-2. Crear la Spec en .agents/specs/ (si no existe la carpeta .agents/specs/, créala) con requisitos EARS y Definition of Done (DoD), y crear el Plan Técnico en .agents/plans/ detallando archivo por archivo qué cambiarás y cómo verificarás.
-3. DETENERTE en Gate 3 y pedirme aprobación explícita antes de escribir o modificar código en src/ o public/.
+ANTES de editar una sola línea de código en src/, public/ o docs/, debes:
+1. Revisar los archivos indicados abajo y buscar con grep todas las ocurrencias de "SERVITECNOLOGY" y de "CONSUMIBLES" en todo el repositorio (src/, public/ y docs/).
+2. Crear la Spec en .agents/specs/ con requisitos EARS y Definition of Done (DoD), y crear el Plan Técnico en .agents/plans/ detallando archivo por archivo qué cambiarás y cómo verificarás.
+3. DETENERTE en Gate 3 y pedirme aprobación explícita antes de modificar archivos.
+
+REGLA CRÍTICA DE BLINDAJE LEGAL (META TECH PROVIDER + SII CHILE):
+- PROHIBIDO escribir "Studio Coders Dev EIRL" o mantener "SERVITECNOLOGY EIRL": en Chile la sigla E.I.R.L. pertenece exclusivamente a la razón social inscrita en el e-RUT del SII y verificada en Meta Business Suite.
+- Marca comercial / estudio de ingeniería: "Studio Coders" (https://studiocoders.dev), sin sigla EIRL.
+- Razón social legal / tributaria SII definitiva (ya actualizada en escrituras y e-RUT, SIN "Y CONSUMIBLES"): "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L." (RUT: 77.709.717-2).
 
 OBJETIVO DE LA TAREA:
-1) Migración de Entidad Creadora y Operadora Legal:
-   Reemplazar las referencias a "SERVITECNOLOGY EIRL" como empresa creadora/operadora de Whagil IA por "Studio Coders Dev EIRL" (manteniendo el mismo RUT: 77.709.717-2) en los 13 archivos detectados:
-   - src/app/layout.tsx (líneas 34-35: authors y creator)
-   - src/app/page.tsx (líneas 77-78 legalName en #organization, línea 325 cuerpo y líneas 914-915 footer)
-   - src/app/venezuela/page.tsx (líneas 71 y 471)
-   - src/app/latam/page.tsx (líneas 72 y 477)
-   - src/app/privacy/page.tsx (líneas 40, 43 y 276)
-   - src/app/terms/page.tsx (línea 150)
-   - src/app/refund/page.tsx (línea 92)
-   - src/app/tarifas-meta/page.tsx (línea 478)
-   - src/features/landing/constants/landing-seo.ts (líneas 8, 51 y 56)
-   - src/features/landing/constants/spokes-data.ts (líneas 77, 177, 270, 363, 456 y 555)
-   - src/features/landing/components/spokes/SpokeLandingTemplate.tsx (línea 265)
-   - public/llms.txt (línea 4)
-   - public/llms-full.txt (líneas 4 y 16)
-   (Verifica también con grep si existen ocurrencias adicionales de "SERVITECNOLOGY" antes de planificar).
+1) Separación Marca Comercial vs. Razón Social + Limpieza de "Y CONSUMIBLES":
+   - Grupo A — Legales, privacidad, términos, facturación SII y razón social (usar exactamente "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L." + RUT 77.709.717-2, aclarando cuando corresponda que opera las marcas Whagil IA y Studio Coders):
+     * src/app/page.tsx (líneas 77-78 legalName en #organization y líneas 914-915 datos legales footer)
+     * src/app/venezuela/page.tsx (líneas 71 y 471)
+     * src/app/latam/page.tsx (líneas 72 y 477)
+     * src/app/privacy/page.tsx (líneas 40, 43 y 276 — clave para Meta Data Use Checkup y Ley 21.719)
+     * src/app/terms/page.tsx (línea 150)
+     * src/app/refund/page.tsx (línea 92)
+     * src/features/landing/constants/landing-seo.ts (líneas 51 y 56 sobre facturación electrónica SII)
+     * src/features/landing/components/spokes/SpokeLandingTemplate.tsx (línea 265)
+   - Grupo B — Textos de producto, ingeniería y marketing SEO/GEO (usar "Studio Coders" como marca comercial de "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L."):
+     * src/app/layout.tsx (líneas 34-35: authors y creator)
+     * src/app/page.tsx (línea 325 cuerpo)
+     * src/app/tarifas-meta/page.tsx (línea 478)
+     * src/features/landing/constants/landing-seo.ts (línea 8 descripción general)
+     * src/features/landing/constants/spokes-data.ts (líneas 77, 177, 270, 363, 456 y 555)
+     * public/llms.txt y public/llms-full.txt (líneas 4 y 16)
+   - Grupo C — Limpieza de documentación Compliance y Meta ("Y CONSUMIBLES" ya eliminado de escrituras y e-RUT):
+     * Actualizar todas las ocurrencias antiguas de "JESUS LEON SOLUCIONES INFORMÁTICAS Y CONSUMIBLES E.I.R.L." (o "Jesus Leon Soluciones Informaticas y Consumibles EIRL") a "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L." en docs/compliance/ (archivos Ley 21.719 y Ley 21.595), docs/arquitectura/fase-41-guia-completa.md y docs/desarrollo/Compliance Ley 21.719 y 21.595/.
+     * Revisar si docs/compliance/state.json o metadata relacionada contiene el texto antiguo para actualizarlo consistentemente.
 
 2) Cross-Linking Anti-Spam (SEO/AEO/GEO):
-   - En los footers de src/app/page.tsx (y verificar /venezuela y /latam), añadir atribución editorial con rel="noopener" hacia https://studiocoders.dev usando exactamente el anchor text "Studio Coders" (precedido de "Arquitectura e ingeniería por" y aclarando "(Studio Coders Dev EIRL · RUT: 77.709.717-2)"), más un enlace complementario con rel="noopener" hacia https://whalinkbot.com usando el anchor text "Whalinkbot" para quienes buscan monitoreo y prospección en grupos de WhatsApp.
-   - NO crear un anillo de enlaces a todos los demás dominios. Conservar el caso de estudio existente hacia eaestampa.com en LandingUseCasesSection.tsx.
-   - En src/features/landing/constants/landing-seo.ts (FAQ_ITEMS), añadir una pregunta "Answer-First" explicando la diferencia entre Whagil IA (Meta Cloud API oficial inbound sin riesgo de baneo) y Whalinkbot (monitoreo de grupos en la nube y outbound).
+   - En el footer de src/app/page.tsx (y revisar /venezuela y /latam), añadir atribución editorial con rel="noopener" hacia https://studiocoders.dev usando exactamente el anchor text "Studio Coders" (precedido de "Arquitectura e ingeniería por" y seguido de "(marca comercial de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT: 77.709.717-2)"), más enlace complementario con rel="noopener" hacia https://whalinkbot.com con el anchor text "Whalinkbot" para prospección en grupos de WhatsApp.
+   - NO crear anillo de enlaces hacia los demás sitios. Conservar el caso real de eaestampa.com en LandingUseCasesSection.tsx.
+   - En src/features/landing/constants/landing-seo.ts (FAQ_ITEMS), añadir una pregunta "Answer-First" diferenciando Whagil IA (Meta Cloud API oficial inbound sin riesgo de baneo) de Whalinkbot (monitoreo de grupos en la nube y outbound).
 
-3) Schema.org JSON-LD Bidireccional:
-   - En src/app/page.tsx (y replicar coherencia en /venezuela y /latam si tienen @graph): actualizar legalName a "Studio Coders Dev EIRL" en #organization, y en SoftwareApplication ("@id": "https://whagil.com/#software") añadir:
-     * creator: { "@type": "Organization", "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "legalName": "Studio Coders Dev EIRL", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" }
+3) Schema.org JSON-LD Bidireccional (page.tsx, /venezuela, /latam):
+   - En #organization: usar name: "Whagil IA", alternateName: "Studio Coders", legalName: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.", taxID: "77.709.717-2".
+   - En SoftwareApplication ("@id": "https://whagil.com/#software"), añadir:
+     * creator: { "@type": "Organization", "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "alternateName": "Studio Coders Dev", "legalName": "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" }
      * isRelatedTo: [{ "@type": "SoftwareApplication", "name": "Whalinkbot", "url": "https://whalinkbot.com" }]
 
 4) Estandarización de public/llms.txt (llmstxt.org):
-   - Reescribir public/llms.txt siguiendo estrictamente la especificación llmstxt.org: H1 (# Whagil IA), UN solo párrafo blockquote (> ...) mencionando que es desarrollada y operada por Studio Coders Dev EIRL (RUT: 77.709.717-2, https://studiocoders.dev), listas Markdown "- [Título](URL): descripción" para planes, regiones, llms-full.txt y una sección "## Ecosistema Relacionado" enlazando a Whalinkbot y Studio Coders.
+   - Reescribir public/llms.txt bajo la especificación estricta llmstxt.org: H1 (# Whagil IA), UN solo párrafo blockquote (> ...) mencionando que es desarrollada por Studio Coders (https://studiocoders.dev), marca comercial de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2), listas Markdown "- [Título](URL): descripción" para planes, regiones, llms-full.txt y sección "## Ecosistema Relacionado" hacia Whalinkbot y Studio Coders.
 
 5) Gate 4 (al ejecutar tras mi aprobación):
-   - Correr tests unitarios, verificación de tipos (tsc --noEmit), lint y build de producción sin errores.
+   - Correr tests unitarios, tsc --noEmit, lint y build de producción sin errores.
 
-Por ahora solo inspecciona el repo, redacta la Spec y el Plan Técnico, y preséntamelos esperando mi "aprobado".
+Por ahora solo inspecciona el repo, redacta la Spec y el Plan Técnico, y detente en Gate 3 esperando mi aprobación.
 ```
 
 ---
@@ -514,34 +556,39 @@ Por ahora solo inspecciona el repo, redacta la Spec y el Plan Técnico, y presé
 ```text
 Trabajaremos bajo Spec-Driven Development (SDD) en este repositorio (whabot / whalinkbot.com).
 ANTES de editar una sola línea de código en src/ o public/, debes:
-1. Revisar los archivos listados abajo para verificar su estado actual.
-2. Crear la Spec en .agents/specs/ (si no existe la carpeta, créala) con requisitos EARS y DoD, y crear el Plan Técnico en .agents/plans/ detallando archivos a tocar y verificaciones.
-3. DETENERTE en Gate 3 y pedirme aprobación explícita antes de modificar código.
+1. Revisar los archivos indicados abajo para confirmar su estado actual.
+2. Crear la Spec en .agents/specs/ (si no existe la carpeta, créala) con requisitos EARS y DoD, y el Plan Técnico en .agents/plans/.
+3. DETENERTE en Gate 3 esperando mi aprobación explícita antes de modificar código.
+
+REGLA CRÍTICA DE IDENTIDAD LEGAL (SII CHILE):
+- PROHIBIDO escribir "Studio Coders Dev EIRL" o "SERVITECNOLOGY EIRL": no corresponden a la razón social legal inscrita en el SII.
+- Marca comercial / estudio desarrollador: "Studio Coders Dev" (https://studiocoders.dev).
+- Razón social legal oficial (SII): "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L." (RUT: 77.709.717-2).
 
 OBJETIVO DE LA TAREA:
-1) Migración de Entidad Creadora/Operadora a Studio Coders Dev EIRL (RUT: 77.709.717-2):
-   - Actualizar "SERVITECNOLOGY" -> "Studio Coders Dev EIRL" en:
-     * src/app/page.tsx (línea 36 en el JSON-LD y línea 991 en el Descargo de Responsabilidad del footer)
+1) Migración de Entidad en Textos Legales y Landing:
+   - Actualizar "SERVITECNOLOGY" -> "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L." (aclarando la marca comercial "Studio Coders Dev") en:
+     * src/app/page.tsx (línea 36 en JSON-LD Organization y línea 991 en Descargo de Responsabilidad)
      * src/app/privacy/page.tsx (líneas 86 y 112)
-   - PRECAUCIÓN CRÍTICA: NO modificar src/lib/currency/bcvService.ts (línea 161: PAGO_MOVIL_BENEFICIARY || "SERVITECNOLOGY EIRL") sin confirmarlo conmigo explícitamente, ya que corresponde al titular bancario de cobros Pago Móvil.
-   - Verifica con grep si existen otras menciones a SERVITECNOLOGY en src/ o public/.
+   - PRECAUCIÓN CRÍTICA: NO modificar src/lib/currency/bcvService.ts (línea 161: PAGO_MOVIL_BENEFICIARY || "SERVITECNOLOGY EIRL") sin confirmarlo conmigo explícitamente antes en Gate 3, ya que afecta instrucciones bancarias de Pago Móvil.
+   - Verifica con grep si existen otras ocurrencias de SERVITECNOLOGY en src/ o public/.
 
 2) Cross-Linking Anti-Spam (SEO/AEO/GEO):
-   - En src/app/page.tsx (línea 991, Descargo de Responsabilidad del footer): reemplazar el texto plano actual por enlaces con rel="noopener":
-     * Enlace a https://studiocoders.dev con el anchor text exacto "Studio Coders Dev EIRL" seguido de "(RUT 77.709.717-2)".
-     * Enlace complementario en el mismo descargo (o en una FAQ comparativa de la landing) hacia https://whagil.com con el anchor text exacto "Whagil IA" para usuarios que busquen bots conversacionales 24/7 con la API Oficial de Meta para WhatsApp e Instagram.
-   - No agregar enlaces en el footer hacia los demás sitios del grupo.
+   - En src/app/page.tsx (línea 991, Descargo de Responsabilidad del footer): reemplazar el texto plano por enlaces con rel="noopener":
+     * Enlace a https://studiocoders.dev con el anchor text exacto "Studio Coders Dev", seguido de "(marca comercial de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT 77.709.717-2)".
+     * Enlace complementario en el mismo descargo (o en FAQ comparativa) hacia https://whagil.com con el anchor text exacto "Whagil IA" para bots conversacionales 24/7 con la API Oficial de Meta.
+   - No agregar enlaces en el footer hacia los demás sitios del ecosistema.
 
-3) Schema.org JSON-LD Bidireccional en src/app/layout.tsx (líneas 71-109):
-   - Enriquecer orgSchema (SoftwareApplication) con:
+3) Schema.org JSON-LD Bidireccional en src/app/layout.tsx (líneas 71-109) y coherencia con src/app/page.tsx:
+   - En orgSchema (SoftwareApplication) añadir:
      * "@id": "https://whalinkbot.com/#software"
      * "url": "https://whalinkbot.com"
-     * "creator": { "@type": "Organization", "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "legalName": "Studio Coders Dev EIRL", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" }
+     * "creator": { "@type": "Organization", "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "alternateName": "Studio Coders Dev", "legalName": "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" }
      * "isRelatedTo": [{ "@type": "SoftwareApplication", "name": "Whagil IA", "url": "https://whagil.com", "description": "Agentes de IA conversacionales sobre la API Oficial de Meta para WhatsApp, Instagram y Messenger." }]
-   - Conservar las ofertas y campos válidos existentes, y asegurarte de que src/app/page.tsx línea 36 sea coherente con esto y no genere organizaciones duplicadas contradictorias.
+   - Asegurar que src/app/page.tsx línea 36 declare name: "Studio Coders Dev" y legalName: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L." sin duplicidad contradictoria.
 
 4) Estandarización de public/llms.txt (llmstxt.org):
-   - Reescribir public/llms.txt eliminando divisores "---" y viñetas planas sin URL; usar H1 (# Whalinkbot), un único párrafo blockquote (> ...) indicando que es desarrollado por Studio Coders Dev EIRL (RUT: 77.709.717-2, https://studiocoders.dev), listas Markdown "- [Título](URL): descripción" para funcionalidades y planes, y una sección "## Ecosistema e Ingeniería" con enlaces a Whagil IA (https://whagil.com) y Studio Coders (https://studiocoders.dev).
+   - Reescribir public/llms.txt eliminando divisores "---" y listas planas sin URL; usar H1 (# Whalinkbot), un único párrafo blockquote (> ...) citando a Studio Coders Dev (https://studiocoders.dev) y JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2), listas Markdown "- [Título](URL): descripción", y sección "## Ecosistema e Ingeniería" hacia Whagil IA (https://whagil.com) y Studio Coders (https://studiocoders.dev).
 
 5) Gate 4 (al ejecutar tras mi aprobación):
    - Ejecutar verificación de tipos, tests (si existen), lint y build de Next.js sin errores.
@@ -558,31 +605,36 @@ Trabajaremos bajo Spec-Driven Development (SDD) en este repositorio (gestorinfra
 ANTES de editar cualquier plantilla o ruta Python, debes:
 1. Inspeccionar templates/landing.html, templates/base.html y routes/auth.py (o app.py) para confirmar cómo se renderiza la landing y las rutas públicas.
 2. Crear la Spec en .agents/specs/ (si no existe el directorio, créalo) con requisitos EARS y DoD, y crear el Plan Técnico en .agents/plans/.
-3. DETENERTE en Gate 3 y esperar mi aprobación explícita antes de aplicar cambios.
+3. DETENERTE en Gate 3 esperando mi aprobación explícita antes de aplicar cambios.
+
+REGLA CRÍTICA DE IDENTIDAD LEGAL:
+- Nunca usar "Studio Coders Dev EIRL" ni "SERVITECNOLOGY EIRL".
+- Marca comercial del estudio desarrollador: "Studio Coders" / "Studio Coders Dev" (https://studiocoders.dev).
+- Razón social legal SII: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L." (RUT: 77.709.717-2).
 
 OBJETIVO DE LA TAREA:
 1) Pureza B2B Anti-Spam (Único Enlace Saliente):
    - Infra Manager Pro es un ERP B2B inmobiliario y de mantenimiento técnico. NO debe enlazar a herramientas de WhatsApp, bots ni talleres de estampado.
-   - Su único enlace externo saliente debe apuntar a su firma de ingeniería creadora: https://studiocoders.dev.
+   - Su único enlace externo saliente debe apuntar a su estudio creador: https://studiocoders.dev.
 
 2) Footer en templates/landing.html (alrededor de las líneas 466-470):
-   - Actualizar el footer añadiendo la atribución técnica: "Ingeniería por" seguido de un enlace con rel="noopener" y target="_blank" hacia https://studiocoders.dev con el anchor text exacto "Studio Coders Dev", acompañado de "(Studio Coders Dev EIRL · RUT 77.709.717-2)".
+   - Actualizar el footer añadiendo: "Desarrollado por" seguido de un enlace con rel="noopener" y target="_blank" hacia https://studiocoders.dev con el anchor text exacto "Studio Coders (Ingeniería B2B)", aclarando "· División de software de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)".
 
 3) Schema.org JSON-LD Bidireccional en templates/landing.html (líneas 7-21):
-   - Mantener los datos reales de SoftwareApplication (price, currency, description) y agregar:
+   - Conservar los datos reales de SoftwareApplication (price, currency, description) y agregar:
      * "@id": "https://inframanagerpro.com/#software"
      * "url": "https://inframanagerpro.com"
-     * "creator": { "@type": "Organization", "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "legalName": "Studio Coders Dev EIRL", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" }
+     * "creator": { "@type": "Organization", "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "alternateName": "Studio Coders Dev", "legalName": "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" }
 
 4) Exponer /llms.txt desde Flask (routes/auth.py o app.py):
-   - Crear la ruta GET /llms.txt sirviendo text/plain; charset=utf-8 bajo formato estricto llmstxt.org:
+   - Crear ruta GET /llms.txt sirviendo text/plain; charset=utf-8 bajo formato estricto llmstxt.org:
      * H1: # Infra Manager Pro
-     * Un único párrafo blockquote (> ...) describiendo el ERP desarrollado por Studio Coders Dev EIRL (RUT: 77.709.717-2).
-     * Secciones con listas "- [Título](URL): descripción" hacia las rutas públicas (/register, /soporte, etc.) y una sección "## Ingeniería" enlazando a Studio Coders (https://studiocoders.dev).
-   - Si existe sitemap o robots.txt en Flask, asegurarse de que /llms.txt no quede bloqueado.
+     * Un único párrafo blockquote (> ...) describiendo el ERP desarrollado por Studio Coders (división de software de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT 77.709.717-2).
+     * Listas "- [Título](URL): descripción" hacia rutas públicas (/register, /soporte, etc.) y una sección "## Ingeniería" enlazando a Studio Coders (https://studiocoders.dev).
+   - Verificar que robots.txt o middleware no bloquee /llms.txt.
 
 5) Gate 4 (al ejecutar tras mi aprobación):
-   - Correr pytest / suite de pruebas de Flask o validación de sintaxis Python, renderizado HTML del template landing.html y respuesta HTTP 200 de /llms.txt.
+   - Correr pytest / validación de sintaxis Python, renderizado HTML del template landing.html y respuesta HTTP 200 de /llms.txt.
 
 Por ahora solo inspecciona el repo, redacta la Spec y el Plan Técnico, y preséntamelos esperando mi "aprobado".
 ```
@@ -598,25 +650,29 @@ ANTES de editar cualquier archivo en src/ o public/, debes:
 2. Crear la Spec en .agents/specs/ (si no existe la carpeta, créala) con requisitos EARS y DoD, y el Plan Técnico en .agents/plans/.
 3. DETENERTE en Gate 3 esperando mi aprobación explícita antes de tocar código.
 
-REGLA CRÍTICA DE SEPARACIÓN DE ENTIDADES (NO ROMPER EL E-COMMERCE):
-- MANTENER "SERVITECNOLOGY EIRL" intacto para el giro de retail de hardware, repuestos, garantías físicas, correos transaccionales del e-commerce y transferencia bancaria (src/pages/terminos.astro, src/pages/privacidad.astro, src/lib/mailer.ts, src/pages/mis-pedidos.astro, src/pages/pedido/[id].astro).
-- ACTUALIZAR a "Studio Coders Dev EIRL (RUT: 77.709.717-2)" + enlaces hacia https://studiocoders.dev únicamente en lo relacionado con la división de desarrollo de software, IA y plataformas SaaS.
+REGLA CRÍTICA DE IDENTIDAD LEGAL Y SEPARACIÓN DE MARCAS (SII CHILE):
+- En Chile, la sigla E.I.R.L. pertenece exclusivamente a la razón social inscrita en el SII: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L." (RUT: 77.709.717-2).
+- Tanto "SERVITECNOLOGY" (retail de hardware y repuestos) como "Studio Coders" (división de software e IA en https://studiocoders.dev) son MARCAS COMERCIALES operadas bajo "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.". Nunca usar el nombre inexacto "Studio Coders Dev EIRL", ni dejar el inexacto "SERVITECNOLOGY EIRL" en textos legales nuevos.
+- PRECAUCIÓN BANCARIA CRÍTICA: En src/pages/pedido/[id].astro (línea 84) figura `titular: "SERVITECNOLOGY EIRL"`. NO cambiar ese campo bancario sin confirmarlo conmigo antes en Gate 3 para verificar cómo aparece el titular exacto de la cuenta en BancoEstado.
 
 OBJETIVO DE LA TAREA:
-1) Footer (src/components/Footer.astro, alrededor de la línea 256):
-   - Reemplazar la línea estática "Diseñado y desarrollado Por SERVITECNOLOGY" por un bloque que indique: "División de Software e IA:" con enlace a https://studiocoders.dev (rel="noopener", target="_blank", anchor text "Studio Coders") y aclaración "(Studio Coders Dev EIRL · RUT 77.709.717-2)".
+1) Corregir textos legales del e-commerce (hardware/repuestos):
+   - En src/pages/terminos.astro, src/pages/privacidad.astro, src/lib/mailer.ts y src/pages/mis-pedidos.astro (y src/pages/pedido/[id].astro fuera de la constante bancaria si no aplica): actualizar "SERVITECNOLOGY EIRL" por "SERVITECNOLOGY (marca comercial de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. · RUT: 77.709.717-2)" para que coincida con la factura del SII.
 
-2) Conectar /desarrollo y fichas SaaS con Studio Coders Dev EIRL:
-   - En src/pages/desarrollo.astro: añadir un CTA secundario editorial hacia https://studiocoders.dev con el anchor text "Conoce Studio Coders", explicando que los proyectos corporativos de software a medida, SaaS y agentes de IA son ejecutados por Studio Coders Dev EIRL (nuestra división especializada de ingeniería de software).
-   - En src/pages/whagil.astro, src/pages/whalinkbot.astro y src/pages/inframanagerpro.astro (donde ya existen botones hacia los sitios externos): revisar y asegurar que la autoría de ingeniería de esas plataformas cite a Studio Coders Dev EIRL (https://studiocoders.dev) y que no falte rel="noopener" en sus enlaces externos.
+2) Footer (src/components/Footer.astro, alrededor de la línea 256):
+   - Reemplazar la línea estática "Diseñado y desarrollado Por SERVITECNOLOGY" por un bloque que indique: "División de Software e IA:" con enlace a https://studiocoders.dev (rel="noopener", target="_blank", anchor text "Studio Coders") seguido de "· SERVITECNOLOGY es marca comercial de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L. (RUT: 77.709.717-2)".
 
-3) Schema.org JSON-LD en src/layouts/Layout.astro (y en desarrollo.astro si aplica):
-   - Agregar vínculo semántico ("subOrganization" o "sameAs") apuntando a { "@type": "Organization", "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "legalName": "Studio Coders Dev EIRL", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" }.
+3) Conectar /desarrollo y fichas SaaS con Studio Coders:
+   - En src/pages/desarrollo.astro: añadir CTA secundario editorial hacia https://studiocoders.dev con el anchor text "Conoce Studio Coders", explicando que los proyectos corporativos de software a medida, SaaS y agentes de IA son ejecutados por Studio Coders (división de ingeniería de JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.).
+   - En src/pages/whagil.astro, src/pages/whalinkbot.astro y src/pages/inframanagerpro.astro: revisar sus enlaces salientes (asegurar rel="noopener") e indicar la autoría de ingeniería de Studio Coders (https://studiocoders.dev).
 
-4) Estandarización de public/llms.txt (llmstxt.org):
-   - Reescribir public/llms.txt sustituyendo el formato de texto numerado plano por el estándar llmstxt.org: H1 (# SERVITECNOLOGY), un único párrafo blockquote (> ...), y listas Markdown "- [Título](URL): descripción" incluyendo /repuestos, /desarrollo, /whagil, /whalinkbot, /inframanagerpro y enlace a nuestra división de ingeniería Studio Coders (https://studiocoders.dev).
+4) Schema.org JSON-LD en src/layouts/Layout.astro:
+   - Declarar legalName: "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.", taxID: "77.709.717-2", name: "Servitecnology", y vincular la división de software mediante subOrganization o sameAs hacia { "@type": "Organization", "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "alternateName": "Studio Coders Dev", "legalName": "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" }.
 
-5) Gate 4 (al ejecutar tras mi aprobación):
+5) Estandarización de public/llms.txt (llmstxt.org):
+   - Reescribir public/llms.txt sustituyendo el formato numerado plano por llmstxt.org: H1 (# SERVITECNOLOGY), un único párrafo blockquote (> ...), y listas Markdown "- [Título](URL): descripción" incluyendo /repuestos, /desarrollo, /whagil, /whalinkbot, /inframanagerpro y Studio Coders (https://studiocoders.dev).
+
+6) Gate 4 (al ejecutar tras mi aprobación):
    - Ejecutar astro check / typecheck / npm run build sin errores.
 
 Por ahora solo analiza los archivos, crea la Spec y el Plan Técnico, y detente en Gate 3 esperando mi aprobación.
@@ -631,33 +687,101 @@ Trabajaremos bajo Spec-Driven Development (SDD) en este repositorio (eastampa/la
 ANTES de editar cualquier archivo en src/ o public/, debes:
 1. Inspeccionar landing-page/src/app/page.tsx, landing-page/src/app/layout.tsx y landing-page/public/ para verificar el estado actual.
 2. Crear la Spec en .agents/specs/ (si no existe, créala en landing-page/.agents/ o en la raíz según la estructura del repo) con requisitos EARS y DoD, y el Plan Técnico en .agents/plans/.
-3. DETENERTE en Gate 3 y esperar mi aprobación explícita antes de modificar código.
+3. DETENERTE en Gate 3 esperando mi aprobación explícita antes de modificar código.
 
 OBJETIVO DE LA TAREA:
 1) Corregir Dato de Contacto Placeholder en JSON-LD (NAP Consistency):
    - En landing-page/src/app/page.tsx (línea 15), existe "telephone": "+56912345678" en el JSON-LD LocalBusiness. Revisa el botón real de WhatsApp en el mismo page.tsx para obtener el teléfono comercial real de EA Estampa (o pregúntamelo antes de ejecutar en Gate 3 si no está visible en el archivo) y reemplaza ese placeholder.
 
 2) Schema.org JSON-LD Bidireccional (WebSite + creator):
-   - En landing-page/src/app/page.tsx dentro del @graph existente (sin romper LocalBusiness ni FAQPage), añadir el nodo WebSite:
+   - En landing-page/src/app/page.tsx dentro del @graph existente (sin romper LocalBusiness ni FAQPage), añadir el nodo WebSite vinculando la marca del estudio y su entidad legal SII en los metadatos estructurados:
      * "@type": "WebSite"
      * "@id": "https://eaestampa.com/#website"
      * "url": "https://eaestampa.com"
      * "name": "EA Estampa"
-     * "creator": { "@type": "Organization", "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "legalName": "Studio Coders Dev EIRL", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" }
+     * "creator": { "@type": "Organization", "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "alternateName": "Studio Coders Dev", "legalName": "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" }
+   - PROHIBIDO usar "Studio Coders Dev EIRL".
 
-3) Enlaces Editoriales y Footer Anti-Spam:
+3) Enlaces Editoriales y Footer Anti-Spam (Respetando UI de Cliente Externo):
    - CONSERVAR intactos los dos enlaces existentes en las FAQs de page.tsx (líneas 383 y 428) que ya apuntan a https://whagil.com/vendedor-pro con el texto "Whagil IA". Opcionalmente añadir una mención sutil en la sección #cotizar.
    - NO enlazar a whalinkbot.com, inframanagerpro.com ni servitecnology.com (no tienen relación con estampado textil y parecería spam).
-   - En .footer-bottom de landing-page/src/app/page.tsx (alrededor de la línea 505), añadir atribución discreta de desarrollo web con rel="noopener" y target="_blank" hacia https://studiocoders.dev usando el anchor text exacto "studiocoders.dev" (ej: "| Ideas · Diseños · Web por studiocoders.dev").
+   - En .footer-bottom de landing-page/src/app/page.tsx (alrededor de la línea 505), añadir atribución discreta de agencia SIN mostrar el RUT ni la EIRL del estudio desarrollador en la UI visible de EA Estampa: usar rel="noopener" y target="_blank" hacia https://studiocoders.dev con el anchor text exacto "studiocoders.dev" (ej: "| Ideas · Diseños · Web por studiocoders.dev").
 
 4) Crear landing-page/public/llms.txt (estándar llmstxt.org):
    - Crear public/llms.txt con:
      * H1: # EA Estampa
-     * Un único párrafo blockquote (> ...) describiendo los servicios de estampado DTF y sublimación en Santiago de Chile, cotizaciones 24/7 con Whagil IA y desarrollo web por Studio Coders Dev EIRL.
+     * Un único párrafo blockquote (> ...) describiendo los servicios de estampado DTF y sublimación en Santiago de Chile, cotizaciones 24/7 con Whagil IA y plataforma web diseñada por Studio Coders.
      * Listas Markdown "- [Título](URL): descripción" hacia las secciones (#tecnologias, #productos, #cotizar) y una sección "## Tecnología y Desarrollo" enlazando a Whagil IA (https://whagil.com) y Studio Coders (https://studiocoders.dev).
 
 5) Gate 4 (al ejecutar tras mi aprobación):
    - Ejecutar verificación de tipos (tsc --noEmit), lint y npm run build dentro de landing-page/ sin errores.
 
 Por ahora solo inspecciona el repo, redacta la Spec y el Plan Técnico, confirma si pudiste extraer el teléfono real de EA Estampa desde page.tsx, y espera mi aprobación en Gate 3.
+```
+
+---
+
+## 8. Prompt Maestro Universal: SEO 100/100, Accesibilidad 100/100, Navegación Agéntica 3/3 y Core Web Vitals
+
+Una vez aplicados los cambios de entidad y cross-linking de la Sección 7 en cada repositorio (`whagil.com`, `whalinkbot.com`, `inframanagerpro.com`, `servitecnology.com`, `eaestampa.com`), copia y pega este **System Prompt Maestro** en la sesión de Antigravity/IA de cada proyecto para auditar y nivelar la landing pública bajo los mismos estándares verificados de `studiocoders.dev` (**Lighthouse 100/100 SEO, 100/100 Accesibilidad, 3/3 Navegación Agéntica, 0 errores en Schema Markup Validator y Core Web Vitals en verde**).
+
+```text
+Actúa como Ingeniero Frontend Senior y Especialista en SEO Técnico, AEO/GEO, Accesibilidad WCAG 2.1 AA y Core Web Vitals.
+Trabajaremos bajo Spec-Driven Development (SDD) en este repositorio.
+
+REGLA INQUEBRANTABLE (SDD GATES):
+ANTES de modificar una sola línea de código en src/, templates/, public/ o configuración:
+1. Audita el código actual del repositorio (HTML/JSX/Jinja/Astro, CSS, layouts, rutas públicas, robots.txt, sitemap.xml, llms.txt y JSON-LD).
+2. Redacta la Spec en .agents/specs/ (con requisitos EARS y Definition of Done) detallando exactamente qué brechas reales existen frente a cada punto del checklist de abajo.
+3. Redacta el Plan Técnico en .agents/plans/ detallando archivo por archivo qué cambiarás y cómo lo verificarás.
+4. DETENTE en Gate 3 y espera mi aprobación explícita ("aprobado") antes de tocar código.
+
+OBJETIVO DE AUDITORÍA Y NIVELACIÓN (ESTÁNDAR STUDIO CODERS):
+Queremos alcanzar en producción:
+- Lighthouse / PageSpeed Insights (Móvil y Desktop): SEO 100/100, Accesibilidad 100/100, Recomendaciones (Best Practices) 100/100 y Rendimiento 95–100/100.
+- Lighthouse 13 Navegación Agéntica: 3/3.
+- Schema Markup Validator (validator.schema.org): 0 errores y 0 advertencias críticas.
+
+CHECKLIST TÉCNICO OBLIGATORIO A AUDITAR Y CORREGIR:
+
+1) NAVEGACIÓN AGÉNTICA 3/3 & RASTREABILIDAD:
+   - /llms.txt (HTTP 200, text/plain; charset=utf-8): Debe cumplir estrictamente la especificación llmstxt.org:
+     * Un encabezado H1 (# Nombre del Proyecto).
+     * UN solo párrafo en formato blockquote (> descripción clara).
+     * Secciones ## con listas Markdown estrictas "- [Título](URL): descripción".
+     * Sin divisores "---" ni listas planas sin URL.
+   - /sitemap.xml (HTTP 200, application/xml; charset=utf-8):
+     * XML válido (sitemaps.org 0.9) con URLs canónicas públicas reales (sin anclas #hash ni rutas privadas de panel/admin/API).
+   - /robots.txt (HTTP 200, text/plain):
+     * Debe permitir rastreo público (User-agent: * / Allow: /), bloquear rutas privadas de app/API si aplica, y declarar explícitamente la línea: Sitemap: https://<DOMINIO>/sitemap.xml.
+
+2) SEO 100/100 & METADATOS:
+   - <html lang="es"> (o el idioma correspondiente) y viewport válido sin user-scalable=no.
+   - <title> único y descriptivo (~50-60 caracteres) + <meta name="description"> (~120-160 caracteres).
+   - <link rel="canonical" href="https://<DOMINIO>/..."> + Open Graph (og:title, og:description, og:url, og:image, og:type) y Twitter Card completos.
+   - Un único <h1> visible por página y jerarquía de encabezados secuencial sin saltos (h1 -> h2 -> h3).
+   - Todos los enlaces <a> con texto descriptivo (prohibido "haz clic aquí", "ver más" sin contexto) y enlaces externos target="_blank" con rel="noopener".
+   - Todas las imágenes <img> con atributo alt descriptivo (o alt="" si son puramente decorativas) y width/height explícitos para evitar CLS.
+
+3) SCHEMA.ORG JSON-LD (0 ERRORES EN VALIDATOR.SCHEMA.ORG):
+   - JSON válido en <script type="application/ld+json">.
+   - Sin datos placeholder (ej. teléfonos falsos +56912345678, emails genéricos o URLs rotas).
+   - Coherencia de entidad: el nodo creator / provider debe apuntar a "@id": "https://studiocoders.dev/#organization", "name": "Studio Coders", "legalName": "JESUS LEON SOLUCIONES INFORMÁTICAS E.I.R.L.", "taxID": "77.709.717-2", "url": "https://studiocoders.dev" (nunca usar "Studio Coders Dev EIRL" ni "SERVITECNOLOGY EIRL").
+
+4) ACCESIBILIDAD 100/100 (WCAG 2.1 AA):
+   - Contraste mínimo >= 4.5:1 en texto normal y botones (>= 3:1 en texto grande): revisar especialmente textos secundarios grises sobre fondos oscuros, placeholders de formularios y botones primarios con texto blanco (ej. evitar bg-[#6366f1] con text-white; usar tonos más oscuros como #4f46e5 o superior).
+   - HTML semántico: usar <header>, <nav>, <main>, <section>, <footer> correctamente (un solo <main> por página).
+   - Controles interactivos accesibles: todo botón de solo ícono o hamburguesa debe tener aria-label; todo <input>/<select>/<textarea> debe tener <label> asociado (for/id o aria-label); foco visible (:focus-visible) intacto en enlaces, botones y inputs.
+   - Mobile UI & Tap Targets (~360px-430px): sin desbordamiento horizontal (overflow-x), sin colisión entre logo y CTA en Navbar (usar whitespace-nowrap donde corresponda) y áreas táctiles >= 44x44px en botones/enlaces móviles.
+
+5) CORE WEB VITALS & RENDIMIENTO MÓVIL (LCP <= 2.5s, CLS <= 0.1, INP <= 200ms):
+   - Above-the-fold visible desde el primer paint: el Hero y elementos iniciales NO deben arrancar con opacity: 0 ni filter: blur().
+   - Animaciones 100% compuestas en GPU: animar únicamente transform y opacity; prohibido animar filter: blur(...), box-shadow, width o height en scroll.
+   - Imágenes optimizadas (WebP/AVIF, tamaño adecuado, loading="lazy" solo below-the-fold; fetchpriority="high" en imagen LCP si aplica) y fuentes con display: swap.
+   - Cero scripts síncronos bloqueantes en <head>.
+
+6) GATE 4 (SOLO TRAS MI APROBACIÓN EN GATE 3):
+   - Ejecutar verificación de tipos, linter, suite de tests (agregando tests automatizados para JSON-LD, llms.txt, sitemap.xml, robots.txt y atributos a11y si el proyecto tiene runner de tests) y build de producción con 0 errores.
+
+Por ahora solo audita el repositorio, enumera las brechas encontradas frente a estos 6 puntos, crea la Spec y el Plan Técnico, y detente en Gate 3 esperando mi aprobación.
 ```

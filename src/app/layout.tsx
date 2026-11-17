@@ -87,6 +87,9 @@ const jsonLd = {
       areaServed: ["Chile", "Latinoamérica", "Estados Unidos", "España"],
       sameAs: [
         "https://github.com/studiocoders-dev",
+        "https://www.linkedin.com/company/studiocoders-dev",
+        "https://www.crunchbase.com/organization/studio-coders",
+        "https://www.npmjs.com/package/@studiocoders/webhook-verifier",
       ],
       priceRange: "$$$",
     },

@@ -129,4 +129,22 @@ describe("SEO, GEO & AEO Master Blindaje Suite", () => {
       expect(keyContent).toBe("9f8e4c3a2b1d0e5f6a7b8c9d0e1f2a3b");
     });
   });
+
+  describe("External Authority sameAs Links", () => {
+    it("includes GitHub, LinkedIn, Crunchbase and npm URLs in #organization sameAs", () => {
+      const layoutPath = path.resolve(process.cwd(), "src/app/layout.tsx");
+      const layoutContent = fs.readFileSync(layoutPath, "utf-8");
+
+      const expectedSameAs = [
+        "https://github.com/studiocoders-dev",
+        "https://www.linkedin.com/company/studiocoders-dev",
+        "https://www.crunchbase.com/organization/studio-coders",
+        "https://www.npmjs.com/package/@studiocoders/webhook-verifier",
+      ];
+
+      for (const url of expectedSameAs) {
+        expect(layoutContent).toContain(`"${url}"`);
+      }
+    });
+  });
 });
