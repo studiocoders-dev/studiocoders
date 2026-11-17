@@ -261,7 +261,7 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(html).not.toContain("+100");
     });
 
-    it("renders CommercialGuarantees multi-industry section with 5 paraphrased cards starting at +5 años", () => {
+    it("renders CommercialGuarantees multi-industry section with 6 paraphrased cards starting at +5 años", () => {
       expect(html).toContain('id="respaldo"');
       expect(html).toContain(
         "Especialistas en desarrollo de software a medida para múltiples industrias."
@@ -272,6 +272,8 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(html).toContain("Entrega en 30 días");
       expect(html).toContain("100% a tu nombre");
       expect(html).toContain("1 año de soporte incluido");
+      expect(html).toContain("Cero vendor lock-in");
+      expect(html).toContain("06.");
       expect(html).not.toContain("+100 proyectos exitosos");
       expect(html).not.toContain("más de una década");
     });

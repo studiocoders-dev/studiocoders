@@ -1,5 +1,5 @@
 import React from "react";
-import { Award, Clock, Headset, KeyRound, Wallet } from "lucide-react";
+import { Award, Clock, Headset, KeyRound, Layers, Wallet } from "lucide-react";
 
 export function CommercialGuarantees() {
   const guarantees = [
@@ -37,6 +37,13 @@ export function CommercialGuarantees() {
       description:
         "Te brindamos acompañamiento y soporte técnico sin costo durante doce meses completos tras la puesta en producción.",
       Icon: Headset,
+    },
+    {
+      index: "06",
+      title: "Cero vendor lock-in",
+      description:
+        "Arquitectura sobre estándares abiertos desplegada en tus propios repositorios y nube. Sin cajas negras ni dependencias que te aten a un proveedor.",
+      Icon: Layers,
     },
   ];
 
