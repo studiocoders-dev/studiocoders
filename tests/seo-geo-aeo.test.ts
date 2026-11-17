@@ -110,7 +110,8 @@ describe("SEO, GEO & AEO Master Blindaje Suite", () => {
       if (matchQ2) {
         const text = matchQ2[0].replace(/\s+/g, " ").trim();
         const words = text.split(" ");
-        expect(words.length).toBe(99);
+        expect(words.length).toBe(103);
+        expect(text).not.toContain("cinco plataformas");
         expect(text).toContain("whagil.com");
         expect(text).toContain("whalinkbot.com");
         expect(text).toContain("inframanagerpro.com");

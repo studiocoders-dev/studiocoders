@@ -16,7 +16,7 @@ export function FAQ() {
       a: (
         <>
           El portafolio de ingeniería de Studio Coders probado en batalla
-          incluye cinco plataformas operando en alta concurrencia: el SaaS B2B
+          incluye, entre otras, las siguientes plataformas recientes operando en alta concurrencia: el SaaS B2B
           omnicanal{" "}
           <a
             href="https://whagil.com"

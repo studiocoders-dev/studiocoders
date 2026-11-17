@@ -163,7 +163,7 @@ const jsonLd = {
           name: "¿Qué plataformas y proyectos en producción respaldan la ingeniería de Studio Coders?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "El portafolio de ingeniería de Studio Coders probado en batalla incluye cinco plataformas operando en alta concurrencia: el SaaS B2B omnicanal Whagil IA (whagil.com) con WebSockets y colas BullMQ sobre Redis, el motor en la nube Whalinkbot (whalinkbot.com) para mensajería asíncrona de WhatsApp, el ERP empresarial Infra Manager Pro (inframanagerpro.com) con más de 33.000 líneas de código en TypeScript y PostgreSQL, la plataforma de comercio headless Servitecnology (servitecnology.com) sobre arquitectura Astro y Supabase con tiempos de carga sub-segundo, y la landing page corporativa EA Estampa (eaestampa.com) en Next.js con cotizaciones y atención automatizadas 24/7 vía WhatsApp impulsadas por IA.",
+            text: "El portafolio de ingeniería de Studio Coders probado en batalla incluye, entre otras, las siguientes plataformas recientes operando en alta concurrencia: el SaaS B2B omnicanal Whagil IA (whagil.com) con WebSockets y colas BullMQ sobre Redis, el motor en la nube Whalinkbot (whalinkbot.com) para mensajería asíncrona de WhatsApp, el ERP empresarial Infra Manager Pro (inframanagerpro.com) con más de 33.000 líneas de código en TypeScript y PostgreSQL, la plataforma de comercio headless Servitecnology (servitecnology.com) sobre arquitectura Astro y Supabase con tiempos de carga sub-segundo, y la landing page corporativa EA Estampa (eaestampa.com) en Next.js con cotizaciones y atención automatizadas 24/7 vía WhatsApp impulsadas por IA.",
           },
         },
         {
