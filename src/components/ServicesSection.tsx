@@ -8,9 +8,9 @@ export function ServicesSection() {
         "Donde la velocidad es la característica principal y no algo que se optimiza al final. Rendimiento medido en dispositivos móviles, publicado en la nube y auditable por ti en cualquier momento.",
     },
     {
-      title: "Aplicaciones móviles para iOS y Android",
+      title: "Aplicaciones móviles y Web Apps instalables (PWA)",
       description:
-        "Una sola base de código para ambas tiendas, corriendo en teléfonos de verdad y no en capturas de simulador.",
+        "En 30 días sales operando en teléfonos reales con una Web App instalable (PWA) de alto rendimiento. La publicación nativa en App Store y Google Play se planifica en Fase 2 según los tiempos de revisión de cada tienda.",
     },
     {
       title: "Sistemas internos y software a medida",

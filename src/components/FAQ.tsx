@@ -9,7 +9,7 @@ export function FAQ() {
   const faqs: FAQItem[] = [
     {
       q: "¿Qué es Studio Coders y quién respalda su operación técnica y legal?",
-      a: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su entrega en producción en 30 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios de agencias tradicionales. El cliente mantiene el 100% de la propiedad del código fuente y repositorios en GitHub desde el primer día.",
+      a: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su entrega en producción en 30 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con ingeniería senior, eliminando intermediarios de agencias tradicionales. El cliente mantiene el 100% de la propiedad del código fuente y repositorios en GitHub desde el primer día.",
     },
     {
       q: "¿Qué plataformas y proyectos en producción respaldan la ingeniería de Studio Coders?",
@@ -71,7 +71,7 @@ export function FAQ() {
     },
     {
       q: "¿Cómo es posible tener una primera versión en producción en 30 días?",
-      a: "Trabajamos sin intermediarios: hablas directamente con desarrolladores senior con más de cinco años de experiencia. Validamos avances funcionales en entorno de pruebas al día 15, utilizamos aceleración asistida por Inteligencia Artificial bajo estricta supervisión de arquitectura y nos basamos en componentes probados en batalla (Next.js 16, Supabase, Tailwind CSS, Redis y BullMQ) para liberar en producción al día 30.",
+      a: "Trabajamos sin intermediarios: hablas directamente con un ingeniero senior con más de cinco años de experiencia. Acotamos el alcance al núcleo operativo (MVP: autenticación, roles, flujo principal y pagos), validamos en entorno de pruebas al día 15 y usamos aceleración asistida por IA sobre componentes probados (Next.js 16, Supabase, Tailwind CSS, Redis y BullMQ) para lanzar en producción al día 30 y continuar módulos de Fase 2 desde el día 31.",
     },
     {
       q: "¿Quién es el dueño del código fuente y de los accesos?",
@@ -83,7 +83,7 @@ export function FAQ() {
     },
     {
       q: "¿Cómo funcionan los pagos y la facturación internacional?",
-      a: "Operamos formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2 (Chile). Emitimos facturación comercial y contratos internacionales de exportación de servicios. Todos nuestros presupuestos son en USD, cerrados, sin costos ocultos y puedes arrancar tu desarrollo con solo el 5% de inversión inicial.",
+      a: "Operamos formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2 (Chile). Emitimos facturación comercial y contratos internacionales de exportación de servicios. Todos nuestros presupuestos son en USD, cerrados, sin costos ocultos y trabajamos por hitos: arrancas con solo el 5% inicial, 45% al aprobar Staging (Día 15) y 50% al pasar a Producción (Día 30).",
     },
     {
       q: "¿Qué tecnologías utilizan para construir las plataformas?",

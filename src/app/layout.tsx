@@ -32,7 +32,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "studiocoders.dev — De la Idea a Producción en 30 Días",
   description:
-    "Estudio de ingeniería de software e Inteligencia Artificial en Santiago de Chile. Lanzamos tu plataforma web o Agente de IA en 30 días. Trato directo con desarrolladores senior.",
+    "Estudio de ingeniería de software e Inteligencia Artificial en Santiago de Chile. Lanzamos tu plataforma web o Agente de IA en 30 días. Trato directo con ingeniero senior.",
   metadataBase: new URL("https://studiocoders.dev"),
   alternates: {
     canonical: "/",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "studiocoders.dev — De la Idea a Producción en 30 Días",
     description:
-      "Lanzamos tu plataforma web o Agente de IA en 30 días. Software funcional, conectado a base de datos y pagos, directo con ingenieros senior.",
+      "Lanzamos tu plataforma web o Agente de IA en 30 días. Software funcional, conectado a base de datos y pagos, directo con ingeniero senior.",
     url: "https://studiocoders.dev",
     siteName: "studiocoders.dev",
     locale: "es_CL",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "studiocoders.dev — De la Idea a Producción en 30 Días",
     description:
-      "Tu sistema o Agente IA en producción en 30 días. Trato directo con desarrolladores senior y arquitectura ágil asistida por IA.",
+      "Tu sistema o Agente IA en producción en 30 días. Trato directo con ingeniero senior y arquitectura ágil asistida por IA.",
   },
   robots: {
     index: true,
@@ -155,7 +155,7 @@ const jsonLd = {
           name: "¿Qué es Studio Coders y quién respalda su operación técnica y legal?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su entrega en producción en 30 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con desarrolladores senior, eliminando intermediarios de agencias tradicionales. El cliente mantiene el 100% de la propiedad del código fuente y repositorios en GitHub desde el primer día.",
+            text: "Studio Coders es un estudio de ingeniería de software e inteligencia artificial con sede en Santiago de Chile, operado formalmente bajo la firma comercial Studio Coders Dev con RUT 77.709.717-2. Especializado en el desarrollo ágil de aplicaciones web, plataformas SaaS y agentes de IA conversacionales para empresas y fundadores en América Latina, Estados Unidos y Europa. La firma se distingue por su entrega en producción en 30 días bajo presupuesto cerrado en dólares estadounidenses (USD) y trato directo con ingeniería senior, eliminando intermediarios de agencias tradicionales. El cliente mantiene el 100% de la propiedad del código fuente y repositorios en GitHub desde el primer día.",
           },
         },
         {
@@ -171,7 +171,7 @@ const jsonLd = {
           name: "¿Cómo es posible tener una primera versión en producción en 30 días?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Trabajamos sin intermediarios: hablas directamente con desarrolladores senior con más de cinco años de experiencia. Validamos avances funcionales en entorno de pruebas al día 15, utilizamos aceleración asistida por Inteligencia Artificial bajo estricta supervisión de arquitectura y nos apoyamos en componentes probados en batalla (Next.js 16, Supabase, Tailwind CSS, Redis y BullMQ) para lanzar llave en mano al día 30.",
+            text: "Trabajamos sin intermediarios: hablas directamente con un ingeniero senior con más de cinco años de experiencia. Acotamos el alcance al núcleo operativo (MVP: autenticación, roles, flujo principal y pagos), validamos en entorno de pruebas al día 15 y usamos aceleración asistida por IA sobre componentes probados (Next.js 16, Supabase, Tailwind CSS, Redis y BullMQ) para lanzar en producción al día 30 y continuar módulos de Fase 2 desde el día 31.",
           },
         },
         {

@@ -5,12 +5,12 @@ export function ProcessTimeline() {
     {
       time: "Día 0",
       description:
-        "Llamada técnica de 20 minutos con un desarrollador senior. Evaluamos tu necesidad, descartamos lo innecesario y definimos el núcleo funcional.",
+        "Llamada técnica de 20 minutos con un ingeniero senior. Evaluamos tu operación, acotamos el núcleo funcional (MVP) para 30 días y separamos módulos secundarios para Fase 2.",
     },
     {
       time: "Día 2",
       description:
-        "Propuesta técnica con arquitectura definida y presupuesto cerrado en USD. Un precio fijo y exacto e inicio con solo el 5% de inversión inicial.",
+        "Propuesta técnica con arquitectura definida y presupuesto cerrado en USD. Inicio con solo el 5% inicial (45% al aprobar Staging en Día 15 y 50% al pasar a Producción en Día 30).",
     },
     {
       time: "Día 15",
@@ -20,12 +20,12 @@ export function ProcessTimeline() {
     {
       time: "Día 30",
       description:
-        "Tu sistema o Agente IA en producción llave en mano. Desplegado, conectado a base de datos y pagos, 100% operativo a tu nombre y en tu propio GitHub.",
+        "El núcleo funcional de tu sistema o Agente IA en producción llave en mano. Desplegado, conectado a base de datos y pagos, 100% operativo a tu nombre y en tu propio GitHub.",
     },
     {
       time: "Cada semana",
       description:
-        "Ciclos de mejora continua y nuevas funciones bajo demanda. Ves avances reales en la nube cada semana, nunca en reportes teóricos.",
+        "Ciclos de mejora continua y módulos de Fase 2 bajo demanda desde el Día 31. Ves avances reales en la nube cada semana, nunca en reportes teóricos.",
     },
   ];
 
@@ -36,14 +36,14 @@ export function ProcessTimeline() {
         "Next.js 16, React 19, Supabase, Tailwind CSS 4, Redis y BullMQ. Arquitecturas probadas en batalla que escalan desde el minuto uno sin reinventar la rueda.",
     },
     {
-      title: "Trato directo con ingenieros senior",
+      title: "Trato directo con ingeniero senior",
       description:
-        "Cero intermediarios, ejecutivos comerciales o project managers teóricos. Hablas directamente con quien diseña la base de datos y escribe el código.",
+        "Cero intermediarios, ejecutivos comerciales o project managers teóricos. Hablas directamente con quien diseña la base de datos y audita cada línea de código.",
     },
     {
       title: "Aceleración por IA con rigor humano",
       description:
-        "La Inteligencia Artificial genera scaffolding, tipados y tests unitarios en segundos. Los arquitectos senior auditamos cada línea, garantizando máxima seguridad y cero deuda técnica.",
+        "La Inteligencia Artificial genera scaffolding, tipados y tests unitarios en segundos. El ingeniero senior audita cada línea, garantizando máxima seguridad y cero deuda técnica.",
     },
     {
       title: "Propiedad total de código y cloud",

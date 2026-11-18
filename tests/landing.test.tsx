@@ -50,7 +50,8 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(html).toContain("Qué Construimos");
       expect(html).toContain("Cinco cosas, descritas por lo que resuelven.");
       expect(html).toContain("Sitios web y plataformas que cargan al instante");
-      expect(html).toContain("Aplicaciones móviles para iOS y Android");
+      expect(html).toContain("Aplicaciones móviles y Web Apps instalables (PWA)");
+      expect(html).toContain("Fase 2");
       expect(html).toContain("Sistemas internos y software a medida");
       expect(html).toContain("Integraciones entre herramientas que ya usas");
       expect(html).toContain("Inteligencia Artificial aplicada a un proceso concreto");
@@ -101,10 +102,10 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(html).toContain("Cada semana");
     });
 
-    it("explains why 30 days is possible with senior developers and AI acceleration", () => {
+    it("explains why 30 days is possible with senior engineering and AI acceleration", () => {
       expect(html).toContain("¿Cómo logramos entregar en 30 días?");
       expect(html).toContain("Un stack consolidado que dominamos");
-      expect(html).toContain("Trato directo con ingenieros senior");
+      expect(html).toContain("Trato directo con ingeniero senior");
       expect(html).toContain("Aceleración por IA con rigor humano");
       expect(html).toContain("Propiedad total de código y cloud");
     });
@@ -185,7 +186,7 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(metadata.title).toBe("studiocoders.dev — De la Idea a Producción en 30 Días");
       expect(metadata.description).toContain("Santiago de Chile");
       expect(metadata.description).toContain("30 días");
-      expect(metadata.description).toContain("desarrolladores senior");
+      expect(metadata.description).toContain("ingeniero senior");
     });
 
     it("includes both atomic FAQ questions for entity and canonical portfolio", () => {
@@ -269,9 +270,12 @@ describe("Studio Coders Landing Page & Architecture Suite", () => {
       expect(html).toContain("logística, salud, finanzas, comercio y operaciones");
       expect(html).toContain("+5 años de experiencia");
       expect(html).toContain("Arrancas con solo el 5%");
+      expect(html).toContain("45% al aprobar Staging");
+      expect(html).toContain("50% al pasar a Producción");
       expect(html).toContain("Entrega en 30 días");
       expect(html).toContain("100% a tu nombre");
       expect(html).toContain("1 año de soporte incluido");
+      expect(html).toContain("Garantía técnica, estabilidad y corrección de fallos");
       expect(html).toContain("Cero vendor lock-in");
       expect(html).toContain("06.");
       expect(html).not.toContain("+100 proyectos exitosos");

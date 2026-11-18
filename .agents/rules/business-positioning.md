@@ -6,13 +6,13 @@ trigger: model_decision
 # Reglas de Posicionamiento Comercial & Marca B2B
 
 ## 1. La Oferta Central & Propuesta de Valor
-- **Promesa Irresistible:** *"Tu software o Agente IA en producción en 30 días. No un mockup ni una demo: una plataforma llave en mano, 100% a tu nombre y lista para operar."*
+- **Promesa Irresistible:** *"El núcleo funcional de tu software o Agente IA en producción en 30 días. No un mockup ni una demo: una plataforma operativa, 100% a tu nombre y lista para facturar."*
 - **El Modelo Operativo:**
-  - **Día 0:** Llamada de alcance técnico (Scope Call) de 20 min con un Senior Developer.
-  - **Día 2:** Presupuesto cerrado en USD, arquitectura definida e inicio del proyecto con solo el 5% de inversión inicial.
+  - **Día 0:** Llamada de alcance técnico (Scope Call) de 20 min con un ingeniero senior. Se define el núcleo operativo (MVP: auth, roles, flujo principal y pagos/reportes) y se separa Fase 2.
+  - **Día 2:** Presupuesto cerrado en USD, arquitectura definida e inicio del proyecto con solo el 5% de inversión inicial (esquema de hitos: 5% inicio → 45% aprobación de Staging → 50% despliegue en Producción).
   - **Día 15:** Primera versión funcional en entorno de staging para validación con tu equipo.
-  - **Día 30:** Despliegue llave en mano en producción con base de datos, autenticación, pagos e IA listos, más 1 año de soporte técnico incluido.
-- **Diferenciador:** Trato directo con ingenieros seniors (+5 años de experiencia), aceleración asistida por IA bajo estricto code-review humano, sin capas de intermediarios ni project managers teóricos.
+  - **Día 30:** Despliegue llave en mano del núcleo funcional en producción con base de datos, autenticación, pagos e IA listos (móvil vía Web App instalable PWA; tiendas nativas App Store/Google Play en Fase 2), más 1 año de garantía técnica sobre el alcance entregado (estabilidad y corrección de fallos).
+- **Diferenciador:** Trato directo con el ingeniero senior (+5 años de experiencia) que diseña y audita cada línea, con aceleración multi-agente bajo estricto code-review humano, sin capas de intermediarios ni project managers teóricos.
 
 ## 2. Entidad Legal & Facturación
 - **Razón Social Operativa:** Facturación comercial en Chile y facturas de exportación de servicios en USD operadas bajo la firma comercial **Studio Coders Dev · RUT: 77.709.717-2** (Chile).

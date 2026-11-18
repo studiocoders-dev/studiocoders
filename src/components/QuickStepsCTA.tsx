@@ -6,19 +6,19 @@ export function QuickStepsCTA() {
       step: "Paso 01",
       title: "Diagnóstico técnico en 20 minutos",
       description:
-        "Conversas directamente con un desarrollador senior sobre tu operación y objetivos, sin vendedores intermediarios.",
+        "Conversas directamente con un ingeniero senior sobre tu operación para definir el núcleo MVP, sin vendedores intermediarios.",
     },
     {
       step: "Paso 02",
       title: "Propuesta cerrada e inicio con 5%",
       description:
-        "En 48 horas recibes la arquitectura definida, el presupuesto fijo en USD y activas el desarrollo con solo el 5% inicial.",
+        "En 48 horas recibes la arquitectura definida, el presupuesto fijo en USD y activas el desarrollo con solo el 5% inicial (45% en Staging y 50% en Producción).",
     },
     {
       step: "Paso 03",
       title: "Lanzamiento llave en mano en 30 días",
       description:
-        "Validas avances en entorno de pruebas el día 15 y recibes tu software desplegado a tu nombre el día 30.",
+        "Validas avances en entorno de pruebas el día 15 y recibes el núcleo funcional de tu software desplegado a tu nombre el día 30.",
     },
   ];
 

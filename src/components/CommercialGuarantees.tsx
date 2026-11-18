@@ -7,21 +7,21 @@ export function CommercialGuarantees() {
       index: "01",
       title: "+5 años de experiencia",
       description:
-        "Nuestro equipo de ingenieros y especialistas acumula más de cinco años diseñando y desplegando soluciones tecnológicas a medida.",
+        "Ingeniería senior con más de cinco años diseñando, auditando y desplegando plataformas en producción a medida.",
       Icon: Award,
     },
     {
       index: "02",
       title: "Arrancas con solo el 5%",
       description:
-        "Iniciamos la ingeniería de tu proyecto con apenas el 5% del presupuesto aprobado, sin exigir grandes desembolsos iniciales.",
+        "Inicias arquitectura y desarrollo con apenas el 5% del presupuesto; continúas con 45% al aprobar Staging (Día 15) y 50% al pasar a Producción (Día 30).",
       Icon: Wallet,
     },
     {
       index: "03",
       title: "Entrega en 30 días",
       description:
-        "Metodología de ejecución ágil asistida por IA que acelera el arranque y pone tu software o aplicación en producción en 30 días.",
+        "Metodología ágil asistida por IA que pone el núcleo funcional de tu plataforma (MVP) en producción en 30 días, listo para operar y facturar.",
       Icon: Clock,
     },
     {
@@ -35,7 +35,7 @@ export function CommercialGuarantees() {
       index: "05",
       title: "1 año de soporte incluido",
       description:
-        "Te brindamos acompañamiento y soporte técnico sin costo durante doce meses completos tras la puesta en producción.",
+        "Garantía técnica, estabilidad y corrección de fallos sin costo durante doce meses completos sobre el alcance entregado.",
       Icon: Headset,
     },
     {
